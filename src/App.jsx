@@ -1,7 +1,10 @@
 import React from 'react';
-import axios from 'axios';
 import './App.css'
-import { findByStatus, findById, addPet, changeStats } from './module/index.js'
+import { HashRouter as Router } from "react-router-dom";
+import Header from './components/Header'
+import Main from './components/Main'
+import Footer from './components/Footer'
+
 class App extends React.Component {
     constructor(props) {
         super(props)
@@ -12,7 +15,11 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>hello</div>
+            <Router>
+                <Header />
+                <Main />
+                <Footer />
+            </Router>
         )
     }
 }
