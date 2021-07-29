@@ -5,3 +5,7 @@ export const categoryMap = {
     rabblit: 4,
     hamsters: 5
 }
+
+export const categoryArray = [
+    'cat', 'dog', 'bird', 'rabbit', 'hamsters'
+]

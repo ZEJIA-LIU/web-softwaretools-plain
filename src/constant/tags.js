@@ -6,3 +6,6 @@ export const tagsMap = {
     active: 4,
     mild: 5
 }
+export const tagArray = [
+    'team4', 'barve', 'elegance', 'lazy', 'active', 'mild'
+]
