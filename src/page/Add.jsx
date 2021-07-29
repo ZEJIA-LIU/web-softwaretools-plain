@@ -1,6 +1,7 @@
 import React from 'react'
 import { observer, inject } from 'mobx-react'
 import AddForm from '../components/AddForm'
+import ChangeStatus from '../components/ChangeStatus'
 @inject('newPetStore')
 @observer
 class Component extends React.Component {
@@ -9,7 +10,10 @@ class Component extends React.Component {
     }
     render() {
         return (
-            <AddForm />
+            <>
+                <AddForm />
+                <ChangeStatus />
+            </>
         )
     }
 }
