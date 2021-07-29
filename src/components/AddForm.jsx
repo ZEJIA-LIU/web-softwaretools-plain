@@ -6,7 +6,7 @@ import {
     Col,
     Select
 } from 'antd';
-@inject('newPetStore')
+@inject('newPetStore', 'petArrayStore')
 @observer
 class Component extends React.Component {
     constructor(props) {
@@ -24,17 +24,20 @@ class Component extends React.Component {
 
 
     onFinish = () => {
-        const { newPetStore } = this.props
+        const { newPetStore, petArrayStore } = this.props
+        console.log(petArrayStore)
         newPetStore.addNewPet()
             .then(res => {
                 console.log(res)
+                petArrayStore.add(res.data)
                 newPetStore.resetNewPet()
                 window.alert('add success')
-                // window.location.reload()
+                this.refs.form.resetFields()
             })
             .catch(error => {
                 console.log(error)
             })
+
 
     };
     onFinishFailed = (errorInfo) => {
@@ -68,6 +71,8 @@ class Component extends React.Component {
         const tagsValue = tags.map(tags => tags.name)
         return (
             <Form
+                ref='form'
+
                 name="basic"
                 labelCol={{ span: 4 }}
                 wrapperCol={{ span: 12 }}
