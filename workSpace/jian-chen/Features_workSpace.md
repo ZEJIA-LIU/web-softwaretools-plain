@@ -1,3 +1,4 @@
+
 # Possible Features
 
 1. Sorting pets by category and/or tags.
@@ -9,9 +10,16 @@
 4. Updating tags of pets on sale.
 
 - 1 未出售筛选种类和标签
-- 2 展示已经出售
-- 3 上架
+1 多个tag？
+
+- 2 展示已经出售 with ranking list
+1 直接点击跳转available -tags？？？
+
+- 3 上架  
+(1 override id, name?? 2 no name?? 3 默认状态就是available)
+
 - 4 修改标签  
+(1 查询name？ 2 直接在 available 页面修改? )
 ---
 
 # Feature 1
@@ -61,6 +69,6 @@
 
 ## Justification
 
-- Shop keeper could update tags of pets which are on sale, living animals' status(Not selling status) would change, updating their tags could show customers newest information about them. 
+- Shop keeper could update tags of pets which are on sale, living animals' status(Not selling status) would change, updating their tags could show customers newest information about them.
 
 # Testing
