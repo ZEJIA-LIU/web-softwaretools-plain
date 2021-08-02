@@ -7,5 +7,5 @@ export const tagsMap = {
     mild: 5
 }
 export const tagArray = [
-    'team4', 'barve', 'elegance', 'lazy', 'active', 'mild'
+    'team4', 'brave', 'elegance', 'lazy', 'active', 'mild'
 ]

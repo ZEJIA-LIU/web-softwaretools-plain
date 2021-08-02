@@ -11,8 +11,15 @@ class Component extends React.Component {
             category: 'all',
             tags: 'all'
         }
+
+    }
+
+    jumpToAva = (category) => {
+        console.log(this.props)
+        this.props.history.push('/')
     }
     render() {
+
         const { petArrayStore } = this.props
         const array = petArrayStore.curArray.filter(pet => pet.status !== "available")
         const dogNum = petArrayStore.curArray.filter(pet => pet.status !== "available" && pet.category.name === 'dog').length
@@ -20,24 +27,18 @@ class Component extends React.Component {
         const birdNum = petArrayStore.curArray.filter(pet => pet.status !== "available" && pet.category.name === 'bird').length
         const rabbitNum = petArrayStore.curArray.filter(pet => pet.status !== "available" && pet.category.name === 'rabbit').length
         const hamstersNum = petArrayStore.curArray.filter(pet => pet.status !== "available" && pet.category.name === 'hamsters').length
+        const rankArray = [{ type: 'dog', num: dogNum }, { type: 'cat', num: catNum }, { type: 'bird', num: birdNum }, { type: 'rabbit', num: rabbitNum }, { type: 'hamsters', num: hamstersNum }].sort((a, b) => b.num - a.num)
         return (
             <>
                 <ul>
-                    <li>
-                        dogNum : {dogNum}
-                    </li>
-                    <li>
-                        catNum : {catNum}
-                    </li>
-                    <li>
-                        birdNum : {birdNum}
-                    </li>
-                    <li>
-                        rabbitNum : {rabbitNum}
-                    </li>
-                    <li>
-                        hamstersNum : {hamstersNum}
-                    </li>
+                    {rankArray.map(item => {
+                        return (
+                            <li key={item.type}>
+                                <span>{item.type}:</span>
+                                <span>{item.num}</span>
+                            </li>
+                        )
+                    })}
                 </ul>
                 <ul>
                     {array.map((item) => {

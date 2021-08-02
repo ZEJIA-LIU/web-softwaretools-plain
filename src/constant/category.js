@@ -3,7 +3,8 @@ export const categoryMap = {
     dog: 2,
     bird: 3,
     rabblit: 4,
-    hamsters: 5
+    hamsters: 5,
+
 }
 
 export const categoryArray = [

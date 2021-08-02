@@ -17,15 +17,9 @@ class Component extends React.Component {
 
             <main>
                 <Switch>
-                    <Route path="/sold">
-                        <Sold />
-                    </Route>
-                    <Route path="/add">
-                        <Add />
-                    </Route>
-                    <Route path="/">
-                        <Available />
-                    </Route>
+                    <Route path="/sold" component={Sold} />
+                    <Route path="/add" component={Add} />
+                    <Route path="/" component={Available} />
                 </Switch>
             </main>
 

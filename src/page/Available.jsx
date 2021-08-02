@@ -10,8 +10,12 @@ import { rightTag, rihtCategory } from '../util/index'
 class Component extends React.Component {
     constructor(props) {
         super(props)
+        const { location } = props
+        const { search } = location
+        console.log(search)
+        const category = search.split('=')[1]
         this.state = {
-            category: 'all',
+            category: category || 'all',
             tag: 'all'
         }
     }
@@ -21,17 +25,15 @@ class Component extends React.Component {
         console.log(petArrayStore.curArray)
     }
     onFinish = (values) => {
-        console.log(values)
         const { category, tag } = values
         this.setState({ category, tag })
     }
     render() {
         const { Option } = Select
         const { petArrayStore } = this.props
-        console.log(petArrayStore.curArray)
         const { category, tag } = this.state
         const array = petArrayStore.curArray.filter(pet => pet.status === "available").filter((item) => rightTag(tag, item) === true).filter(item => rihtCategory(category, item))
-        console.log(array)
+
         return (
             <>
                 <Form
@@ -47,7 +49,7 @@ class Component extends React.Component {
                         label="category"
                         hasFeedback
                         rules={[{ required: true, message: 'Please select pet\' s category!' }]}
-                        initialValue="all"
+                        initialValue={category}
                     >
                         <Select placeholder="Please select pet' s category!">
                             <Option value="all">All</Option>
@@ -64,7 +66,7 @@ class Component extends React.Component {
                         name="tag"
                         label="tag"
                         hasFeedback
-                        initialValue="all"
+                        initialValue={tag}
                         rules={[{ required: true, message: 'Please select pet\' s tag!' }]}
                     >
                         <Select placeholder="Please select pet' s status!">
