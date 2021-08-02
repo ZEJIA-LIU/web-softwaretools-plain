@@ -16,7 +16,7 @@ class Component extends React.Component {
 
     jumpToAva = (category) => {
         console.log(this.props)
-        this.props.history.push('/')
+        this.props.history.push(`/?category=${category}`)
     }
     render() {
 
@@ -34,7 +34,9 @@ class Component extends React.Component {
                     {rankArray.map(item => {
                         return (
                             <li key={item.type}>
-                                <span>{item.type}:</span>
+                                <span onClick={() => {
+                                    this.jumpToAva(item.type)
+                                }}>{item.type}:</span>
                                 <span>{item.num}</span>
                             </li>
                         )

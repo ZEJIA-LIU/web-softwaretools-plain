@@ -1,5 +1,6 @@
-import { observable, action } from 'mobx';
-
+import { observable, action, runInAction } from 'mobx';
+import resolve from 'resolve';
+import { deletePet } from '../module/index'
 class ArrayStore {
     @observable curArray = []
     @observable curIdArray = []
@@ -25,6 +26,25 @@ class ArrayStore {
         if (index !== -1) {
             this.curArray[index].status = status
         }
+    }
+
+    @action
+    delete(id) {
+        return new Promise((resolve, reject) => {
+            deletePet(id)
+                .then(res => {
+                    runInAction(() => {
+                        this.curIdArray = this.curIdArray.filter(curId => curId !== id)
+                        this.curArray = this.curArray.filter(pet => pet.id !== id)
+                        resolve(`delete success ${res}`)
+                    })
+
+                })
+                .catch(err => {
+                    reject(`delete fail ${err}`)
+                })
+        })
+
     }
 
 }

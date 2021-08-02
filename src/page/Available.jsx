@@ -1,9 +1,6 @@
 import React from 'react'
 import { observer, inject } from 'mobx-react'
-import {
-    Form, Button,
-    Select
-} from 'antd';
+import { Form, Button, Select } from 'antd';
 import { rightTag, rihtCategory } from '../util/index'
 @inject('petArrayStore')
 @observer
@@ -12,18 +9,16 @@ class Component extends React.Component {
         super(props)
         const { location } = props
         const { search } = location
-        console.log(search)
         const category = search.split('=')[1]
+        const { petArrayStore } = props
         this.state = {
             category: category || 'all',
-            tag: 'all'
+            tag: 'all',
+            petArray: petArrayStore.curArray
         }
     }
 
-    componentDidMount() {
-        const { petArrayStore } = this.props
-        console.log(petArrayStore.curArray)
-    }
+
     onFinish = (values) => {
         const { category, tag } = values
         this.setState({ category, tag })
@@ -31,9 +26,8 @@ class Component extends React.Component {
     render() {
         const { Option } = Select
         const { petArrayStore } = this.props
-        const { category, tag } = this.state
-        const array = petArrayStore.curArray.filter(pet => pet.status === "available").filter((item) => rightTag(tag, item) === true).filter(item => rihtCategory(category, item))
-
+        const { category, tag, petArray } = this.state
+        const array = petArray.filter(pet => pet.status === "available").filter((item) => rightTag(tag, item) === true).filter(item => rihtCategory(category, item))
         return (
             <>
                 <Form
@@ -97,11 +91,16 @@ class Component extends React.Component {
                                     <div> tags:{item.tags.map(
                                         item => {
                                             if (item.name !== 'team4') {
-                                                return <div>{item.name}</div>
+                                                return <span>{item.name}</span>
                                             }
                                         }
                                     )}</div>
+                                    <div onClick={() => {
+                                        petArrayStore.delete(item.id).then(res => {
+                                            this.setState({ petArray: petArrayStore.curArray })
+                                        })
 
+                                    }}>delete</div>
                                 </div>
                             </li>
                         )
