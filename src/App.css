@@ -13,4 +13,9 @@ body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, fo
     legend { color:#000; }  
     fieldset, img { border:0; }  
     button, input, select, textarea { font-size:100%; }
+body{
+    position: relative;
+}
+    
     @import '~antd/dist/antd.css'
+

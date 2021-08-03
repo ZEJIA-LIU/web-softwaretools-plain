@@ -158,5 +158,9 @@
         }
       ]
     ]
+  },
+  "devDependencies": {
+    "svg-sprite-loader": "^6.0.9",
+    "svgo-loader": "^3.0.0"
   }
 }

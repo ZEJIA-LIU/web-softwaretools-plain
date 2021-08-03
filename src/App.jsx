@@ -9,17 +9,22 @@ import NewPetStore from './store/newPet'
 import PetArrayStore from './store/petArray'
 import { petArray } from './constant/petData'
 import { findAll, addPet } from './module/index'
+const stores = {
+    newPetStore: new NewPetStore(),
+    petArrayStore: new PetArrayStore()
+}
 class App extends React.Component {
     constructor(props) {
         super(props)
         this.newPetStore = new NewPetStore()
         this.petArrayStore = new PetArrayStore()
+
         this.state = {
             loading: false
         }
     }
     componentDidMount() {
-        const { add } = this.petArrayStore
+        const { add } = stores.petArrayStore
         findAll().then(res => {
             if (res.length < 15) {
                 this.upLoadData()
@@ -54,16 +59,16 @@ class App extends React.Component {
     render() {
         const { loading } = this.state
         return (
+            <Router>
+                {loading ? <Provider {...stores} >
 
-            loading ? <Provider newPetStore={this.newPetStore} petArrayStore={this.petArrayStore}>
-                <Router>
                     <Header />
                     <Main />
                     <Footer />
-                </Router>
-            </Provider > : <div>loading</div>
 
+                </Provider > : <div>loading</div>}
 
+            </Router>
         )
     }
 }

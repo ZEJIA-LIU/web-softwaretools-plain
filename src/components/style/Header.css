@@ -1,0 +1,85 @@
+.headerWrapper{
+    height: 50px;
+  position: relative;
+  padding-left: 50px;
+  padding-right: 50px; 
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  background-color: #2cf1d1;
+}
+.logoWrapper{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    
+    
+}
+.showAndRankWrapper{
+
+    width: 60vw;
+    color:black;
+    position: relative;
+
+}
+.showAndRank{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+}
+.pageButton{
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    margin-right: 50px;
+    background-color: hsl(217, 78%, 61%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pageButton:hover{
+    background-color: hsl(217, 75%, 70%);
+}
+.link{color:#fff;
+}
+.link:hover{
+    color:#fff;
+    text-decoration: none;
+}
+.select  {
+    color:#07e9c3;
+}
+.icon{
+    padding:0;
+    margin:0;
+    width:40px;
+    height:40px;
+    fill:#eee;
+    transition: linear 0.3s;
+}
+.addWrap{
+    width: 50px;
+    display: flex;
+    align-items: center;
+}
+.add{
+    display: flex;
+    align-items: center;
+}
+.icon:hover{
+    padding:0;
+    margin:0;
+    width:45px;
+    height:45px;
+    fill: black;
+}
+
+.addSelect{
+    padding:0;
+    margin:0;
+    width:45px;
+    height:45px;
+}
