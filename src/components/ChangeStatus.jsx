@@ -43,8 +43,8 @@ class Component extends React.Component {
         return (
             <Form
                 name="basic"
-                labelCol={{ span: 4 }}
-                wrapperCol={{ span: 12 }}
+                labelCol={{ span: 9 }}
+                wrapperCol={{ span: 6 }}
                 initialValues={{ remember: true }}
                 onFinish={this.onFinish}
                 onFinishFailed={this.onFinishFailed}
@@ -72,7 +72,7 @@ class Component extends React.Component {
                 </Form.Item>
 
 
-                <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+                <Form.Item wrapperCol={{ offset: 11, span: 16 }}>
                     <Button type="primary" htmlType="add">
                         Submit
                     </Button>

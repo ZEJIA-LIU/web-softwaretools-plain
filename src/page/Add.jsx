@@ -2,6 +2,7 @@ import React from 'react'
 import { observer, inject } from 'mobx-react'
 import AddForm from '../components/AddForm'
 import ChangeStatus from '../components/ChangeStatus'
+import './style/Add.css'
 @inject('newPetStore')
 @observer
 class Component extends React.Component {
@@ -10,10 +11,18 @@ class Component extends React.Component {
     }
     render() {
         return (
-            <>
-                <AddForm />
-                <ChangeStatus />
-            </>
+            <div className='addWrapper'>
+                <div className='addFormWrapper'>
+                    <div className='title'> add a new pet</div>
+                    <AddForm className='addForm' />
+                </div>
+                <div className='addFormWrapper'>
+                    <div className='title'> change pet's status</div>
+                    <ChangeStatus className='addForm' />
+                </div>
+
+
+            </div>
         )
     }
 }
