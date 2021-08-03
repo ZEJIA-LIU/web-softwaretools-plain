@@ -6,7 +6,7 @@
 
 3.Sorting pets by **category** and/or **tag**.
 
-4.Showing sold pets with a ranking list, redirect to *available* page by clicking **category** on the list.
+4.Showing sold pets with a ranking list, redirecting to *available* page with certain search parameter by clicking **category** on the list.
 
 #### not implemented ####
 
