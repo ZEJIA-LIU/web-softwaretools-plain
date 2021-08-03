@@ -1,32 +1,36 @@
 # Possible Features
 
-1.Adding new available pets with more details.
+1.Adding new available pets with more details(default **status**: *available* ).
 
 2.Updating status of pet by **id**.  
 
 3.Sorting pets by **category** and/or **tag**.
 
-4.Showing sold pets with a ranking list.
+4.Showing sold pets with a ranking list, redirecting to *available* page with certain search parameter by clicking **category** on the list.
 
 #### not implemented ####
 
-- Adding new *available* pets with default **id**/**name**/**status**(*available*).
+- Copying **id** to clipboard by clicking pet's **id**.
 
-- Adding new pet without **name**.
-
-- Updating status of pets on *available* page.
-
-- Updating pet detail by **name**.
-
-- Updating **available categories[]**.
-
-- Updating **available tags[]**.
-
-- Updating pet's **tag[]**.
+- Adding new *available* pets with default **id**.  ~~/**name**/~~(useless, banned), ~~**status**(*available*)~~(done).
 
 - Sorting pets on *available* page by multiple **tags**.
 
-- Redirect to *available* page with query parameters by clicking **category** on ranking list.
+- Updating **available categories[]** which is selected while adding pets.
+
+- Updating **available tags[]** which is selected while adding pets.
+
+- Updating pet's **tag[]**.(To be discussed).
+
+- Administrator authorization. 
+
+- Booking/order system. 
+
+- Updating status of pets on *available* page.(Could be implemented after implementing administrator authorization)
+
+- Updating pet detail by **name**.(Not possible due to API).
+
+- ~~Adding new pet without **name**.~~(useless, banned).
 
 ---
 
@@ -37,7 +41,7 @@
  - ***id**
  - ***name**
  - ***category** (e.g. dog/ cat/ fish)
- - ***status** (e.g. available/ sold)
+ - ***status** (e.g. available/ sold **default: *available***)
  - **tag[]** (e.g. Brave/ Elegance/ Lazy/ Active/ Mild)
 
 
@@ -46,7 +50,7 @@
 - ***name**, ***category**, ***status**, are required because they are necessary for every pet.
 
 - **tag[]** are optional, just for more detailed record.
-  - **tag[]** are only selectable(from **available tags[]**), they do  not support customisation insertion due to the API data structure, updating **available tags[]** could only be done in editing source code.
+  - **tag[]** are only selectable(from **available tags[]**), they do not support customisation insertion due to the API data structure, updating **available tags[]** could only be done in editing source code.
 
 ## Justification
 
@@ -94,9 +98,11 @@
 
 # Feature 4
 
-- Showing sold pets with a ranking list.
+- Showing sold pets with a ranking list, redirect to *available* page by clicking **category** on the list.
 
   - The ranking list ranks top 5 best selling **categories** with their sales.
+  
+  - When clicking on the **category**, page will redirect to *available* page with request parameter of the clicked **category**, which will be automatically filled into the sorting form.
 
 ## Justification
 
@@ -106,7 +112,9 @@
 
 - Visitors without a clear purpose could take a look and it would help them to discover their preference(**category**).
 
-- some people tend to buy best selling **categories** driven by group psychology, and inventory of those would be exactly the most after shopkeeper's business analysis.    
+- some people tend to buy best selling **categories** driven by group psychology, and inventory of those would be exactly the most after shopkeeper's business analysis.  
+
+- Redirecting to **available** page with request parameter gives all users much much convinience in finding certain kind of *available* pets the want.
 
 # Testing
 
