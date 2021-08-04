@@ -82,3 +82,7 @@ opacity: 0.5;
 .numIcon{
     height: 80px;
 }
+.statusIcon{
+    height: 25px;
+    width: 25px;
+}

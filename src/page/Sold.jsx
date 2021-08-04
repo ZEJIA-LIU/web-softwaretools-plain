@@ -127,7 +127,7 @@ class Component extends React.Component {
                                             <div className='name'>{item.name}</div>
                                             <div className='delete'>
                                                 {
-                                                    item.status === 'sold' ? <Icon name='red' _className='deleteIcon' /> : <Icon name='yellow' _className='deleteIcon' />
+                                                    item.status === 'sold' ? <Icon name='red' _className='statusIcon' /> : <Icon name='yellow' _className='deleteIcon' />
                                                 }
 
                                             </div>
