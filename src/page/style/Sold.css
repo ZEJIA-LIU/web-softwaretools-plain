@@ -1,9 +1,84 @@
 .soldWrapper{
-    border:1px red solid;
     width: 60vw;
 }
 .rankWrapper{
+    position: relative;
+    justify-content: center;
+}
+.grassWrapper{
+    bottom: -6px;
     display: flex;
-    border:1px red solid;
+    align-items: flex-end;
+    position: relative;
+}
+.grass{
+    position: relative;
+    bottom: -6px
+}
+.white{
+    background-color: white;
+}
+.right{
+    right:-105px;
+}
+.left{
+    left:-105px;
+}
+.grassIcon{
+    height: 100px;
+
+}
+.awardWrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.award{
+    width:150px;
+    height: 280px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.fir{
+    background-color: hsl(0, 100%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 240px;
+    width: 150px;
+}
+.sec{
+    background-color: hsl(14, 100%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 180px;
+    width: 150px;
+}
+.thr{
+    background-color: hsl(28, 100%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100px;
+    width: 150px;
+}
+.plant{
+    display: flex;
     justify-content: space-around;
+}
+.rankIcon{
+    height: 30px;
+    width: 30px;
+}
+.rankIcon:hover{
+opacity: 0.5;
+}
+.num{
+    text-align: center;
+}
+
+.numIcon{
+    height: 80px;
 }
