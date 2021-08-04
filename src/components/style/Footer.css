@@ -5,6 +5,7 @@ footer{
     background-color: #d2b48c;
     display: flex;
     color:#fff;
+   
 }
 .footIcon{
     padding:0;
@@ -12,26 +13,43 @@ footer{
     width:26px;
     height:26px;
     fill:#eee;
-    margin-right: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.footIcon2{
-    padding:0;
-    margin:0;
-    margin-right: 30px;
-    width:32px;
-    height:32px;
-    fill:#eee;
+
+.detial{
+    width:500px;
+    margin-top: 5px;
 }
 .item{
     display: flex;
     margin-bottom: 5px;
-    width: 500px;
     
 }
+.footerIconWrapper{
+    display: flex;
+    width: 50px;
+    justify-content: center;
+}
 .contact{
+    margin-top:20px;
     margin-right: 50px;
     margin-left: 50px;
+    font-size: 24px;
+}
+.copyRightWrapper{
+    display: flex;
+    align-items: center;
+}
+.copyRightIcon{
+    height: 30px;
+    width: 30px;
+}
+.copyRightIconWrapper{
+    display: flex;
+    align-items: center;
+}
+.copyText{
+    font-size: 18px;
 }
