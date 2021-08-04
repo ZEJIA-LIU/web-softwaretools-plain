@@ -26,7 +26,7 @@
 
   ### The final performance of the project
 
-
+  During the meeting, our group conducted a complete demonstration of the entire pet website, and we were very satisfied with the entire functional module. At the same time, in order to make the page look more vivid, some styles have been added to make the whole project more complete and more attractive to customers to use and purchase pets. From the experience of the website, it is also more convenient for customers and store managers. It is expected that this project can bring a good user experience to customers and a higher profitability for the store manager.
 
   ## <span id="jump2">Analysis of project</span>
 
