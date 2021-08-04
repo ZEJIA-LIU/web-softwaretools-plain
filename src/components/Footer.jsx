@@ -19,7 +19,7 @@ class Component extends React.Component {
                         <div>xxxxxxxxx@xx.com </div>
                     </div>
                     <div className='item'>
-                        <Icon name='address' _className='footIcon2' />
+                        <Icon name='adress' _className='footIcon2' />
                         <div>No.xx at xxxStreet </div>
                     </div>
 

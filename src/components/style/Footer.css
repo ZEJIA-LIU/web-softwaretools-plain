@@ -1,8 +1,8 @@
 footer{
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
-    background-color: #2cf1d1;
+    background-color: #d2b48c;
     display: flex;
     color:#fff;
 }

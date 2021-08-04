@@ -1,6 +1,6 @@
 import React from 'react'
 import { observer, inject } from 'mobx-react'
-
+import './style/Sold.css'
 
 @inject('petArrayStore')
 @observer
@@ -19,7 +19,7 @@ class Component extends React.Component {
         this.props.history.push(`/?category=${category}`)
     }
     render() {
-
+        console.log('render')
         const { petArrayStore } = this.props
         const array = petArrayStore.curArray.filter(pet => pet.status !== "available")
         const dogNum = petArrayStore.curArray.filter(pet => pet.status !== "available" && pet.category.name === 'dog').length
@@ -29,8 +29,8 @@ class Component extends React.Component {
         const hamstersNum = petArrayStore.curArray.filter(pet => pet.status !== "available" && pet.category.name === 'hamsters').length
         const rankArray = [{ type: 'dog', num: dogNum }, { type: 'cat', num: catNum }, { type: 'bird', num: birdNum }, { type: 'rabbit', num: rabbitNum }, { type: 'hamsters', num: hamstersNum }].sort((a, b) => b.num - a.num)
         return (
-            <>
-                <ul>
+            <div className='soldWrapper'>
+                <ul className='rankWrapper'>
                     {rankArray.map(item => {
                         return (
                             <li key={item.type}>
@@ -66,7 +66,7 @@ class Component extends React.Component {
                         )
                     })}
                 </ul>
-            </>
+            </div>
         )
     }
 }

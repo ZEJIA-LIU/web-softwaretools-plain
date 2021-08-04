@@ -17,6 +17,13 @@ body{
     position: relative;
     background-color: #eee;
 }
+.clearfix:after{
+    content:''; 
+    display: block; 
+    clear: both;  
+    }
+
     
+  
     @import '~antd/dist/antd.css'
 

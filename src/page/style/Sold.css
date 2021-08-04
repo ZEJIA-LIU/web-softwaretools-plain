@@ -1,0 +1,9 @@
+.soldWrapper{
+    border:1px red solid;
+    width: 60vw;
+}
+.rankWrapper{
+    display: flex;
+    border:1px red solid;
+    justify-content: space-around;
+}

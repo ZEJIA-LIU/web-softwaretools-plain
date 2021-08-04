@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import './style/Header.css'
 import logo from '../constant/img/logo.jpeg'
 import Icon from './Icon'
-
 class Header extends React.Component {
     constructor(props) {
         super(props)
@@ -59,8 +58,8 @@ class Header extends React.Component {
                 <div className='addWrap'>
                     <Link className='add' to="/add" onClick={this.changePage} >
                         {
-                            select === 2 ? <Icon name='add' _className='addSelect' /> :
-                                <Icon name='add' />
+                            select === 2 ? <Icon name='add-black' _className='addSelect' /> : <Icon name='add' />
+
                         }
                     </Link>
 
