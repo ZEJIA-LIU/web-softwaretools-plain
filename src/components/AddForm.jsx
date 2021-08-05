@@ -55,6 +55,7 @@ class Component extends React.Component {
             newPetStore.setCategory(category)
         }
         if (name) {
+
             newPetStore.setName(name)
         }
         if (tags) {
@@ -135,7 +136,7 @@ class Component extends React.Component {
                                     Brave
                                 </Checkbox>
                             </Col>
-                            <Col span={8}>
+                            <Col span={10}>
                                 <Checkbox value="elegance" style={{ lineHeight: '32px' }}>
                                     Elegance
                                 </Checkbox>

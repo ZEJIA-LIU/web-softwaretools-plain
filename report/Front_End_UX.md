@@ -135,8 +135,10 @@ Added the function of deleting pets. As long as you click the delete button of t
 ## 1. Framework choice 
 ### 1. sample vs framework
 1. Do not choose framework
+
     For pages with complex operations, a lot of HTML will be mixed into the sample JS code, and the API names are very long, the code is too long, difficult to maintain, and the development efficiency is low. For this project, it needs rapid development, and time is very important, so the framework should be selected for development.
 2. Choose to use framework
+
     The essence of the framework is to encapsulate the API of sample JS, so that programmers can write code more conveniently. 
     Advantages of using framework：
     * Componentization allows complex DOM trees to be subdivided into components for better management
@@ -145,11 +147,13 @@ Added the function of deleting pets. As long as you click the delete button of t
     
 ### 2. Why react
 1. React, Vue and Angular
-React、Vue and Angular are the three most popular front end framework nowadays.
+
+    React、Vue and Angular are the three most popular front end framework nowadays.
 This project is a relatively easy front end project if seeing it from the view of features and structure. Therefore the three frameworks above can all fulfill basic requirements of this project.
 However, since that this project requires quick & agile development as the time is limited we chose to use React as our main developers are most familiar with React. 
 
 2. React.js's advantages 
+
     * ReactJS is made up of lots of components and each compnent has its own logic and controls. These components could be reused which helps a lot with code maintenance when handling large project.  
     * Speaking of function and performance，React uses virtual dom and it has its own dom diff algorithm. This helps optimize performance when the web needs frequent handling of dom nodes. For instance, in this project, we need to carry out frequent add, delete, modify to pet list. 
     * Easy to code: ReactJS uses JSX file which makes coding and understanding much easier. 

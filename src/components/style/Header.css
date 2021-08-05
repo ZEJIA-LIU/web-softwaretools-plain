@@ -6,7 +6,7 @@
   justify-content: space-between;
   display: flex;
   align-items: center;
-  background-color: #2cf1d1;
+  background-color: #d2b48c;
 }
 .logoWrapper{
     overflow: hidden;
@@ -50,7 +50,7 @@
     text-decoration: none;
 }
 .select  {
-    color:#07e9c3;
+    color:#d2b48c;
 }
 .icon{
     padding:0;
