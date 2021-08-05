@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import './style/Header.css'
-import logo from '../constant/img/logo.jpeg'
+import logo from '../constant/img/logo.png'
 import Icon from './Icon'
 import { inject, observer } from 'mobx-react'
 @inject('pageStore')
@@ -40,7 +40,7 @@ class Header extends React.Component {
 
             <header className='headerWrapper'>
                 <div className='logoWrapper'>
-                    <img src={logo} height='50px' width='80px' />
+                    <img src={logo} height='50px' width='60px' />
                 </div>
 
                 <div className='showAndRankWrapper'>
