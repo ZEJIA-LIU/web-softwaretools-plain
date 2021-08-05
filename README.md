@@ -5,21 +5,21 @@ Plain HTML, CSS and Javascript  website created for the software tools module at
 
 ## **Report**
 
-### [1. Background](report/Introduction.md)
+### [1. Background](report/.md)
 
 
-### [2. Features](report/BackgroundandMotivation.md)
+### [2. Features](report/.md)
 
 
 ### [3. Implementation - Front End / UX](report/Implementation.md)
 
 
-### [4. Process](report/UXDesign.md)
+### [4. Process](report/.md)
 
 
-### [5. Conclusion](report/sprints&ProjectManagement.md)
+### [5. Conclusion](report/.md)
 
 
-### [6. Working Demo](report/Evaluation.md)
+### [6. Working Demo](report/.md)
 
 See the [Video](https://) link showing a brief explanation of our project. 
