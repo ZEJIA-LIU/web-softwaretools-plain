@@ -1,4 +1,4 @@
-# Team4 for SEPG
+# Team4 for SEGP
   
 Plain HTML, CSS and Javascript  website created for the software tools module at University of Bristol.
 ## PetStore Display Link: https://zejia-liu.github.io/web-softwaretools-plain/
