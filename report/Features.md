@@ -10,6 +10,8 @@
 
 #### not implemented ####
 
+- Adding tips after cursor.
+
 - Copying **id** to clipboard by clicking pet's **id**.
 
 - Adding new *available* pets with default **id**.  ~~/**name**/~~(useless, banned), ~~**status**(*available*)~~(done).
