@@ -10,7 +10,7 @@
 
 #### not implemented ####
 
-- 
+- Hover . jump. pointer...
 
 - Deleting???? At which page???  Alert??
 
