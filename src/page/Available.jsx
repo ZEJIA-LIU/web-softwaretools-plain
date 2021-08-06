@@ -32,6 +32,17 @@ class Component extends React.Component {
         const array = petArray.filter(pet => pet.status === "available").filter((item) => rightTag(tag, item) === true).filter(item => rihtCategory(category, item))
         return (
             <div className='avaWrapper'>
+                <div className='tipsWrapper'>
+                    <div className='tips'>
+                        <div className='tipIconWrapper'>
+                            <Icon name='tips' _className='tipIcon' />
+                        </div>
+                        <div className='tipText'>
+                            Have a look at pets AVAILABLE here in our store today!
+                        </div>
+
+                    </div>
+                </div>
                 <div className='formWrapper'>
                     <div className='title'> select your pet </div>
                     <Form

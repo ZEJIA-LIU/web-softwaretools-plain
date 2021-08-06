@@ -50,6 +50,22 @@ class Component extends React.Component {
         }
         return (
             <div className='soldWrapper'>
+                <div className='soldTipWrap'>
+                    <div className='soldTip'>
+                        <Icon name='tips' _className='soldTipIcon'></Icon>
+                        <Icon name='red' _className='tipRed' />
+                        means the status of pet is SOLD!
+                    </div>
+                    <div className='soldTip'>
+                        <Icon name='tips' _className='soldTipIcon'></Icon>
+                        <Icon name='yellow' _className='tipRed' />
+                        means the status of pet is PENDING!
+                    </div>
+                    <div className='soldTip'>
+                        <Icon name='tips' _className='soldTipIcon'></Icon>
+                        Click on the pet icon below to jump!
+                    </div>
+                </div>
                 <div className='rankWrapper'>
 
                     <div className='awardWrapper'>
