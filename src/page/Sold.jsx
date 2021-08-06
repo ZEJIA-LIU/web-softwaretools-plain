@@ -2,6 +2,11 @@ import React from 'react'
 import { observer, inject } from 'mobx-react'
 import './style/Sold.css'
 import Icon from '../components/Icon'
+import cat from '../constant/img/cat.jpeg'
+import dog from '../constant/img/dog.jpeg'
+import bird from '../constant/img/bird.jpeg'
+import rabbit from '../constant/img/rabbit.jpeg'
+import hamsters from '../constant/img/hamsters.jpeg'
 @inject('petArrayStore')
 @inject('pageStore')
 @observer
@@ -47,6 +52,13 @@ class Component extends React.Component {
 
                 }
             }
+        }
+        const imgMap = {
+            'dog': dog,
+            'cat': cat,
+            'bird': bird,
+            'hamsters': hamsters,
+            'rabbit': rabbit
         }
         return (
             <div className='soldWrapper'>
@@ -138,7 +150,7 @@ class Component extends React.Component {
                                 <li key={item.id}>
                                     <div className='liWrap clearfix'>
                                         <div className='imgWrapper'>
-                                            <Icon name={item.category.name} _className='imgIcon' />
+                                            <img src={imgMap[item.category.name]} className='imgIcon' alt="" />
                                             <div className='petId'> {item.id}</div>
                                             <div className='name'>{item.name}</div>
                                             <div className='delete'>
@@ -152,10 +164,10 @@ class Component extends React.Component {
                                                     if (item.name !== 'team4') {
                                                         return <div className='tag'>
                                                             <div className='iconWrapper'>
-                                                                <Icon name='tag' _className='tagIcon' />
+                                                                <Icon name={item.name} _className='tagIcon' />
                                                             </div>
 
-                                                            <div className='tagName'> {item.name}</div>
+                                                            <div className={`tagName ${item.name}`}> {item.name}</div>
                                                         </div>
                                                     }
                                                 }

@@ -4,6 +4,11 @@ import { Form, Button, Select } from 'antd';
 import { rightTag, rihtCategory } from '../util/index'
 import './style/Ava.css'
 import Icon from '../components/Icon'
+import cat from '../constant/img/cat.jpeg'
+import dog from '../constant/img/dog.jpeg'
+import bird from '../constant/img/bird.jpeg'
+import rabbit from '../constant/img/rabbit.jpeg'
+import hamsters from '../constant/img/hamsters.jpeg'
 @inject('petArrayStore')
 @observer
 class Component extends React.Component {
@@ -30,6 +35,13 @@ class Component extends React.Component {
         const { petArrayStore } = this.props
         const { category, tag, petArray } = this.state
         const array = petArray.filter(pet => pet.status === "available").filter((item) => rightTag(tag, item) === true).filter(item => rihtCategory(category, item))
+        const imgMap = {
+            'dog': dog,
+            'cat': cat,
+            'bird': bird,
+            'hamsters': hamsters,
+            'rabbit': rabbit
+        }
         return (
             <div className='avaWrapper'>
                 <div className='tipsWrapper'>
@@ -99,11 +111,13 @@ class Component extends React.Component {
                 <div className='containWrapper'>
                     <ul className='contain'>
                         {array.map((item) => {
+
                             return (
                                 <li key={item.id}>
                                     <div className='liWrap clearfix'>
                                         <div className='imgWrapper'>
-                                            <Icon name={item.category.name} _className='imgIcon' />
+                                            <img src={imgMap[item.category.name]} className='imgIcon' alt="" />
+
                                             <div className='petId'> {item.id}</div>
                                             <div className='name'>{item.name}</div>
                                             <div onClick={() => {
@@ -119,10 +133,10 @@ class Component extends React.Component {
                                                     if (item.name !== 'team4') {
                                                         return <div className='tag'>
                                                             <div className='iconWrapper'>
-                                                                <Icon name='tag' _className='tagIcon' />
+                                                                <Icon name={item.name} _className='tagIcon' />
                                                             </div>
 
-                                                            <div className='tagName'> {item.name}</div>
+                                                            <div className={`tagName ${item.name}`}> {item.name}</div>
                                                         </div>
                                                     }
                                                 }
