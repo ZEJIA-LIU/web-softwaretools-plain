@@ -10,6 +10,8 @@
 
 #### not implemented ####
 
+- these are pets sold recently for your reference, you can click a category icon on the best-selling ranking to look for available ones of the same category.
+
 - Hover . jump. pointer...
 
 - Deleting???? At which page???  Alert??
