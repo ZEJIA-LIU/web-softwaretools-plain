@@ -10,7 +10,12 @@
 
 #### not implemented ####
 
+- 
+
+- Deleting???? At which page???
+
 - Adding tips after cursor.
+----
 
 - Copying **id** to clipboard by clicking pet's **id**.
 
@@ -102,21 +107,21 @@
 
 - Showing sold pets with a ranking list, redirect to *available* page by clicking **category** on the list.
 
-  - The ranking list ranks top 5 best selling **categories** with their sales.
+  - The ranking list ranks top 5 best-selling **categories** with their sales.
   
-  - When clicking on the **category**, page will redirect to *available* page with request parameter of the clicked **category**, which will be automatically filled into the sorting form.
+  - When clicking on the icon of a **category**, page will redirect to *available* page with request parameter of the clicked **category**, which will be automatically filled into the sorting form.
 
 ## Justification
 
 - Shopkeeper could analyse business and customers' preference by checking *sold* pets.
 
-- knowing best selling **categories** would help shopkeeper with arranging future management like updating inventory.
+- knowing best-selling **categories** would help shopkeeper with arranging future management like updating inventory.
 
-- Visitors without a clear purpose could take a look and it would help them to discover their preference(**category**).
+- Visitors without a clear purpose could take a look, and it would help them to discover their preference(**category**).
 
-- some people tend to buy best selling **categories** driven by group psychology, and inventory of those would be exactly the most after shopkeeper's business analysis.  
+- some people tend to buy best-selling **categories** driven by group psychology, and inventory of those would be exactly the most after shopkeeper's business analysis.  
 
-- Redirecting to **available** page with request parameter gives all users much much convinience in finding certain kind of *available* pets the want.
+- Redirecting to **available** page with request parameter gives all users much convenience in finding certain kind of *available* pets the want.
 
 # Testing
 
