@@ -70,6 +70,21 @@
 - This feature let visitors see more detailed information and distinguish different pets.
 
 # Testing
+这部分是通过发送http请求来实现的，因此我们使用jest对该feature进行unit test
+* 如何测试：pull代码，进入web-softwaretools-plain，
+  ```
+  npm install
+  npm run test newPet.test.js
+  ```
+* 测试文件
+
+  web-softwaretools-plain/src/test/newPet.test.js
+
+* 测试内容
+
+    mock创建一只新的宠物所需要的数据，把该数据作为参数调用创建新宠物的函数，检查函数的返回值是否如预期一样
+* 图片展示:
+![](../static/reportImg/test-1.png)
 
 ---
 
@@ -82,6 +97,41 @@
 - When a pet is sold, shopkeeper could update its status from *available* to *sold*, the pet would no longer be shown on the available page, which keeps the available page showing the most recent inventory.
 
 - *sold* pets are still remaining in the website, helping shopkeeper to review business.
+
+# Testing
+这部分是通过发送http请求来实现的，因此我们使用jest对该feature进行unit test
+* 如何测试：pull代码，进入web-softwaretools-plain，
+  ```
+  npm install
+  npm run test changeStatus.test.js
+  ```
+* 测试文件
+
+  web-softwaretools-plain/src/test/changeStatus.test.js
+
+* 测试内容
+
+    1、创建只新的宠物作为测试对象，状态为SOLD
+    2、修改该宠物的状态为PENDING
+    3、寻找该宠物，检查其状态是否为PEDNING
+
+* 图片展示:
+![](../static/reportImg/test-2.png)
+---
+
+# Feature 3
+
+- Sorting pets by **category** and/or **tag** on available page.
+
+  - One **category** and one **tag** could be chosen at the same time.
+
+## Justification
+
+- Most visitors have a clear purpose of which **category**/**tag** of pet they like, so they want to filter the inventory.
+
+- It is more efficient for the shopkeeper to gain an overview and manage available pets by sorting.
+
+- Visitors without a clear purpose could also get an overview of what **category**/**tag** of pets are on sale and browse pets with more comparability.
 
 # Testing
 这部分使用的是intergation测试，自动测试化工具是cypress。
@@ -102,24 +152,6 @@
 
 * 图片展示:
 ![](../static/reportImg/test-3.png)
----
-
-# Feature 3
-
-- Sorting pets by **category** and/or **tag** on available page.
-
-  - One **category** and one **tag** could be chosen at the same time.
-
-## Justification
-
-- Most visitors have a clear purpose of which **category**/**tag** of pet they like, so they want to filter the inventory.
-
-- It is more efficient for the shopkeeper to gain an overview and manage available pets by sorting.
-
-- Visitors without a clear purpose could also get an overview of what **category**/**tag** of pets are on sale and browse pets with more comparability.
-
-# Testing
-
 ---
 
 # Feature 4
