@@ -38,23 +38,24 @@
 ---
 
 # Feature 1
+(Administrator authorization feature not implemented so everyone is permitted to do.)
 
 - Adding new available pets with configurable information:
-
- - ***id**
- - ***name**
- - ***category** (e.g. dog/ cat/ fish)
- - ***status** (e.g. available/ sold **default: *available***)
- - **tag[]** (e.g. Brave/ Elegance/ Lazy/ Active/ Mild)
-
- /deleting available pet( with alert to double check)
+  - ***id**
+  - ***name**
+  - ***category** (e.g. dog/ cat/ fish)
+  - ***status** (e.g. available/ sold **default: *available***)
+  - **tag[]** (e.g. Brave/ Elegance/ Lazy/ Active/ Mild)
+- Deleting available pet(with alert to double check)
  
-- ***id** is required because it's reserved for querying, while the back-end does not support auto increment of pet's **id**.
+  - ***id** is required because it's reserved for querying, while the back-end does not support auto increment of pet's **id**.
 
-- ***name**, ***category**, ***status**, are required because they are necessary for every pet.
+  - ***name**, ***category**, ***status**, are required because they are necessary for every pet.
 
-- **tag[]** are optional, just for more detailed record.
-  - **tag[]** are only selectable(from **available tags[]**), they do not support customisation insertion due to the API data structure, updating **available tags[]** could only be done in editing source code.
+  - **tag[]** are optional, just for more detailed record.
+    - **tag[]** are only selectable(from **available tags[]**), they do not support customisation insertion due to the API data structure, updating **available tags[]** could only be done in editing source code.
+
+  - Shopkeeper could delete pets on available page to manage inventory. 
 
 ## Justification
 
@@ -64,11 +65,25 @@
 
 - This feature let visitors see more detailed information and distinguish different pets.
 
-
 # Testing
+这部分是通过发送http请求来实现的，因此我们使用jest对该feature进行unit test
+* 如何测试：pull代码，进入web-softwaretools-plain，
+  ```
+  npm install
+  npm run test changeStatus.test.js
+  ```
+* 测试文件
 
+  web-softwaretools-plain/src/test/changeStatus.test.js
+
+* 测试内容
 - 测试后端的返回值是否与编写传入的属性一致
+    1、创建只新的宠物作为测试对象，状态为SOLD
+    2、修改该宠物的状态为PENDING
+    3、寻找该宠物，检查其状态是否为PEDNING
 
+* 图片展示:
+![](../static/reportImg/test-1.png)
 ---
 
 # Feature 2
@@ -139,7 +154,6 @@
   * 测试文件
 
     
-
     file showFliter.spec.js?????? in where??????
 
   * Testing details：
@@ -158,13 +172,10 @@
        - whether the sorted pets' **tags** contain the chosen **tag**
 
          ???判断pet cards 的id是否都等于category
-
-    
-
+         
   * Testing result:
-    ![](C:\Users\Chent\OneDrive\static\reportImg\test-3.png)
+    ![](../static/reportImg/test-3.png)
 
-  
 ---
 
 # Feature 4
