@@ -16,11 +16,12 @@ class Component extends React.Component {
         super(props)
         const { location } = props
         const { search } = location
-        const category = search.split('=')[1]
+        const category = search.split('=')[1].split('&')[0]
+        const tag = search.split('=')[2]
         const { petArrayStore } = props
         this.state = {
             category: category || 'all',
-            tag: 'all',
+            tag: tag || 'all',
             petArray: petArrayStore.curArray
         }
     }
@@ -95,7 +96,7 @@ class Component extends React.Component {
                                 <Option value="brave">Brave</Option>
                                 <Option value="mild">Mild</Option>
                                 <Option value="active">Active</Option>
-                                <Option value="lazy">Lzay</Option>
+                                <Option value="lazy">Lazy</Option>
                                 <Option value="elegance">Elegance</Option>
                             </Select>
                         </Form.Item>
@@ -114,7 +115,7 @@ class Component extends React.Component {
 
                             return (
                                 <li key={item.id}>
-                                    <div className='liWrap clearfix'>
+                                    <div className={`liWrap clearfix ${item.category.name}`}>
                                         <div className='imgWrapper'>
                                             <img src={imgMap[item.category.name]} className='imgIcon' alt="" />
 

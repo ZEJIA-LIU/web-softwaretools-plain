@@ -93,7 +93,7 @@ class Component extends React.Component {
                                     return (
                                         <div key={pet.type}>
                                             <div className='num'>{pet.num}</div>
-                                            <div className='iconWrapper' onClick={() => { this.jumpToAva(pet.type) }}>
+                                            <div className='iconWrapper' id={pet.type} onClick={() => { this.jumpToAva(pet.type) }}>
                                                 <Icon name={pet.type} _className='rankIcon' />
                                             </div>
                                         </div>)
@@ -109,7 +109,7 @@ class Component extends React.Component {
                                     return (
                                         <div key={pet.type}>
                                             <div className='num'>{pet.num}</div>
-                                            <div className='iconWrapper' onClick={() => { this.jumpToAva(pet.type) }}>
+                                            <div className='iconWrapper' id={pet.type} onClick={() => { this.jumpToAva(pet.type) }}>
                                                 <Icon name={pet.type} _className='rankIcon' />
                                             </div>
                                         </div>)
@@ -126,7 +126,7 @@ class Component extends React.Component {
                                 return (
                                     <div key={pet.type}>
                                         <div className='num'>{pet.num}</div>
-                                        <div className='iconWrapper' onClick={() => { this.jumpToAva(pet.type) }}>
+                                        <div className='iconWrapper' id={pet.type} onClick={() => { this.jumpToAva(pet.type) }}>
                                             <Icon name={pet.type} _className='rankIcon' />
                                         </div>
                                     </div>)
@@ -163,7 +163,7 @@ class Component extends React.Component {
                                                 item => {
                                                     if (item.name !== 'team4') {
                                                         return <div className='tag'>
-                                                            <div className='iconWrapper'>
+                                                            <div className='iconWrapper'  >
                                                                 <Icon name={item.name} _className='tagIcon' />
                                                             </div>
 

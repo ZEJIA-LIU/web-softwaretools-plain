@@ -77,7 +77,24 @@
 - *sold* pets are still remaining in the website, helping shopkeeper to review business.
 
 # Testing
+这部分使用的是intergation测试，自动测试化工具是cypress。
 
+* 如何测试：pull代码，进入web-softwaretools-plain，
+  ```
+  npm install
+  ./node_modules/.bin/cypress run --spec ./cypress/integration/showFliter.spec.js
+  ```
+
+* 测试文件
+
+  web-softwaretools-plain/cypress/integration/showFliter.spec.js
+
+* 测试内容：
+  1. 判断是否能根据category寻找pets。判断pet cards 的id是否都等于category
+  2. 判断是否能根据tag寻找pets。判断pet的tags是否包括寻找的tag
+
+* 图片展示:
+![](../static/reportImg/test-3.png)
 ---
 
 # Feature 3
@@ -119,5 +136,22 @@
 - Redirecting to **available** page with request parameter gives all users much much convinience in finding certain kind of *available* pets the want.
 
 # Testing
+这部分使用的是intergation测试，自动测试化工具是cypress。
 
+* 如何测试：pull代码，进入web-softwaretools-plain，
+  ```
+  npm install
+  ./node_modules/.bin/cypress run --spec ./cypress/integration/rankJumpShow.spec.js
+  ```
+
+* 测试文件
+
+  web-softwaretools-plain/cypress/integration/rankJumpShow.spec.js
+
+* 测试内容：
+  1. 找到宠物icon后点击，可以跳转到正确的页面。（  通过判断跳转后的url是否为正确的url）
+  2. 跳转到show页面后，页面的category的input的内容为正确的宠物。有一跳转的时候会带上category=${pet}的参数，只需要检查该值是否和category的input的值相等即可
+
+* 图片展示:
+![](../static/reportImg/test-4.png)
 ---
