@@ -1,20 +1,18 @@
 # Possible Features
 
-1. Adding new available pets with more details(default **status**: *available* ).
+1. Adding new available pets with more details(default **status**: *available*) / deleting available pet.
 
 2. Updating status of pet by **id**.  
 
 3. Sorting pets by **category** and/or **tag**.
 
-4. Showing sold pets with a ranking list, redirecting to *available* page with certain search parameter by clicking **category** on the list.
+4. Showing sold pets with a ranking list, jump to *available* page with certain category parameter by clicking **category** icon on the list.
 
 #### not implemented ####
 
-- these are pets sold recently for your reference, you can click a category icon on the best-selling ranking to look for available ones of the same category.
-
 - Hover . jump. pointer...
 
-- Deleting???? At which page???  Alert??
+- Alert??
 
 - Adding tips after cursor.
 ----
@@ -29,8 +27,6 @@
 
 - Updating **available tags[]** which is selected while adding pets.
 
-- Updating pet's **tag[]**.(To be discussed).
-
 - Administrator authorization. 
 
 - Booking/order system. 
@@ -38,8 +34,6 @@
 - Updating status of pets on *available* page.(Could be implemented after implementing administrator authorization)
 
 - Updating pet detail by **name**.(Not possible due to API).
-
-- ~~Adding new pet without **name**.~~(useless, banned).
 
 ---
 
@@ -53,7 +47,8 @@
  - ***status** (e.g. available/ sold **default: *available***)
  - **tag[]** (e.g. Brave/ Elegance/ Lazy/ Active/ Mild)
 
-
+ /deleting available pet( with alert to double check)
+ 
 - ***id** is required because it's reserved for querying, while the back-end does not support auto increment of pet's **id**.
 
 - ***name**, ***category**, ***status**, are required because they are necessary for every pet.
@@ -69,7 +64,10 @@
 
 - This feature let visitors see more detailed information and distinguish different pets.
 
-* 
+
+# Testing
+
+- 测试后端的返回值是否与编写传入的属性一致
 
 ---
 
@@ -119,9 +117,9 @@
 - Visitors without a clear purpose could also get an overview of what **category**/**tag** of pets are on sale and browse pets with more comparability.
 
 # Testing
-* We test this feature by automated integration testing tool: cypress.
+* We test this feature by automated integration testing tool: cypress. Because this feature has things to deal with different pages so we chose integration testing but not unit testing.
 
-  Testing Process: 
+### Testing Process: 
 
   * install cypress
 
@@ -148,18 +146,20 @@
 
     1. Sorting by **category**: 
 
-       - whether specific kind of pets could be sorted by **category** from all available pets??. 判断是否能根据**category**寻找pets.
+       - 判断选择后的标签是否包含category
+       - whether specific kind of pets could be sorted by **category** from all available pets??. 判断是否能根据**category**寻找pets.判断选择后的标签是否包含category
        - whether the sorted pets' **category** id equals???判断pet cards 的id是否都等于category
 
     2. Sorting by **tag**: 
 
+       - 判断选择后的标签是否包含tag
        - whether specific kind of pets could be sorted by** tag** from all available pets. 判断是否能根据category寻找pets.
 
        - whether the sorted pets' **tags** contain the chosen **tag**
 
          ???判断pet cards 的id是否都等于category
 
-    3. 判断是否能根据tag寻找pets。判断pet的tags是否包括寻找的tag
+    
 
   * Testing result:
     ![](C:\Users\Chent\OneDrive\static\reportImg\test-3.png)
@@ -203,23 +203,19 @@
 
   * Testing details：
 
-    1. Redirecting to available page  with correct **category** parameter by clicking icon: 
+    1. Redirecting to available page with correct **category** parameter by clicking icon: 
 
-       - when a category icon is clicked, the page redirected to is correct (By testing the redirecting url).
+       - when a category icon is clicked, the page jump to is correct (By testing the new url).
 
-    2. Inputing correct **category** into the sorting form automatically after redirecting: 
+    2. Inputing correct **category** into the sorting form automatically after jumping: 
 
        - whether specific kind of pets could be sorted by** tag** from all available pets. 判断是否能根据category寻找pets.
 
        - whether the sorted pets' **tags** contain the chosen **tag**
 
-         ???判断pet cards 的id是否都等于category
-
-    3. 判断是否能根据tag寻找pets。判断pet的tags是否包括寻找的tag
-
   * 测试内容：
 
-    1. 找到宠物icon后点击，可以跳转到正确的页面。（  通过判断跳转后的url是否为正确的url）
+    1. 找到宠物icon后点击，可以跳转到正确的页面。（通过判断跳转后的url是否为正确的url）
     2. 跳转到show页面后，页面的category的input的内容为正确的宠物。有一跳转的时候会带上category=${pet}的参数，只需要检查该值是否和category的input的值相等即可
 
   * 图片展示:
