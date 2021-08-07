@@ -60,8 +60,20 @@
 
 - This feature let visitors see more detailed information and distinguish different pets.
 
-# Testing
 
+# Testing
+这部分是通过发送http请求来实现的，因此我们使用jest对该feature进行unit test
+* 如何测试：pull代码，进入web-softwaretools-plain，
+  ```
+  npm install
+  npm run test newPet.test.js
+  ```
+* 测试文件
+  web-softwaretools-plain/src/test/newPet.test.js
+* 测试内容
+    mock创建一只新的宠物所需要的数据，把该数据作为参数调用创建新宠物的函数，检查函数的返回值是否如预期一样
+* 图片展示:
+![](../static/reportImg/test-1.png)
 ---
 
 # Feature 2
