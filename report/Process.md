@@ -30,23 +30,41 @@ Documentation of your sprints, including both high level overview, timeline, and
 High level overview: For quick in time justification of our webpage to cater to quick feature design and demand changes, our sprints are designed to be very short term and we nearly have a new sprint for each meeting every three days. 
 ### Timeline: grant chart/sprint backlog
 
-
+![timeline](../static/reportImg/timeline.png)
 
 ### Critical points:
-Early form of webpage basic 
+1. Early form of webpage basic 
+ This version came out after our first meeting when we roughly talked about some potential features and developers tried to implement them then, 
+
+![first](../static/reportImg/dev1-4.png)
+
+2. Version with full features 
+ This version came out after the third meeting during which we finally decided on which features we were going to add. Our design changed a lot from the first meeting to the third. This sprint shows how we improved our design from the previous one. 
+ 
+![secondversion](../static/reportImg/dev1-6.png)
+
+3. Beautified with CSS
+ Version after putting on CSS:
+
+![beautified](../static/reportImg/dev2-3.png)
+
+4. Modified after HCI evaluation
+ After analysing HCI feedback, we realized that our webpage might only make sense to ourselves and for other people it looked a little bit confusing. Therefore we discussed during forth meeting and decided to add some explanation and tips on the webpage to make it clearer. 
+
+
 
 # Continuous Integration
 ### branch
-Every time we meet, a new RELEASE branch is created with the current date. For example, if today is 2021/07/27, then we would create a release-20210727 branch
+Every time we meet, a new RELEASE branch is created with the current date. For example, if today is 2021/07/27, then we would create a release-20210727 branch. We git push things to this branch first and then one person is in charge of merging useful information to main branch. 
 
 ### pull code
-Choose the latest branch to develop on, not the main
+We choose the latest branch to develop on, not the main. 
 
 ### merge into main
-Before each meeting, zejia liu will merge the code on the latest release branch into main, and after the meeting a new release branch will be created
+Before each meeting, zejia liu will merge the code on the latest release branch into main, and after the meeting a new release branch will be created. 
 
-### work space
-As some students are not familiar with git, we will create a workspace directory and each student can only modify the contents of their own directory to prevent merging conflicts
+### workSpace
+To avoid potential merging conflicts, we will create a workSpace directory and each member can only modify the contents in their own directory. 
 
 ### commit
 We should have used eslint as the specification for the submission, but for convenience we just made our own stipulations. The stipulation is as follows:
