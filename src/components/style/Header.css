@@ -31,12 +31,13 @@
 
 }
 .pageButton{
-    width: 80px;
-    height: 30px;
-    border-radius: 5px;
+    width: 130px;
+    height: 38px;
+    border-radius: 15px;
     margin-right: 50px;
     background-color: hsl(217, 78%, 61%);
     display: flex;
+    font-size: 18px;
     justify-content: center;
     align-items: center;
 }

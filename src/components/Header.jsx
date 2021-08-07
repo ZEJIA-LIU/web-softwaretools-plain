@@ -46,10 +46,10 @@ class Header extends React.Component {
                 <div className='showAndRankWrapper'>
                     <div className='showAndRank'>
                         <div className='pageButton'>
-                            <Link className={pageState === 1 ? ' link select ' : 'link'} to="/sold" onClick={this.changePage} >Rank</Link>
+                            <Link className={pageState === 1 ? ' link select ' : 'link'} to="/sold" onClick={this.changePage} >Best-selling!</Link>
                         </div>
                         <div className='pageButton'>
-                            <Link className={pageState === 0 ? ' link select ' : 'link'} to="/" onClick={this.changePage} >Show</Link>
+                            <Link className={pageState === 0 ? ' link select ' : 'link'} to="/" onClick={this.changePage} >Available Pets</Link>
                         </div>
 
                     </div>

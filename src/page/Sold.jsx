@@ -2,6 +2,11 @@ import React from 'react'
 import { observer, inject } from 'mobx-react'
 import './style/Sold.css'
 import Icon from '../components/Icon'
+import cat from '../constant/img/cat.jpeg'
+import dog from '../constant/img/dog.jpeg'
+import bird from '../constant/img/bird.jpeg'
+import rabbit from '../constant/img/rabbit.jpeg'
+import hamsters from '../constant/img/hamsters.jpeg'
 @inject('petArrayStore')
 @inject('pageStore')
 @observer
@@ -48,8 +53,31 @@ class Component extends React.Component {
                 }
             }
         }
+        const imgMap = {
+            'dog': dog,
+            'cat': cat,
+            'bird': bird,
+            'hamsters': hamsters,
+            'rabbit': rabbit
+        }
         return (
             <div className='soldWrapper'>
+                <div className='soldTipWrap'>
+                    <div className='soldTip'>
+                        <Icon name='tips' _className='soldTipIcon'></Icon>
+                        <Icon name='red' _className='tipRed' />
+                        means the status of pet is SOLD!
+                    </div>
+                    <div className='soldTip'>
+                        <Icon name='tips' _className='soldTipIcon'></Icon>
+                        <Icon name='yellow' _className='tipRed' />
+                        means the status of pet is PENDING!
+                    </div>
+                    <div className='soldTip'>
+                        <Icon name='tips' _className='soldTipIcon'></Icon>
+                        Click on the pet icon below to jump!
+                    </div>
+                </div>
                 <div className='rankWrapper'>
 
                     <div className='awardWrapper'>
@@ -65,7 +93,7 @@ class Component extends React.Component {
                                     return (
                                         <div key={pet.type}>
                                             <div className='num'>{pet.num}</div>
-                                            <div className='iconWrapper' onClick={() => { this.jumpToAva(pet.type) }}>
+                                            <div className='iconWrapper' id={pet.type} onClick={() => { this.jumpToAva(pet.type) }}>
                                                 <Icon name={pet.type} _className='rankIcon' />
                                             </div>
                                         </div>)
@@ -81,7 +109,7 @@ class Component extends React.Component {
                                     return (
                                         <div key={pet.type}>
                                             <div className='num'>{pet.num}</div>
-                                            <div className='iconWrapper' onClick={() => { this.jumpToAva(pet.type) }}>
+                                            <div className='iconWrapper' id={pet.type} onClick={() => { this.jumpToAva(pet.type) }}>
                                                 <Icon name={pet.type} _className='rankIcon' />
                                             </div>
                                         </div>)
@@ -98,7 +126,7 @@ class Component extends React.Component {
                                 return (
                                     <div key={pet.type}>
                                         <div className='num'>{pet.num}</div>
-                                        <div className='iconWrapper' onClick={() => { this.jumpToAva(pet.type) }}>
+                                        <div className='iconWrapper' id={pet.type} onClick={() => { this.jumpToAva(pet.type) }}>
                                             <Icon name={pet.type} _className='rankIcon' />
                                         </div>
                                     </div>)
@@ -122,7 +150,7 @@ class Component extends React.Component {
                                 <li key={item.id}>
                                     <div className='liWrap clearfix'>
                                         <div className='imgWrapper'>
-                                            <Icon name={item.category.name} _className='imgIcon' />
+                                            <img src={imgMap[item.category.name]} className='imgIcon' alt="" />
                                             <div className='petId'> {item.id}</div>
                                             <div className='name'>{item.name}</div>
                                             <div className='delete'>
@@ -135,11 +163,11 @@ class Component extends React.Component {
                                                 item => {
                                                     if (item.name !== 'team4') {
                                                         return <div className='tag'>
-                                                            <div className='iconWrapper'>
-                                                                <Icon name='tag' _className='tagIcon' />
+                                                            <div className='iconWrapper'  >
+                                                                <Icon name={item.name} _className='tagIcon' />
                                                             </div>
 
-                                                            <div className='tagName'> {item.name}</div>
+                                                            <div className={`tagName ${item.name}`}> {item.name}</div>
                                                         </div>
                                                     }
                                                 }
