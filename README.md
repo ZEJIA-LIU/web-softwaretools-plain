@@ -20,6 +20,3 @@ Plain HTML, CSS and Javascript  website created for the software tools module at
 ### [5. Conclusion](report/Conclusion.md)
 
 
-### [6. Working Demo](report/.md)
-
-See the [Video](https://) link showing a brief explanation of our project. 
