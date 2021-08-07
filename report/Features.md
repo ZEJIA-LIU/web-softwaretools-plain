@@ -1,12 +1,12 @@
 # Possible Features
 
-1.Adding new available pets with more details(default **status**: *available* ).
+1. Adding new available pets with more details(default **status**: *available* ).
 
-2.Updating status of pet by **id**.  
+2. Updating status of pet by **id**.  
 
-3.Sorting pets by **category** and/or **tag**.
+3. Sorting pets by **category** and/or **tag**.
 
-4.Showing sold pets with a ranking list, redirecting to *available* page with certain search parameter by clicking **category** on the list.
+4. Showing sold pets with a ranking list, redirecting to *available* page with certain search parameter by clicking **category** on the list.
 
 #### not implemented ####
 
@@ -69,22 +69,7 @@
 
 - This feature let visitors see more detailed information and distinguish different pets.
 
-# Testing
-这部分是通过发送http请求来实现的，因此我们使用jest对该feature进行unit test
-* 如何测试：pull代码，进入web-softwaretools-plain，
-  ```
-  npm install
-  npm run test newPet.test.js
-  ```
-* 测试文件
-
-  web-softwaretools-plain/src/test/newPet.test.js
-
-* 测试内容
-
-    mock创建一只新的宠物所需要的数据，把该数据作为参数调用创建新宠物的函数，检查函数的返回值是否如预期一样
-* 图片展示:
-![](../static/reportImg/test-1.png)
+* 
 
 ---
 
@@ -134,24 +119,52 @@
 - Visitors without a clear purpose could also get an overview of what **category**/**tag** of pets are on sale and browse pets with more comparability.
 
 # Testing
-这部分使用的是intergation测试，自动测试化工具是cypress。
+* We test this feature by automated integration testing tool: cypress.
 
-* 如何测试：pull代码，进入web-softwaretools-plain，
-  ```
-  npm install
-  ./node_modules/.bin/cypress run --spec ./cypress/integration/showFliter.spec.js
-  ```
+  Testing Process: 
 
-* 测试文件
+  * install cypress
 
-  web-softwaretools-plain/cypress/integration/showFliter.spec.js
+  * create testing file : 
 
-* 测试内容：
-  1. 判断是否能根据category寻找pets。判断pet cards 的id是否都等于category
-  2. 判断是否能根据tag寻找pets。判断pet的tags是否包括寻找的tag
+    - web-softwaretools-plain/cypress/integration/showFliter.spec.js
 
-* 图片展示:
-![](../static/reportImg/test-3.png)
+  * change directory to web-softwaretools-plain
+
+  * commands: 
+
+    ```
+    npm install
+    ./node_modules/.bin/cypress run --spec ./cypress/integration/showFliter.spec.js
+    ```
+
+  * 测试文件
+
+    
+
+    file showFliter.spec.js?????? in where??????
+
+  * Testing details：
+
+    1. Sorting by **category**: 
+
+       - whether specific kind of pets could be sorted by **category** from all available pets??. 判断是否能根据**category**寻找pets.
+       - whether the sorted pets' **category** id equals???判断pet cards 的id是否都等于category
+
+    2. Sorting by **tag**: 
+
+       - whether specific kind of pets could be sorted by** tag** from all available pets. 判断是否能根据category寻找pets.
+
+       - whether the sorted pets' **tags** contain the chosen **tag**
+
+         ???判断pet cards 的id是否都等于category
+
+    3. 判断是否能根据tag寻找pets。判断pet的tags是否包括寻找的tag
+
+  * Testing result:
+    ![](C:\Users\Chent\OneDrive\static\reportImg\test-3.png)
+
+  
 ---
 
 # Feature 4
@@ -175,22 +188,41 @@
 - Redirecting to **available** page with request parameter gives all users much convenience in finding certain kind of *available* pets the want.
 
 # Testing
-这部分使用的是intergation测试，自动测试化工具是cypress。
+* 这部分使用的是intergation测试，自动测试化工具是cypress。
 
-* 如何测试：pull代码，进入web-softwaretools-plain，
-  ```
-  npm install
-  ./node_modules/.bin/cypress run --spec ./cypress/integration/rankJumpShow.spec.js
-  ```
+  * 如何测试：pull代码，进入web-softwaretools-plain，
 
-* 测试文件
+    ```
+    npm install
+    ./node_modules/.bin/cypress run --spec ./cypress/integration/rankJumpShow.spec.js
+    ```
 
-  web-softwaretools-plain/cypress/integration/rankJumpShow.spec.js
+  * 测试文件
 
-* 测试内容：
-  1. 找到宠物icon后点击，可以跳转到正确的页面。（  通过判断跳转后的url是否为正确的url）
-  2. 跳转到show页面后，页面的category的input的内容为正确的宠物。有一跳转的时候会带上category=${pet}的参数，只需要检查该值是否和category的input的值相等即可
+    web-softwaretools-plain/cypress/integration/rankJumpShow.spec.js
 
-* 图片展示:
-![](../static/reportImg/test-4.png)
+  * Testing details：
+
+    1. Redirecting to available page  with correct **category** parameter by clicking icon: 
+
+       - when a category icon is clicked, the page redirected to is correct (By testing the redirecting url).
+
+    2. Inputing correct **category** into the sorting form automatically after redirecting: 
+
+       - whether specific kind of pets could be sorted by** tag** from all available pets. 判断是否能根据category寻找pets.
+
+       - whether the sorted pets' **tags** contain the chosen **tag**
+
+         ???判断pet cards 的id是否都等于category
+
+    3. 判断是否能根据tag寻找pets。判断pet的tags是否包括寻找的tag
+
+  * 测试内容：
+
+    1. 找到宠物icon后点击，可以跳转到正确的页面。（  通过判断跳转后的url是否为正确的url）
+    2. 跳转到show页面后，页面的category的input的内容为正确的宠物。有一跳转的时候会带上category=${pet}的参数，只需要检查该值是否和category的input的值相等即可
+
+  * 图片展示:
+    ![](../static/reportImg/test-4.png)
+
 ---
