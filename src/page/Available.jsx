@@ -16,8 +16,12 @@ class Component extends React.Component {
         super(props)
         const { location } = props
         const { search } = location
-        const category = search.split('=')[1].split('&')[0]
-        const tag = search.split('=')[2]
+        let category = 'all'
+        let tag = 'all'
+        if (search) {
+            category = search.split('=')[1].split('&')[0]
+            tag = search.split('=')[2]
+        }
         const { petArrayStore } = props
         this.state = {
             category: category || 'all',
