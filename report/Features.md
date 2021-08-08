@@ -8,31 +8,20 @@
 
 4. Showing sold pets with a ranking list, jump to *available* page with certain category parameter by clicking **category** icon on the list.
 
-#### not implemented ####
+## ->>>>>> not implemented 
 
 - Hover . jump. pointer...
-
 - Alert??
-
 - Adding tips after cursor.
-----
-
-- Copying **id** to clipboard by clicking pet's **id**.
-
+- 
+- Copying **id** to clipboard by clicking pet's **id**.  
 - Adding new *available* pets with default **id**.  ~~/**name**/~~(useless, banned), ~~**status**(*available*)~~(done).
-
 - Sorting pets on *available* page by multiple **tags**.
-
 - Updating **available categories[]** which is selected while adding pets.
-
 - Updating **available tags[]** which is selected while adding pets.
-
 - Administrator authorization. 
-
 - Booking/order system. 
-
 - Updating status of pets on *available* page.(Could be implemented after implementing administrator authorization)
-
 - Updating pet detail by **name**.(Not possible due to API).
 
 ---
@@ -40,22 +29,24 @@
 # Feature 1
 (Administrator authorization feature not implemented so everyone is permitted to do.)
 
-- Adding new available pets with configurable information:
+- ### Adding new available pets with configurable information:
+
   - ***id**
   - ***name**
   - ***category** (e.g. dog/ cat/ fish)
   - ***status** (e.g. available/ sold **default: *available***)
   - **tag[]** (e.g. Brave/ Elegance/ Lazy/ Active/ Mild)
-- Deleting available pet(with alert to double check)
- 
-  - ***id** is required because it's reserved for querying, while the back-end does not support auto increment of pet's **id**.
 
-  - ***name**, ***category**, ***status**, are required because they are necessary for every pet.
+- ### Deleting available pet(with alert to double check)
 
-  - **tag[]** are optional, just for more detailed record.
-    - **tag[]** are only selectable(from **available tags[]**), they do not support customisation insertion due to the API data structure, updating **available tags[]** could only be done in editing source code.
+---
 
-  - Shopkeeper could delete pets on available page to manage inventory. 
+> - ***id** is required because it's reserved for querying, while the back-end does not support auto increment of pet's **id**.
+> 
+> - ***name**, ***category**, ***status**, are required because they are necessary for every pet.
+> 
+> - **tag[]** are optional, just for more detailed record.
+>   > **tag[]** are only selectable(from **available tags[]**), they do not support customisation insertion due to the API data structure, updating **available tags[]** could only be done in editing source code.
 
 ## Justification
 
@@ -65,27 +56,59 @@
 
 - This feature let visitors see more detailed information and distinguish different pets.
 
-# Testing
-这部分是通过发送http请求来实现的，因此我们使用jest对该feature进行unit test
-* 如何测试：pull代码，进入web-softwaretools-plain，
-  ```
-  npm install
-  npm run test changeStatus.test.js
-  ```
-* 测试文件
+- Shopkeeper could delete pets on available page to manage inventory. 
 
-  web-softwaretools-plain/src/test/changeStatus.test.js
-
-* 测试内容
-- 测试后端的返回值是否与编写传入的属性一致
-    1、创建只新的宠物作为测试对象，状态为SOLD
-    2、修改该宠物的状态为PENDING
-    3、寻找该宠物，检查其状态是否为PEDNING
-
-* 图片展示:
-![](../static/reportImg/test-1.png)
 ---
 
+# Testing
+
+- We test this feature by automated unit testing tool: jest.
+  > Because this feature is mostly implemented by one specific function.
+
+## Testing details：
+
+  1. Mock data of a pet being added.
+  2. Call the tested adding function with the data as parameter.
+  3. Check response from the function(which is received from back-end) is consistent with the mocked data.  
+
+### Testing Process: 
+
+1. Install jest(Add package into .json file)
+2. Create testing file : 
+```
+web-softwaretools-plain/src/test/changeStatus.test.js
+```
+```javascript
+import { addPet, changeStats, findById } from '../module/index'
+const newPEt = {
+    name: 'testPet',
+    category: { name: 'test', id: 0 },
+    status: 'sold',
+    tags: [],
+    id: 99999
+}
+test('testChangeStatus', () => {
+    return addPet(newPEt).then(res => {
+        return changeStats(99999, 'pending').then(res => {
+            return findById(99999).then(res => {
+                const { data } = res
+                expect(data.status).toBe('pending')
+            })
+        })
+    })
+})
+```
+3. Change directory to web-softwaretools-plain
+4. Run commands:
+```
+npm install
+npm run test changeStatus.test.js
+```  
+    
+### Testing result:
+
+  ![](../static/reportImg/test-1.png)
+  
 # Feature 2
 
 - Updating status of pet by entering ***id**.
