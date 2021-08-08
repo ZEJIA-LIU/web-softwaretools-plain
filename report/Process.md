@@ -49,6 +49,7 @@ High level overview: For quick in time justification of our webpage to cater to 
 ![beautified](../static/reportImg/dev2-3.png)
 
 4. Modified after HCI evaluation
+ 
  After analysing HCI feedback, we realized that our webpage might only make sense to ourselves and for other people it looked a little bit confusing. Therefore we discussed during forth meeting and decided to add some explanation and tips on the webpage to make it clearer. 
 
 
