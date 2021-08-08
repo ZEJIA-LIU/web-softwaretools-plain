@@ -27,7 +27,7 @@
 ---
 
 # Feature 1
-(Administrator authorization feature not implemented so everyone is permitted to do.)
+> Administrator authorization feature not implemented so everyone is permitted to do.
 
 - ### Adding new available pets with configurable information:
 
@@ -65,16 +65,16 @@
 - We test this feature by automated unit testing tool: jest.
   > Because this feature is mostly implemented by one specific function.
 
-## Testing details：
+## Testing details
 
   1. Mock data of a pet being added.
   2. Call the tested adding function with the data as parameter.
   3. Check response from the function(which is received from back-end) is consistent with the mocked data.  
 
-### Testing Process: 
+### Testing Process
 
 1. Install jest(Add package into .json file)
-2. Create testing file : 
+2. Create testing file: 
 ```
 web-softwaretools-plain/src/test/changeStatus.test.js
 ```
@@ -105,7 +105,7 @@ npm install
 npm run test changeStatus.test.js
 ```  
     
-### Testing result:
+### Testing result
 
   ![](../static/reportImg/test-1.png)
   
