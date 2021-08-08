@@ -65,21 +65,21 @@ class Component extends React.Component {
                 <div className='soldTipWrap'>
                     <div className='soldTip'>
                         <Icon name='tips' _className='soldTipIcon'></Icon>
-                        <div className='tipText'>
+                        <div className='soldTipText'>
                             <Icon name='red' _className='tipRed' />
                             means the status of pet is SOLD!
                         </div>
                     </div>
                     <div className='soldTip'>
                         <Icon name='tips' _className='soldTipIcon'></Icon>
-                        <div className='tipText'>
+                        <div className='soldTipText'>
                             <Icon name='yellow' _className='tipRed' />
                             means the status of pet is PENDING!
                         </div >
                     </div>
                     <div className='soldTip'>
                         <Icon name='tips' _className='soldTipIcon'></Icon>
-                        <div className='tipText'>
+                        <div className='soldTipText'>
                             Below are best selling pets, click on the category icon to jump to available pets in this category!
                         </div>
 

@@ -74,6 +74,7 @@
 }
 .rankIcon:hover{
 opacity: 0.5;
+cursor: pointer;
 }
 .num{
     text-align: center;
@@ -111,7 +112,7 @@ opacity: 0.5;
     margin-left: -140px;
     margin-right: -130px;
 }
-.tipText{
+.soldTipText{
     width: 30vw;
     margin-top: 5px;
     display: flex;
