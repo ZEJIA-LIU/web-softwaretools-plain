@@ -1,56 +1,55 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import './style/Header.css'
-import logo from '../constant/img/logo.jpeg'
+import logo from '../constant/img/logo.png'
 import Icon from './Icon'
-
+import { inject, observer } from 'mobx-react'
+@inject('pageStore')
+@observer
 class Header extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            select: 0
-        }
-    }
-
-    componentDidMount() {
-        const hash = window.location.hash
-        if (hash.includes('sold')) {
-            this.setState({ select: 1 })
-        } else if (hash.includes('add')) {
-            this.setState({ select: 2 })
-        } else {
-            this.setState({ select: 0 })
-        }
-    }
-
     changePage = () => {
+        const { pageStore } = this.props
+        const { setPageState } = pageStore
         setTimeout(() => {
             const hash = window.location.hash
             if (hash.includes('sold')) {
-                this.setState({ select: 1 })
+                setPageState(1)
             } else if (hash.includes('add')) {
-                this.setState({ select: 2 })
+                setPageState(2)
             } else {
-                this.setState({ select: 0 })
+                setPageState(0)
             }
         })
     }
+    componentWillMount() {
+        const { pageStore } = this.props
+        const { setPageState } = pageStore
+        const hash = window.location.hash
+        if (hash.includes('sold')) {
+            setPageState(1)
+        } else if (hash.includes('add')) {
+            setPageState(2)
+        } else {
+            setPageState(0)
+        }
+    }
     render() {
-        const { select } = this.state
+        const { pageStore } = this.props
+        const { pageState } = pageStore
         return (
 
             <header className='headerWrapper'>
                 <div className='logoWrapper'>
-                    <img src={logo} height='50px' width='80px' />
+                    <img src={logo} height='50px' width='60px' />
                 </div>
 
                 <div className='showAndRankWrapper'>
                     <div className='showAndRank'>
                         <div className='pageButton'>
-                            <Link className={select === 1 ? ' link select ' : 'link'} to="/sold" onClick={this.changePage} >Rank</Link>
+                            <Link className={pageState === 1 ? ' link select ' : 'link'} to="/sold" onClick={this.changePage} >Best-selling!</Link>
                         </div>
                         <div className='pageButton'>
-                            <Link className={select === 0 ? ' link select ' : 'link'} to="/" onClick={this.changePage} >Show</Link>
+                            <Link className={pageState === 0 ? ' link select ' : 'link'} to="/" onClick={this.changePage} >Available Pets</Link>
                         </div>
 
                     </div>
@@ -59,8 +58,8 @@ class Header extends React.Component {
                 <div className='addWrap'>
                     <Link className='add' to="/add" onClick={this.changePage} >
                         {
-                            select === 2 ? <Icon name='add' _className='addSelect' /> :
-                                <Icon name='add' />
+                            pageState === 2 ? <Icon name='add-black' _className='addSelect' /> : <Icon name='add' />
+
                         }
                     </Link>
 

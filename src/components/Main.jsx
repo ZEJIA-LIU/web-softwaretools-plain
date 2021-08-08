@@ -3,7 +3,7 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
-
+import './style/Main.css'
 import Add from '../page/Add'
 import Available from '../page/Available'
 import Sold from '../page/Sold'

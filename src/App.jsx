@@ -7,11 +7,13 @@ import Main from './components/Main'
 import Footer from './components/Footer'
 import NewPetStore from './store/newPet'
 import PetArrayStore from './store/petArray'
+import PageStore from './store/page'
 import { petArray } from './constant/petData'
 import { findAll, addPet } from './module/index'
 const stores = {
     newPetStore: new NewPetStore(),
-    petArrayStore: new PetArrayStore()
+    petArrayStore: new PetArrayStore(),
+    pageStore: new PageStore()
 }
 class App extends React.Component {
     constructor(props) {

@@ -55,6 +55,7 @@ class Component extends React.Component {
             newPetStore.setCategory(category)
         }
         if (name) {
+
             newPetStore.setName(name)
         }
         if (tags) {
@@ -74,8 +75,8 @@ class Component extends React.Component {
                 ref='form'
 
                 name="basic"
-                labelCol={{ span: 4 }}
-                wrapperCol={{ span: 12 }}
+                labelCol={{ span: 9 }}
+                wrapperCol={{ span: 6 }}
                 initialValues={{ remember: true }}
                 onFinish={this.onFinish}
                 onFinishFailed={this.onFinishFailed}
@@ -135,7 +136,7 @@ class Component extends React.Component {
                                     Brave
                                 </Checkbox>
                             </Col>
-                            <Col span={8}>
+                            <Col span={10}>
                                 <Checkbox value="elegance" style={{ lineHeight: '32px' }}>
                                     Elegance
                                 </Checkbox>
@@ -158,7 +159,7 @@ class Component extends React.Component {
                         </Row>
                     </Checkbox.Group>
                 </Form.Item>
-                <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+                <Form.Item wrapperCol={{ offset: 11, span: 16 }}>
                     <Button type="primary" htmlType="add">
                         Submit
                     </Button>

@@ -1,0 +1,113 @@
+.soldWrapper{
+    width: 60vw;
+}
+.rankWrapper{
+    position: relative;
+    justify-content: center;
+}
+.grassWrapper{
+    bottom: -6px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+.grass{
+    position: relative;
+    bottom: -6px
+}
+.white{
+    background-color: white;
+}
+.right{
+    right:-105px;
+}
+.left{
+    left:-105px;
+}
+.grassIcon{
+    height: 100px;
+
+}
+.awardWrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.award{
+    width:150px;
+    height: 280px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.fir{
+    background-color: hsl(0, 100%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 240px;
+    width: 150px;
+}
+.sec{
+    background-color: hsl(14, 100%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 180px;
+    width: 150px;
+}
+.thr{
+    background-color: hsl(28, 100%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100px;
+    width: 150px;
+}
+.plant{
+    display: flex;
+    justify-content: space-around;
+}
+.rankIcon{
+    height: 30px;
+    width: 30px;
+}
+.rankIcon:hover{
+opacity: 0.5;
+}
+.num{
+    text-align: center;
+}
+
+.numIcon{
+    height: 80px;
+}
+.statusIcon{
+    height: 25px;
+    width: 25px;
+}
+.soldTipWrap{
+    margin-top: 30px;
+ background-color:  #afeeee;
+ border-radius: 8px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+.soldTip{
+    width:40vw;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    
+}
+.soldTipIcon{
+    height: 40px;
+    margin-left: -120px;
+    margin-right: -120px;
+}
+.tipRed{
+    height: 25px;
+    margin-left: -140px;
+    margin-right: -130px;
+}
