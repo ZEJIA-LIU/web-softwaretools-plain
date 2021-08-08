@@ -25,7 +25,6 @@ class Component extends React.Component {
 
     onFinish = () => {
         const { newPetStore, petArrayStore } = this.props
-        console.log(petArrayStore)
         newPetStore.addNewPet()
             .then(res => {
                 console.log(res)

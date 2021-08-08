@@ -28,7 +28,6 @@ class Component extends React.Component {
     render() {
         const { petArrayStore } = this.props
         const array = petArrayStore.curArray.filter(pet => pet.status !== "available")
-        console.log(array)
         let dogNum = array.filter(pet => pet.category.name === 'dog').length
         let catNum = array.filter(pet => pet.category.name === 'cat').length
         let birdNum = array.filter(pet => pet.category.name === 'bird').length
