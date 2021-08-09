@@ -8,12 +8,8 @@
 
 4. Showing sold pets with a ranking list, jump to *available* page with certain category parameter by clicking **category** icon on the list.
 
-## ->>>>>> not implemented 
+## ------->>> not implemented 
 
-- Hover . jump. pointer...
-- Alert??
-- Adding tips after cursor.
-- 
 - Copying **id** to clipboard by clicking pet's **id**.  
 - Adding new *available* pets with default **id**.  ~~/**name**/~~(useless, banned), ~~**status**(*available*)~~(done).
 - Sorting pets on *available* page by multiple **tags**.
@@ -32,21 +28,18 @@
 - ### Adding new available pets with configurable information:
 
   - ***id**
+    > ***id** is required because it's reserved for querying, while the back-end does not support auto increment of pet's **id**.
   - ***name**
   - ***category** (e.g. dog/ cat/ fish)
   - ***status** (e.g. available/ sold **default: *available***)
+    > ***name**, ***category**, ***status**, are required because they are necessary for every pet.
   - **tag[]** (e.g. Brave/ Elegance/ Lazy/ Active/ Mild)
+    > - **tag[]** are optional, just for more detailed record.  
+    > - **tag[]** are only selectable(from **available tags[]**), they do not support customisation insertion due to the API data structure, updating **available tags[]** could only be done in editing source code.
 
-- ### Deleting available pet(with alert to double check)
-
----
-
-> - ***id** is required because it's reserved for querying, while the back-end does not support auto increment of pet's **id**.
-> 
-> - ***name**, ***category**, ***status**, are required because they are necessary for every pet.
-> 
-> - **tag[]** are optional, just for more detailed record.
->   > **tag[]** are only selectable(from **available tags[]**), they do not support customisation insertion due to the API data structure, updating **available tags[]** could only be done in editing source code.
+- ### Deleting available pet
+  > - When hover on the icon, cursor become a pointer to imply user this is a funtional button.
+  > - After clicked the delete button there will be an alert to ask the user to double check, in order to avoid misoperation。
 
 ## Justification
 
