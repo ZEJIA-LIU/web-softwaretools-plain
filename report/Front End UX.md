@@ -226,7 +226,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 ![](../static/reportImg/ui-4.png)
 2. 布局:
 
-    整个Show页面只有两个大元素，分别是筛选的form表单，我们叫它fliterForm还有宠物列表，我们叫它petList。两个大部分还是采用了垂直布局，上面放着fliterForm，洗面放petList。
+    整个abailable-pet页面只有三个元素，分别是tips,筛选的form表单，我们叫它fliterForm,还有宠物列表，我们叫它petList。整个页面采用垂直布局，从上到下依次是tip,fliterForm，petList
 
     petList里面是由petCard组成的，petList采用flex布局，让petCard呈每行2个原素分布，让页面结构更加优美。
     petCard包括了petImg，tags，id，name和deletIcon。petImg是根据宠物的category不同，展示不同的icon，它是用于区别不同宠物的，因此我们把它做的很大并且放在card的左边（就像id card一样）。name放在右边的上方，并且修改了它的字体还有大小，使得它能够一眼就被发现。tags放在name下面，并且在文字的左边放上一个tag的icon来表示它是一个标签。至于宠物的id，我们把它放到了左上角，然后删除的icon放到了右上角。
