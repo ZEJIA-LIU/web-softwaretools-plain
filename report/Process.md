@@ -18,10 +18,15 @@ The process should be adaptive and flexible and always have other options ready 
 # Team Roles
 
 Zejia Liu: coding and implementation of features; report part “Use of git” writing
+
 Jian Chen: Features designing, reflecting; report part “Features” writing
+
 Hengbin An: Conclusion & Presentation 
+
 Tramell Li: Process & user research & meeting records 
+
 Tao He: Background & research 
+
 All team members participate in the brainstorming and designing of features. 
 
 
@@ -34,16 +39,19 @@ High level overview: For quick in time justification of our webpage to cater to 
 
 ### Critical points:
 1. Early form of webpage basic 
+ 
  This version came out after our first meeting when we roughly talked about some potential features and developers tried to implement them then, 
 
 ![first](../static/reportImg/dev1-4.png)
 
 2. Version with full features 
+ 
  This version came out after the third meeting during which we finally decided on which features we were going to add. Our design changed a lot from the first meeting to the third. This sprint shows how we improved our design from the previous one. 
  
 ![secondversion](../static/reportImg/dev1-6.png)
 
 3. Beautified with CSS
+ 
  Version after putting on CSS:
 
 ![beautified](../static/reportImg/dev2-3.png)

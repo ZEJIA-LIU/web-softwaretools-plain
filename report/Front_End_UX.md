@@ -3,7 +3,8 @@ Since that the original codes are developed with js, we decided to switch to Rea
 Webpage building is made up of three main parts: 
 1. Realize new features 
 2. Style/UI (CSS)
-3. 根据老师的意见反馈进行修改
+3. Modify according to users' feedback
+
 ## Realize features & functions
 ### 1. Introduce in React to help develop, realize 'Hello World' page：
 * Detail contents:
@@ -179,31 +180,31 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 
 * time: 2021/08/05 03:43
 
-## 根据老师的意见反馈进行修改
+## Modify according to users' feedback
 
-## 1. 使用真正的动物图片代替icon和让页面有更多色彩
-* 具体内容:
+## 1. Use real pet pics to replace icon and make the page more colorful 
+* Detailed contents:
 
-    1. 根据老师的反馈，希望页面上能有真正的动物图片，所以我们吧petCard的img从原来的卡通icon改为真实图片
-    2. 希望页面上能有更多的颜色，所以我们根据不同的标签内容，使用不同的标签颜色和字体颜色
+    1. uses hope that the webpage should contain more real pet picture. So we replaced original petCard img to real pictures of pets. 
+    2. We use different icon color and font color according to different icon contents because users want to webpage to look more colorful. 
 * Picture:
 ![](../static/reportImg/dev3-1.png)
 
 * commit: ea33a83ea50b94e071635de41ef58197c431384a
 * time: 2021/08/06 19:47
 
-## 2.修改nav的内容和加入tips，更好的分辨动物的状态
-* 具体内容:
+## 2.Modify nav's content and add tips to make it easier to identify animal's status
+* Detailed contents:
 
-    1. 由于老师说宠物的状态不好分辨，因此我门修改了nav的内容，增强其可读性
-    2. 在rank和show页面加入了tip，辅助了解
+    1. Since that users think the status of pets are not easy to identify we changed the contents in nav and improved readability. 
+    2. Added tips on "rank" and "show" webpage in order to make features more understandable. 
 
 * Picture:
 
-    1.rank页面
+    1.rank webpage
 
     ![](../static/reportImg/dev3-2-1.png)
-    2. show页面
+    2. show webpage
 
     ![](../static/reportImg/dev3-2-2.png)
 * commit: 26462ae6b9bc26d90ae86ceae4ec6b8560583542
