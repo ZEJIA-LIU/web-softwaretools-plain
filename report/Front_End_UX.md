@@ -139,7 +139,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: 025d5b3d456784cb2883f2db7435df5ec1b80048
 * time: 2021/08/04 2021/08/04 02:10
 
-## 2. "add" webpage's CSS
+### 2. "add" webpage's CSS
 * Detailed contents:
  Since that this page uses antd components, it has its own style. All I need to do is modify their layout, so the whole page looks more balanced.
 
@@ -148,7 +148,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: f977f3f4de95bbc302468675c772f37c34e560b4
 * time: 2021/08/04 02:44
 
-## 3. "show" webpage's CSS
+### 3. "show" webpage's CSS
 * Detailed contents:
   1. Modify the background color of header and footer according to product requirements
   2. The filtered form uses the components of antd, and only needs to adjust the layout
@@ -159,7 +159,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: 423b9e11e028444d7f496cb331f261f361915405
 * time: 2021/08/04 21:55
 
-## 4. "rank" webpage's CSS
+### 4. "rank" webpage's CSS
 * Detailed contents:
   1. Make ranking list
   2. Display the pets of sold and pending
@@ -169,7 +169,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: da6a6a225c8e3e283603141e821d28aef7972915
 * time: 2021/08/05 03:08
 
-## 5. Modify footer's design
+### 5. Modify footer's design
 * Detailed contents:
     1. icon vertical alignment
     2. add copyRight
@@ -182,7 +182,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 
 ## Modify according to users' feedback
 
-## 1. Use real pet pics to replace icon and make the page more colorful 
+### 1. Use real pet pics to replace icon & make the page more colorful 
 * Detailed contents:
 
     1. uses hope that the webpage should contain more real pet picture. So we replaced original petCard img to real pictures of pets. 
@@ -193,10 +193,10 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: ea33a83ea50b94e071635de41ef58197c431384a
 * time: 2021/08/06 19:47
 
-## 2.Modify nav's content and add tips to make it easier to identify animal's status
+### 2. Modify nav's content & add tips 
 * Detailed contents:
 
-    1. Since that users think the status of pets are not easy to identify we changed the contents in nav and improved readability. 
+    1. Since that users think the status of pets are not easy to identify we changed the contents in nav and improved readability. After modification, animal status is easier to identify.
     2. Added tips on "rank" and "show" webpage in order to make features more understandable. 
 
 * Picture:
@@ -396,4 +396,22 @@ Conclusion：Combine the three layout schemes with each other and each takes its
        __________________
 
 ### HCI Questionnaire feedback evaluation
-
+Q1
+![](../static/reportImg/HCI1.png)
+We reviewed our new features again regarding to whether they are easy to understand. 
+Q2
+![](../static/reportImg/HCI2.png)
+We did not change UI design too much as the feedback was quite positive.
+Q3
+![](../static/reportImg/HCI3.png)
+Q4
+![](../static/reportImg/HCI4.png)
+We are quite happy with Q3&Q4's feedback as that means we are on a right path. However we realized there are still places to improve and we asked that in Q7. 
+Q5
+![](../static/reportImg/HCI5.png)
+Q6
+![](../static/reportImg/HCI6.png)
+For Q5&Q6, we added more tips to the webpage as some feedback said they cannot identify which page is rank which page is available clearly. 
+Q7
+![](../static/reportImg/HCI7.png)
+The feedback on this question is most meaningful to us. After seeing this, we decided to add tips and use actual pet pics. And we also discussed whether we are going to do a welcome page or not. As for buttons, we also agree with the idea that consistency needs to be improved so we modified the buttons as well. All the modification is described in UX development before. 
