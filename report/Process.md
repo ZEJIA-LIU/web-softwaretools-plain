@@ -5,12 +5,16 @@ This flexible development method helps us a lot as the demand for features chang
 ![waterfallagile](../static/reportImg/waterfall.png)
 
 ![agile](../static/reportImg/agile.png)
+
 We hold meetings via Teams roughly every 3 days. For every meeting, we update our progress first and then discuss the change of features and demand. Later on we iterate the new needs and make plan on fulfilling the new needs. All team member can bring up new thoughts and share issues in our webpage. Then all members can brainstorm and solve these issues together. At the meantime, we would review and measure the sprint for each stage and brainstorm modification. 
 
 ![scrum](../static/reportImg/scrum.png)
 
 To better implement scrum, we have strict time limit for every task and all follow the timeline in Sprint part below. Scrum development links rules, tasks with roles and specific people. The person who is responsible for feature design would list things needs to be done first and rank their priority. Later on all team member would work on these tasks and work for sprints at the same time. 
 With Scrum development, we can quickly adjust potential changes to features and user demand. We distribute the tasks and clarify the roles from the very beginning. Even when the actual coding for front end part have not started, we have assigned people to learn testing and do testing plan first. Under this case, as soon as the actual coding finishes, the testing can begin immediately, thus improving the overall efficiency. 
+
+In addition, the transparency has also improved under Scrum as all people can know one member's work and progress. This development mode can help keep everyone concentrate on the project and  contribute to the sprint everyday. 
+
 Apart from Scrum, we also combined feature driven development into the development mode. For each short term sprint, we make objectives and plans based on features we want to fulfill. 
 Agile development also focuses on people and it is human driven. It requires sufficient team empowerment, motivation, align constraints, develop competence and grow structure. 
 The process should be adaptive and flexible and always have other options ready to be used. When demand changes, the team can then quickly switch to plan B and rebuild certain features. 
@@ -54,13 +58,13 @@ High level overview: For quick in time justification of our webpage to cater to 
  
  Version after putting on CSS:
 
-![beautified](../static/reportImg/dev2-3.png)
+![beautified](../static/reportImg/ui-4.png)
 
 4. Modified after HCI evaluation
  
  After analysing HCI feedback, we realized that our webpage might only make sense to ourselves and for other people it looked a little bit confusing. Therefore we discussed during forth meeting and decided to add some explanation and tips on the webpage to make it clearer. 
 
-
+![beautified](../static/reportImg/ui-5.png)
 
 # Continuous Integration
 ### branch
