@@ -100,7 +100,7 @@ class Component extends React.Component {
                                         <div key={pet.type}>
                                             <div className='num'>{pet.num}</div>
                                             <div className='iconWrapper' id={pet.type} onClick={() => { this.jumpToAva(pet.type) }}>
-                                                <Icon name={pet.type} _className='rankIcon' />
+                                                <Icon name={pet.type} _className='rankIcon' data_cy={pet.type} />
                                             </div>
                                         </div>)
                                 })}
@@ -116,7 +116,7 @@ class Component extends React.Component {
                                         <div key={pet.type}>
                                             <div className='num'>{pet.num}</div>
                                             <div className='iconWrapper' id={pet.type} onClick={() => { this.jumpToAva(pet.type) }}>
-                                                <Icon name={pet.type} _className='rankIcon' />
+                                                <Icon name={pet.type} _className='rankIcon' data_cy={pet.type} />
                                             </div>
                                         </div>)
                                 })}
@@ -133,7 +133,7 @@ class Component extends React.Component {
                                     <div key={pet.type}>
                                         <div className='num'>{pet.num}</div>
                                         <div className='iconWrapper' id={pet.type} onClick={() => { this.jumpToAva(pet.type) }}>
-                                            <Icon name={pet.type} _className='rankIcon' />
+                                            <Icon name={pet.type} _className='rankIcon' data_cy={pet.type} />
                                         </div>
                                     </div>)
                             })}</div>
