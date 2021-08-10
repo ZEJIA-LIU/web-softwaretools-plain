@@ -1,6 +1,7 @@
 # Possible Features
 
-1. Adding new available pets with more details(default **status**: *available*) / deleting available pet.
+1. Adding new available pets with more details / deleting available pet.
+    > Default adding **status**: *available*.
 
 2. Updating status of pet by **id**.  
 
@@ -15,14 +16,16 @@
 - Adding tips after cursor.
 - 
 - Copying **id** to clipboard by clicking pet's **id**.  
-- Adding new *available* pets with default **id**.  ~~/**name**/~~(useless, banned), ~~**status**(*available*)~~(done).
+- Adding new *available* pets with default **id**~~/**name**~~(useless, banned), ~~/**status**(*available*)~~(done).
 - Sorting pets on *available* page by multiple **tags**.
 - Updating **available categories[]** which is selected while adding pets.
 - Updating **available tags[]** which is selected while adding pets.
 - Administrator authorization. 
 - Booking/order system. 
-- Updating status of pets on *available* page.(Could be implemented after implementing administrator authorization)
-- Updating pet detail by **name**.(Not possible due to API).
+- Updating status of pets on *available* page.
+    > Could be implemented after implementing administrator authorization.
+- Updating pet detail by **name**.
+    > Not possible due to API.
 
 ---
 
@@ -37,7 +40,8 @@
   - ***status** (e.g. available/ sold **default: *available***)
   - **tag[]** (e.g. Brave/ Elegance/ Lazy/ Active/ Mild)
 
-- ### Deleting available pet(with alert to double check)
+- ### Deleting available pet
+    > With poped alert to double check.
 
 ---
 
@@ -60,14 +64,14 @@
 
 # Testing
 
-- We test this feature by automated unit testing tool: jest.
+- We test this feature by automated unit testing tool: ***jest***.
   > Because this feature is mostly implemented by one specific function.
 
 ## Testing Details
 
   1. Mock data of a pet being added.
   2. Call the tested adding function with the data as parameter.
-  3. Check response from the function(which is received from back-end) is consistent with the mocked data.  
+  3. Check whether response from the function(which is received from back-end) is consistent with the mocked data.  
 
 ### Testing Process
 
@@ -96,7 +100,10 @@ test('testNewPet', () => {
     })
 })
 ```
-3. Change directory to web-softwaretools-plain
+3. Change directory to:
+```
+web-softwaretools-plain
+```
 4. Run commands:
 ```
 npm install
@@ -121,7 +128,7 @@ npm run test newPet.test.js
 
 # Testing
 
-- We test this feature by automated unit testing tool: jest.
+- We test this feature by automated unit testing tool: ***jest***.
   > Because this feature is mostly implemented by one specific function.
 
 ## Testing Details
@@ -157,7 +164,10 @@ test('testChangeStatus', () => {
     })
 })
 ```
-3. Change directory to web-softwaretools-plain
+3. Change directory to:
+```
+web-softwaretools-plain
+```
 4. Run commands:
 ```
 npm install
@@ -166,15 +176,14 @@ npm run test changeStatus.test.js
     
 ### Testing Result
 
-![](../static/reportImg/test-2.png)
+  ![](../static/reportImg/test-2.png)
 
 ---
 
 # Feature 3
 
-- Sorting pets by **category** and/or **tag** on available page.
-
-  - One **category** and one **tag** could be chosen at the same time.
+- ### Sorting pets by **category** and/or **tag** on available page.
+  > One **category** and one **tag** could be chosen at the same time.
 
 ## Justification
 
@@ -185,49 +194,62 @@ npm run test changeStatus.test.js
 - Visitors without a clear purpose could also get an overview of what **category**/**tag** of pets are on sale and browse pets with more comparability.
 
 # Testing
-* We test this feature by automated integration testing tool: cypress. Because this feature has things to deal with different pages so we chose integration testing but not unit testing.
+- We test this feature by automated integration testing tool: ***cypress***. 
+  > Because this feature deals with different pages so we chose integration testing but not unit testing.
+
+## Testing Details
+
+  - Sorting by **category**:
+    1. Mock data of a random category being sorted.
+    2. Visit the sorting page with the mocked **category** data as parameter.
+    3. Check whether every displayed ***liWrap's*** class is consistent with the mocked category. 
+        > Every *pet-card* has a unique **liWrap** DOM element.
+   
+  - Sorting by **tag**:
+    1. Mock data of a random tag being sorted.
+    2. Visit the sorting page with the mocked **tag** data as parameter.
+    3. Check whether every displayed ***tagsWrapper's*** children tags contains one tag DOM element whose tagname is consistent with the mocked tag's name.
+        > Every *pet-card* has a **tagsWrapper** DOM element which contains pet's all tags.
 
 ### Testing Process: 
 
-  * install cypress
+1. Install cypress(Add package into .json file)
+2. Create testing file: 
+```
+web-softwaretools-plain/cypress/integration/showFliter.spec.js
+```
+```javascript  
+describe('showFliterFeature', () => {
+    it('fliterByCategory', () => {
+        const categoryArray = ['cat', 'dog', 'bird', 'rabbit', 'hamsters']
+        const random = Math.floor(Math.random() * 5);
+        const category = categoryArray[random]
+        cy.visit(`https://zejia-liu.github.io/web-softwaretools-plain/#/?category=${category}`)
+        cy.get('.liWrap').should('have.class', category)
+    })
+    it('filterByTag', () => {
+        const tagArray = ['brave', 'active', 'lazy', 'elegance', 'mild']
+        const random = Math.floor(Math.random() * 5);
+        const tag = tagArray[random]
+        cy.visit(`https://zejia-liu.github.io/web-softwaretools-plain/#/?category=all&tag=${tag}`)
+        cy.get('.tagsWrapper').each(div => {
+            expect(div.children().find('.tagName').filter(`.${tag}`).length).not.to.eq(0)
+        })
+    })
+})
+```
+3. Change directory to:
+```
+web-softwaretools-plain
+```
+4. Run commands: 
+```
+npm install
+./node_modules/.bin/cypress run --spec ./cypress/integration/showFliter.spec.js
+```
+### Testing result:
 
-  * create testing file : 
-
-    - web-softwaretools-plain/cypress/integration/showFliter.spec.js
-
-  * change directory to web-softwaretools-plain
-
-  * commands: 
-
-    ```
-    npm install
-    ./node_modules/.bin/cypress run --spec ./cypress/integration/showFliter.spec.js
-    ```
-
-  * 测试文件
-
-    
-    file showFliter.spec.js?????? in where??????
-
-  * Testing details：
-
-    1. Sorting by **category**: 
-
-       - 判断选择后的标签是否包含category
-       - whether specific kind of pets could be sorted by **category** from all available pets??. 判断是否能根据**category**寻找pets.判断选择后的标签是否包含category
-       - whether the sorted pets' **category** id equals???判断pet cards 的id是否都等于category
-
-    2. Sorting by **tag**: 
-
-       - 判断选择后的标签是否包含tag
-       - whether specific kind of pets could be sorted by** tag** from all available pets. 判断是否能根据category寻找pets.
-
-       - whether the sorted pets' **tags** contain the chosen **tag**
-
-         ???判断pet cards 的id是否都等于category
-         
-  * Testing result:
-    ![](../static/reportImg/test-3.png)
+  ![](../static/reportImg/test-3.png)
 
 ---
 
