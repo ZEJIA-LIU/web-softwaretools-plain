@@ -1,6 +1,7 @@
 # Possible Features
 
-1. Adding new available pets with more details(default **status**: *available*) / deleting available pet.
+1. Adding new available pets with more details / deleting available pet.
+    > Default adding **status**: *available*.
 
 2. Updating status of pet by **id**.  
 
@@ -8,17 +9,23 @@
 
 4. Showing sold pets with a ranking list, jump to *available* page with certain category parameter by clicking **category** icon on the list.
 
-## ------->>> not implemented 
+## ->>>>>> not implemented 
 
+- Hover . jump. pointer...
+- Alert??
+- Adding tips after cursor.
+- 
 - Copying **id** to clipboard by clicking pet's **id**.  
-- Adding new *available* pets with default **id**.  ~~/**name**/~~(useless, banned), ~~**status**(*available*)~~(done).
+- Adding new *available* pets with default **id**~~/**name**~~(useless, banned), ~~/**status**(*available*)~~(done).
 - Sorting pets on *available* page by multiple **tags**.
 - Updating **available categories[]** which is selected while adding pets.
 - Updating **available tags[]** which is selected while adding pets.
 - Administrator authorization. 
 - Booking/order system. 
-- Updating status of pets on *available* page.(Could be implemented after implementing administrator authorization)
-- Updating pet detail by **name**.(Not possible due to API).
+- Updating status of pets on *available* page.
+    > Could be implemented after implementing administrator authorization.
+- Updating pet detail by **name**.
+    > Not possible due to API.
 
 ---
 
@@ -28,18 +35,22 @@
 - ### Adding new available pets with configurable information:
 
   - ***id**
-    > ***id** is required because it's reserved for querying, while the back-end does not support auto increment of pet's **id**.
   - ***name**
   - ***category** (e.g. dog/ cat/ fish)
   - ***status** (e.g. available/ sold **default: *available***)
-    > ***name**, ***category**, ***status**, are required because they are necessary for every pet.
   - **tag[]** (e.g. Brave/ Elegance/ Lazy/ Active/ Mild)
-    > - **tag[]** are optional, just for more detailed record.  
-    > - **tag[]** are only selectable(from **available tags[]**), they do not support customisation insertion due to the API data structure, updating **available tags[]** could only be done in editing source code.
 
 - ### Deleting available pet
-  > - When hover on the icon, cursor become a pointer to imply user this is a funtional button.
-  > - After clicked the delete button there will be an alert to ask the user to double check, in order to avoid misoperation。
+    > With poped alert to double check.
+
+---
+
+> - ***id** is required because it's reserved for querying, while the back-end does not support auto increment of pet's **id**.
+> 
+> - ***name**, ***category**, ***status**, are required because they are necessary for every pet.
+> 
+> - **tag[]** are optional, just for more detailed record.
+>   > **tag[]** are only selectable(from **available tags[]**), they do not support customisation insertion due to the API data structure, updating **available tags[]** could only be done in editing source code.
 
 ## Justification
 
@@ -51,22 +62,84 @@
 
 - Shopkeeper could delete pets on available page to manage inventory. 
 
----
-
 # Testing
 
-- We test this feature by automated unit testing tool: jest.
+- We test this feature by automated unit testing tool: ***jest***.
   > Because this feature is mostly implemented by one specific function.
 
-## Testing details
+## Testing Details
 
   1. Mock data of a pet being added.
   2. Call the tested adding function with the data as parameter.
-  3. Check response from the function(which is received from back-end) is consistent with the mocked data.  
+  3. Check whether response from the function(which is received from back-end) is consistent with the mocked data.  
 
 ### Testing Process
 
-1. Install jest(Add package into .json file)
+1. Install jest(Add package into package.json file)
+2. Create testing file: 
+```
+web-softwaretools-plain/src/test/newPet.test.js
+```
+```javascript
+import { addPet } from '../module/index'
+const newPEt = {
+    name: 'testPet',
+    category: { name: 'test', id: 0 },
+    status: 'sold',
+    tags: [],
+    id: 99999
+}
+test('testNewPet', () => {
+    return addPet(newPEt).then(res => {
+        const { data } = res
+        expect(data.name).toBe('testPet')
+        expect(data.category.name).toBe('test')
+        expect(data.category.id).toBe(0)
+        expect(data.status).toBe('sold')
+        expect(data.id).toBe(99999)
+    })
+})
+```
+3. Change directory to:
+```
+web-softwaretools-plain
+```
+4. Run commands:
+```
+npm install
+npm run test newPet.test.js
+```  
+    
+### Testing Result
+
+  ![](../static/reportImg/test-1.png)
+  
+---
+
+# Feature 2
+
+- ### Updating status of pet by entering ***id**.
+
+## Justification
+
+- When a pet is sold, shopkeeper could update its status from *available* to *sold*, the pet would no longer be shown on the available page, which keeps the available page showing the most recent inventory.
+
+- *sold* pets are still remaining in the website, helping shopkeeper to review business.
+
+# Testing
+
+- We test this feature by automated unit testing tool: ***jest***.
+  > Because this feature is mostly implemented by one specific function.
+
+## Testing Details
+
+  1. Adding a new pet as test object, whose status is *sold*.
+  2. Changing the pet's status to *pending*.
+  3. Query the test pet and check whether its status is *pending*.
+  
+### Testing Process
+
+1. Install jest(Add package into package.json file)
 2. Create testing file: 
 ```
 web-softwaretools-plain/src/test/changeStatus.test.js
@@ -91,53 +164,26 @@ test('testChangeStatus', () => {
     })
 })
 ```
-3. Change directory to web-softwaretools-plain
+3. Change directory to:
+```
+web-softwaretools-plain
+```
 4. Run commands:
 ```
 npm install
 npm run test changeStatus.test.js
 ```  
     
-### Testing result
+### Testing Result
 
-  ![](../static/reportImg/test-1.png)
-  
-# Feature 2
+  ![](../static/reportImg/test-2.png)
 
-- Updating status of pet by entering ***id**.
-
-## Justification
-
-- When a pet is sold, shopkeeper could update its status from *available* to *sold*, the pet would no longer be shown on the available page, which keeps the available page showing the most recent inventory.
-
-- *sold* pets are still remaining in the website, helping shopkeeper to review business.
-
-# Testing
-这部分是通过发送http请求来实现的，因此我们使用jest对该feature进行unit test
-* 如何测试：pull代码，进入web-softwaretools-plain，
-  ```
-  npm install
-  npm run test changeStatus.test.js
-  ```
-* 测试文件
-
-  web-softwaretools-plain/src/test/changeStatus.test.js
-
-* 测试内容
-
-    1、创建只新的宠物作为测试对象，状态为SOLD
-    2、修改该宠物的状态为PENDING
-    3、寻找该宠物，检查其状态是否为PEDNING
-
-* 图片展示:
-![](../static/reportImg/test-2.png)
 ---
 
 # Feature 3
 
-- Sorting pets by **category** and/or **tag** on available page.
-
-  - One **category** and one **tag** could be chosen at the same time.
+- ### Sorting pets by **category** and/or **tag** on available page.
+  > One **category** and one **tag** could be chosen at the same time.
 
 ## Justification
 
@@ -148,59 +194,72 @@ npm run test changeStatus.test.js
 - Visitors without a clear purpose could also get an overview of what **category**/**tag** of pets are on sale and browse pets with more comparability.
 
 # Testing
-* We test this feature by automated integration testing tool: cypress. Because this feature has things to deal with different pages so we chose integration testing but not unit testing.
+- We test this feature by automated integration testing tool: ***cypress***. 
+  > Because this feature deals with different pages so we chose integration testing but not unit testing.
+
+## Testing Details
+
+  - Sorting by **category**:
+    1. Mock data of a random category being sorted.
+    2. Visit the sorting page with the mocked **category** data as parameter.
+    3. Check whether every displayed ***liWrap's*** class is consistent with the mocked category. 
+        > Every *pet-card* has a unique **liWrap** DOM element.
+   
+  - Sorting by **tag**:
+    1. Mock data of a random tag being sorted.
+    2. Visit the sorting page with the mocked **tag** data as parameter.
+    3. Check whether every displayed ***tagsWrapper's*** children tags contains one tag DOM element whose tagname is consistent with the mocked tag's name.
+        > Every *pet-card* has a **tagsWrapper** DOM element which contains pet's all tags.
 
 ### Testing Process: 
 
-  * install cypress
+1. Install cypress(Add package into package.json file)
+2. Create testing file: 
+```
+web-softwaretools-plain/cypress/integration/showFliter.spec.js
+```
+```javascript  
+describe('showFliterFeature', () => {
+    it('fliterByCategory', () => {
+        const categoryArray = ['cat', 'dog', 'bird', 'rabbit', 'hamsters']
+        const random = Math.floor(Math.random() * 5);
+        const category = categoryArray[random]
+        cy.visit(`https://zejia-liu.github.io/web-softwaretools-plain/#/?category=${category}`)
+        cy.get('.liWrap').should('have.class', category)
+    })
+    it('filterByTag', () => {
+        const tagArray = ['brave', 'active', 'lazy', 'elegance', 'mild']
+        const random = Math.floor(Math.random() * 5);
+        const tag = tagArray[random]
+        cy.visit(`https://zejia-liu.github.io/web-softwaretools-plain/#/?category=all&tag=${tag}`)
+        cy.get('.tagsWrapper').each(div => {
+            expect(div.children().find('.tagName').filter(`.${tag}`).length).not.to.eq(0)
+        })
+    })
+})
+```
+3. Change directory to:
+```
+web-softwaretools-plain
+```
+4. Run commands: 
+```
+npm install
+./node_modules/.bin/cypress run --spec ./cypress/integration/showFliter.spec.js
+```
+### Testing result:
 
-  * create testing file : 
-
-    - web-softwaretools-plain/cypress/integration/showFliter.spec.js
-
-  * change directory to web-softwaretools-plain
-
-  * commands: 
-
-    ```
-    npm install
-    ./node_modules/.bin/cypress run --spec ./cypress/integration/showFliter.spec.js
-    ```
-
-  * 测试文件
-
-    
-    file showFliter.spec.js?????? in where??????
-
-  * Testing details：
-
-    1. Sorting by **category**: 
-
-       - 判断选择后的标签是否包含category
-       - whether specific kind of pets could be sorted by **category** from all available pets??. 判断是否能根据**category**寻找pets.判断选择后的标签是否包含category
-       - whether the sorted pets' **category** id equals???判断pet cards 的id是否都等于category
-
-    2. Sorting by **tag**: 
-
-       - 判断选择后的标签是否包含tag
-       - whether specific kind of pets could be sorted by** tag** from all available pets. 判断是否能根据category寻找pets.
-
-       - whether the sorted pets' **tags** contain the chosen **tag**
-
-         ???判断pet cards 的id是否都等于category
-         
-  * Testing result:
-    ![](../static/reportImg/test-3.png)
+  ![](../static/reportImg/test-3.png)
 
 ---
 
 # Feature 4
 
-- Showing sold pets with a ranking list, redirect to *available* page by clicking **category** on the list.
+- ### Showing sold pets with a ranking list, jumping to *available* page by clicking icon of **category** on the list.
 
-  - The ranking list ranks top 5 best-selling **categories** with their sales.
-  
-  - When clicking on the icon of a **category**, page will redirect to *available* page with request parameter of the clicked **category**, which will be automatically filled into the sorting form.
+  > - The ranking list ranks top 5 best-selling **categories** with their sales.
+  > 
+  > - When clicking on the icon of a **category**, it will jump to *available* page with request parameter of clicked icon's corresponding **category**, which will be automatically filled into the sorting form.
 
 ## Justification
 
@@ -215,37 +274,56 @@ npm run test changeStatus.test.js
 - Redirecting to **available** page with request parameter gives all users much convenience in finding certain kind of *available* pets the want.
 
 # Testing
-* 这部分使用的是intergation测试，自动测试化工具是cypress。
+- We test this feature by automated integration testing tool: ***cypress***. 
+  > Because this feature deals with different pages so we chose integration testing but not unit testing.
 
-  * 如何测试：pull代码，进入web-softwaretools-plain，
+## Testing Details
 
-    ```
-    npm install
-    ./node_modules/.bin/cypress run --spec ./cypress/integration/rankJumpShow.spec.js
-    ```
+  - Clicking to jump to **category** sorting page:
+    1. Visit the *sold* page.
+    2. Mock clicking on the ***first*** icon on the ranking list.
+      >  The order of icons always changes due to the unstable back-end so we can't get a stable **category** to compare with url content.
+    3. Check whether *the purpose of page jump* is to **category** sorting page. 
+      > Url includes ***'/?category='***.
+   
+  - Jumping with right **category**:
+    1. Jump to the jumped page.
+    2. Get the selected **category** in sorting form on the sorting page.
+    3. Check whether jumping url's **category** parameter is consistent with the corresponding **category**.
+    
+### Testing Process: 
 
-  * 测试文件
+1. Install cypress(Add package into package.json file)
+2. Create testing file: 
+```
+web-softwaretools-plain/cypress/integration/rankJumpShow.spec.js
+```
+```javascript  
+describe('rank page', () => {
+    it('click icon can jump to show page', () => {
+        cy.visit('https://zejia-liu.github.io/web-softwaretools-plain/#/sold')
+        cy.get('.rankIcon').eq(0).click()
+        cy.url().should('include', '/?category=')
+    })
+    it('filter the right category', () => {
+        let category
+        cy.get('.ant-select-selection-item').eq(0).should((div) => {
+            category = div.text().toLocaleLowerCase()
+        }).then(() => {
+            cy.url().should('include', category)
+        })
+    })
+})
+```
+3. Change directory to:
+```
+web-softwaretools-plain
+```
+4. Run commands: 
+```
+npm install
+./node_modules/.bin/cypress run --spec ./cypress/integration/rankJumpShow.spec.js
+```
+### Testing result:
 
-    web-softwaretools-plain/cypress/integration/rankJumpShow.spec.js
-
-  * Testing details：
-
-    1. Redirecting to available page with correct **category** parameter by clicking icon: 
-
-       - when a category icon is clicked, the page jump to is correct (By testing the new url).
-
-    2. Inputing correct **category** into the sorting form automatically after jumping: 
-
-       - whether specific kind of pets could be sorted by** tag** from all available pets. 判断是否能根据category寻找pets.
-
-       - whether the sorted pets' **tags** contain the chosen **tag**
-
-  * 测试内容：
-
-    1. 找到宠物icon后点击，可以跳转到正确的页面。（通过判断跳转后的url是否为正确的url）
-    2. 跳转到show页面后，页面的category的input的内容为正确的宠物。有一跳转的时候会带上category=${pet}的参数，只需要检查该值是否和category的input的值相等即可
-
-  * 图片展示:
-    ![](../static/reportImg/test-4.png)
-
----
+  ![](../static/reportImg/test-4.png)
