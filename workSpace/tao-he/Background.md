@@ -6,6 +6,8 @@
 
 - [Objectives](#jump2)
 
+- [Architecture and design](#jump3)
+
 ### <span id="jump1">Abstract</span>
 
 With the current ongoing covid epidemic, people's lives have been affected to some
@@ -45,8 +47,10 @@ In addition to the above key features, the high level goals of the project are
 - Develop teamwork skills and improve the efficiency of our teamwork
 
 - Develop team members' proficiency with git
+  
+  
 
-### Architecture and design
+### <span id="jump3"> Architecture and design</span>
 
 At the beginning of the project, the team created a user survey to study the habits of
 potential customers and their user profile in relation to online pet shopping. Based on the feedback we received from 20 of our local friends, we identified the most requested features and discussed the initial framework of our website.
@@ -54,10 +58,15 @@ potential customers and their user profile in relation to online pet shopping. B
 #### User research questionnaires
 
 1. Male / Female
+
 2. Age range 18-25 26-30 31-40 over 40
+
 3. Previously have pets? Yes/No How many?
+
 4. Plan to adopt a new pet? Yes/No
+
 5. Have you surfed online pet store? Yes/No Which platform did you look at?
+
 6. What features do you want to see on online pet stores?
    
    a. Search bar  
@@ -66,6 +75,7 @@ potential customers and their user profile in relation to online pet shopping. B
    c. Filtering of available items
    
    d. Bookmark favorite items
+   
    8. Others features you want to add? ___
    
    9. Would buy pets based on what?
