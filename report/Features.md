@@ -75,7 +75,7 @@
 
 ### Testing Process
 
-1. Install jest(Add package into .json file)
+1. Install jest(Add package into package.json file)
 2. Create testing file: 
 ```
 web-softwaretools-plain/src/test/newPet.test.js
@@ -139,7 +139,7 @@ npm run test newPet.test.js
   
 ### Testing Process
 
-1. Install jest(Add package into .json file)
+1. Install jest(Add package into package.json file)
 2. Create testing file: 
 ```
 web-softwaretools-plain/src/test/changeStatus.test.js
@@ -213,7 +213,7 @@ npm run test changeStatus.test.js
 
 ### Testing Process: 
 
-1. Install cypress(Add package into .json file)
+1. Install cypress(Add package into package.json file)
 2. Create testing file: 
 ```
 web-softwaretools-plain/cypress/integration/showFliter.spec.js
@@ -255,11 +255,11 @@ npm install
 
 # Feature 4
 
-- Showing sold pets with a ranking list, redirect to *available* page by clicking **category** on the list.
+- ### Showing sold pets with a ranking list, jumping to *available* page by clicking icon of **category** on the list.
 
-  - The ranking list ranks top 5 best-selling **categories** with their sales.
-  
-  - When clicking on the icon of a **category**, page will redirect to *available* page with request parameter of the clicked **category**, which will be automatically filled into the sorting form.
+  > - The ranking list ranks top 5 best-selling **categories** with their sales.
+  > 
+  > - When clicking on the icon of a **category**, it will jump to *available* page with request parameter of clicked icon's corresponding **category**, which will be automatically filled into the sorting form.
 
 ## Justification
 
@@ -274,37 +274,56 @@ npm install
 - Redirecting to **available** page with request parameter gives all users much convenience in finding certain kind of *available* pets the want.
 
 # Testing
-* 这部分使用的是intergation测试，自动测试化工具是cypress。
+- We test this feature by automated integration testing tool: ***cypress***. 
+  > Because this feature deals with different pages so we chose integration testing but not unit testing.
 
-  * 如何测试：pull代码，进入web-softwaretools-plain，
+## Testing Details
 
-    ```
-    npm install
-    ./node_modules/.bin/cypress run --spec ./cypress/integration/rankJumpShow.spec.js
-    ```
+  - Clicking to jump to **category** sorting page:
+    1. Visit the *sold* page.
+    2. Mock clicking on the ***first*** icon on the ranking list.
+      >  The order of icons always changes due to the unstable back-end so we can't get a stable **category** to compare with url content.
+    3. Check whether *the purpose of page jump* is to **category** sorting page. 
+      > Url includes ***'/?category='***.
+   
+  - Jumping with right **category**:
+    1. Jump to the jumped page.
+    2. Get the selected **category** in sorting form on the sorting page.
+    3. Check whether jumping url's **category** parameter is consistent with the corresponding **category**.
+    
+### Testing Process: 
 
-  * 测试文件
+1. Install cypress(Add package into package.json file)
+2. Create testing file: 
+```
+web-softwaretools-plain/cypress/integration/rankJumpShow.spec.js
+```
+```javascript  
+describe('rank page', () => {
+    it('click icon can jump to show page', () => {
+        cy.visit('https://zejia-liu.github.io/web-softwaretools-plain/#/sold')
+        cy.get('.rankIcon').eq(0).click()
+        cy.url().should('include', '/?category=')
+    })
+    it('filter the right category', () => {
+        let category
+        cy.get('.ant-select-selection-item').eq(0).should((div) => {
+            category = div.text().toLocaleLowerCase()
+        }).then(() => {
+            cy.url().should('include', category)
+        })
+    })
+})
+```
+3. Change directory to:
+```
+web-softwaretools-plain
+```
+4. Run commands: 
+```
+npm install
+./node_modules/.bin/cypress run --spec ./cypress/integration/rankJumpShow.spec.js
+```
+### Testing result:
 
-    web-softwaretools-plain/cypress/integration/rankJumpShow.spec.js
-
-  * Testing details：
-
-    1. Redirecting to available page with correct **category** parameter by clicking icon: 
-
-       - when a category icon is clicked, the page jump to is correct (By testing the new url).
-
-    2. Inputing correct **category** into the sorting form automatically after jumping: 
-
-       - whether specific kind of pets could be sorted by** tag** from all available pets. 判断是否能根据category寻找pets.
-
-       - whether the sorted pets' **tags** contain the chosen **tag**
-
-  * 测试内容：
-
-    1. 找到宠物icon后点击，可以跳转到正确的页面。（通过判断跳转后的url是否为正确的url）
-    2. 跳转到show页面后，页面的category的input的内容为正确的宠物。有一跳转的时候会带上category=${pet}的参数，只需要检查该值是否和category的input的值相等即可
-
-  * 图片展示:
-    ![](../static/reportImg/test-4.png)
-
----
+  ![](../static/reportImg/test-4.png)
