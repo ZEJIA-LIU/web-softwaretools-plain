@@ -216,7 +216,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 ![](../static/reportImg/ui-2.png)
 2. Layout:
 
-    header一共有四个原素，分别是logo，best-selling的button和available-pets的button和一个add的icon。其中logo是展示作用，其他三个原素是页面跳转作用。由于header是起一个导航的作用，所以我们把原素都按照水平方向展开。从左到右的顺序依次是logo，best-selling，available-pets和add的icon。由于best-selling和available-pets是主要的页面，因此把他们放在较为中间的部分，并且占更大的体积。
+    The header has four elements: logo, best selling button, available pets button and an add Icon. The logo is the display function, and the other three elements are the webpage jumping function. Since the header is used for navigation, we expand the elements horizontally. The order from left to right is logo, best selling, available pets and add Icon. Since best selling and available pets are the main pages, they are placed in the middle and occupy a larger volume.
 
 3. HCI event:
     
@@ -249,49 +249,47 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 4. Function：
 Add new pets and modify pet status.
 
-## 5. "available-pets" webpage
+## 4. "available-pets" webpage
 1. Picture:
 ![](../static/reportImg/ui-4.png)
 2. Layout:
+    
+    The whole available pet page has only three elements, namely tips, filtered form, which we call fliterForm, and pet list, which we call petList. The whole page is arranged vertically, with tip, fliterForm and petList from top to bottom.
 
-    整个abailable-pet页面只有三个元素，分别是tips,筛选的form表单，我们叫它fliterForm,还有宠物列表，我们叫它petList。整个页面采用垂直布局，从上到下依次是tip,fliterForm，petList
+    The petList is composed of petcard. The petlList adopts flex layout, so that the petCard is distributed with 2 elements per line, making the page structure more beautiful.
+    
+    PetCard includes petimg, tags, ID, name and delet icon. PetImg displays different icons according to different pet categories. It is used to distinguish different pets, so we make it large and put it on the left of the card (just like ID card). Name is placed at the top of the right, and its font and size are modified so that it can be found at a glance. Tags is placed under name, and a tag icon is placed on the left of the text to indicate that it is a tag. As for the Pet ID, we put it in the upper left corner, and then the deleted icon in the upper right corner.
+3. Interaction event
 
-    petList里面是由petCard组成的，petList采用flex布局，让petCard呈每行2个原素分布，让页面结构更加优美。
-    petCard包括了petImg，tags，id，name和deletIcon。petImg是根据宠物的category不同，展示不同的icon，它是用于区别不同宠物的，因此我们把它做的很大并且放在card的左边（就像id card一样）。name放在右边的上方，并且修改了它的字体还有大小，使得它能够一眼就被发现。tags放在name下面，并且在文字的左边放上一个tag的icon来表示它是一个标签。至于宠物的id，我们把它放到了左上角，然后删除的icon放到了右上角。
-3. 交互（event）
-
-    fliter-form的作用是可以根据用户的喜好，选择种类和tag，通过点击summit来筛选展示的宠物。
-    pet list是一个展示的作用。petCard右上角的deleteIcon，hover之后透明度会发生改变，而且鼠标的style也会发生改变，提示用户这里可以点击。点击deleteIcon，可以删除那个该petCard。
+The function of fliter form is to select the type and tag according to the user's preferences, and filter the displayed pets by clicking submit.
+Pet list acts as display function. After deleting icon and hover above the upper right corner of petCard, the transparency will change, and the mouse style will also change, prompting the user to click here. Click Delete Icon to delete the petCard.
 
 
-4. 功能
+4. Function
+    1. Display available pets.
+    2. Filter pet list according to users' preference.
+    3. Delete pets. 
 
-    1. 展示available-pets。
-    2. 通过用户的喜好，筛选宠物列表
-    3. 删除宠物
-
-## 4. "best-selling" webpage
+## 5. "best-selling" webpage
 1. Picture:
 ![](../static/reportImg/ui-5.png)
 2. Layout:
 
-    best-showing页面是由三个元素构成的，采用的是垂直的布局，从上到下依次是tip，排行榜还有petList
+The best showing page is composed of three elements. It adopts a vertical layout, with tip, leaderboard and petlist from top to bottom.
 
+Among them, the design of tip and petlist is basically the same as that of the available pet page. The only difference is that the upper right corner of petcard is changed from the original deleteicon to the circle icon indicating the status, the red icon indicates that the pet's status is solid, and the yellow flag indicates that the status is pending.
+   
+The ranking list is designed in the form of a podium. From left to right, we design the second, first and third places at a time (in fact, if there are fourth and fifth places, we also put them in the third column). Standing on the podium is the icon of the corresponding pet type and the number of pets they have sold (pets in the status of sold and pending are considered to have been sold). On the left and right sides of the podium are two grass icons for decoration.
 
-    其中，tip和petList的设计和available-pet页面的设计基本一致，唯一的不同是petcard的右上角从原来的deleteIcon改为表示状态的圆圈icon，红色的icon表示宠物的状态是sold，黄色则标表示状态是pending。
+3. Interaction event
+Through the mouse hover, the transparency of the pet icon on the podium and the style of the mouse will change, prompting the user that these icons can be clicked. By clicking these icons, you can jump to the available pet page, and the jump URL takes the parameter category = ${pet}, so that the pet list of the "available" page only displays the pets of this category.
+Pet list is also a display function. The color of the icon in the upper right corner of each petcard represents the status. 
 
-    排行榜的我们设计成一个领奖台的形式，从左到右我们一次设计第二名，第一名和第三名（实际上如果有第四第五名，我们也把他们放到第三名的栏目）。站在领奖台上面的是对应的宠物的种类的icon还有他们已经卖出去的个数（状态为sold和pending的宠物我们视为已经卖出）。领奖台的左右两边分别是两个草的icon，用于装饰。
-
-3. 交互（event）
-
-    通过鼠标hover在领奖台上的宠物icon，icon的透明度还有鼠标的style会发生变化，提示用户这些icon可以点击。通过点击这些icon，可以实现对available-pet页面的跳转，并且跳转的url带上category=${pet}的参数，使得available-pet页面的pet list只展示该category的宠物。
-    pet list也是一个展示的作用，每个petCard的右上角的icon的颜色代表状态
-
-4. 功能
-
-    1. 展示状态为sold和pending的宠物。
-    2. 对已经出售或者正在出售宠物根据他们的category进行排行，并展示在排行榜上。
-    3. 通过点击排行榜上的宠物icon，进行跳转
+4. Function
+    1. Display pets under the status of sold and pending.
+    2. Pets that have been sold or are being sold are ranked according to their category and displayed on the ranking list.
+    3. Click the pet icon on the ranking feature to jump.
+    
 # Design Choices
 ## 1. Framework choice 
 ### 1. sample vs framework
