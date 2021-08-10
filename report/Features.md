@@ -11,17 +11,13 @@
 
 ## ->>>>>> not implemented 
 
-- Hover . jump. pointer...
-- Alert??
-- Adding tips after cursor.
-- 
 - Copying **id** to clipboard by clicking pet's **id**.  
 - Adding new *available* pets with default **id**~~/**name**~~(useless, banned), ~~/**status**(*available*)~~(done).
 - Sorting pets on *available* page by multiple **tags**.
 - Updating **available categories[]** which is selected while adding pets.
 - Updating **available tags[]** which is selected while adding pets.
 - Administrator authorization. 
-- Booking/order system. 
+- Booking/Order system. 
 - Updating status of pets on *available* page.
     > Could be implemented after implementing administrator authorization.
 - Updating pet detail by **name**.
@@ -194,15 +190,16 @@ npm run test changeStatus.test.js
 - Visitors without a clear purpose could also get an overview of what **category**/**tag** of pets are on sale and browse pets with more comparability.
 
 # Testing
+
 - We test this feature by automated integration testing tool: ***cypress***. 
   > Because this feature deals with different pages so we chose integration testing but not unit testing.
 
 ## Testing Details
 
   - Sorting by **category**:
-    1. Mock data of a random category being sorted.
+    1. Mock data of a random **category** being sorted.
     2. Visit the sorting page with the mocked **category** data as parameter.
-    3. Check whether every displayed ***liWrap's*** class is consistent with the mocked category. 
+    3. Check whether every displayed ***liWrap's*** class is consistent with the mocked **category**. 
         > Every *pet-card* has a unique **liWrap** DOM element.
    
   - Sorting by **tag**:
@@ -271,26 +268,23 @@ npm install
 
 - some people tend to buy best-selling **categories** driven by group psychology, and inventory of those would be exactly the most after shopkeeper's business analysis.  
 
-- Redirecting to **available** page with request parameter gives all users much convenience in finding certain kind of *available* pets the want.
+- Junmping to **available** page with request parameter gives all users much convenience in finding certain kind of *available* pets the want.
 
 # Testing
+
 - We test this feature by automated integration testing tool: ***cypress***. 
   > Because this feature deals with different pages so we chose integration testing but not unit testing.
 
 ## Testing Details
 
-  - Clicking to jump to **category** sorting page:
+  - Clicking to jump to *available* page with url including right **category**:
     1. Visit the *sold* page.
-    2. Mock clicking on the ***first*** icon on the ranking list.
-      >  The order of icons always changes due to the unstable back-end so we can't get a stable **category** to compare with url content.
-    3. Check whether *the purpose of page jump* is to **category** sorting page. 
-      > Url includes ***'/?category='***.
-   
-  - Jumping with right **category**:
-    1. Jump to the jumped page.
-    2. Get the selected **category** in sorting form on the sorting page.
-    3. Check whether jumping url's **category** parameter is consistent with the corresponding **category**.
-    
+    2. Mock data of a random **category** being clicked.
+    3. Mock clicking the icon correspondence to the mocked **categoty**.
+      > Use *data_cy* to set and *cy.get* locate exact **category** of icon.
+    4. Check whether the requesting Url is expected. 
+      > Url includes ***`/?category=${category}`***.
+
 ### Testing Process: 
 
 1. Install cypress(Add package into package.json file)
@@ -302,16 +296,11 @@ web-softwaretools-plain/cypress/integration/rankJumpShow.spec.js
 describe('rank page', () => {
     it('click icon can jump to show page', () => {
         cy.visit('https://zejia-liu.github.io/web-softwaretools-plain/#/sold')
-        cy.get('.rankIcon').eq(0).click()
-        cy.url().should('include', '/?category=')
-    })
-    it('filter the right category', () => {
-        let category
-        cy.get('.ant-select-selection-item').eq(0).should((div) => {
-            category = div.text().toLocaleLowerCase()
-        }).then(() => {
-            cy.url().should('include', category)
-        })
+        const categoryArray = ['cat', 'dog', 'bird', 'rabbit', 'hamsters']
+        const random = Math.floor(Math.random() * 5);
+        const category = categoryArray[random]
+        cy.get(`[data-cy=${category}]`).click()
+        cy.url().should('include', `/?category=${category}`)
     })
 })
 ```
