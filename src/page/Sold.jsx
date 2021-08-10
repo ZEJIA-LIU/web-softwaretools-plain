@@ -28,7 +28,6 @@ class Component extends React.Component {
     render() {
         const { petArrayStore } = this.props
         const array = petArrayStore.curArray.filter(pet => pet.status !== "available")
-        console.log(array)
         let dogNum = array.filter(pet => pet.category.name === 'dog').length
         let catNum = array.filter(pet => pet.category.name === 'cat').length
         let birdNum = array.filter(pet => pet.category.name === 'bird').length
@@ -65,17 +64,24 @@ class Component extends React.Component {
                 <div className='soldTipWrap'>
                     <div className='soldTip'>
                         <Icon name='tips' _className='soldTipIcon'></Icon>
-                        <Icon name='red' _className='tipRed' />
-                        means the status of pet is SOLD!
+                        <div className='soldTipText'>
+                            <Icon name='red' _className='tipRed' />
+                            means the status of pet is SOLD!
+                        </div>
                     </div>
                     <div className='soldTip'>
                         <Icon name='tips' _className='soldTipIcon'></Icon>
-                        <Icon name='yellow' _className='tipRed' />
-                        means the status of pet is PENDING!
+                        <div className='soldTipText'>
+                            <Icon name='yellow' _className='tipRed' />
+                            means the status of pet is PENDING!
+                        </div >
                     </div>
                     <div className='soldTip'>
                         <Icon name='tips' _className='soldTipIcon'></Icon>
-                        Click on the pet icon below to jump!
+                        <div className='soldTipText'>
+                            Below are best selling pets, click on the category icon to jump to available pets in this category!
+                        </div>
+
                     </div>
                 </div>
                 <div className='rankWrapper'>
@@ -94,7 +100,7 @@ class Component extends React.Component {
                                         <div key={pet.type}>
                                             <div className='num'>{pet.num}</div>
                                             <div className='iconWrapper' id={pet.type} onClick={() => { this.jumpToAva(pet.type) }}>
-                                                <Icon name={pet.type} _className='rankIcon' />
+                                                <Icon name={pet.type} _className='rankIcon' data_cy={pet.type} />
                                             </div>
                                         </div>)
                                 })}
@@ -110,7 +116,7 @@ class Component extends React.Component {
                                         <div key={pet.type}>
                                             <div className='num'>{pet.num}</div>
                                             <div className='iconWrapper' id={pet.type} onClick={() => { this.jumpToAva(pet.type) }}>
-                                                <Icon name={pet.type} _className='rankIcon' />
+                                                <Icon name={pet.type} _className='rankIcon' data_cy={pet.type} />
                                             </div>
                                         </div>)
                                 })}
@@ -127,7 +133,7 @@ class Component extends React.Component {
                                     <div key={pet.type}>
                                         <div className='num'>{pet.num}</div>
                                         <div className='iconWrapper' id={pet.type} onClick={() => { this.jumpToAva(pet.type) }}>
-                                            <Icon name={pet.type} _className='rankIcon' />
+                                            <Icon name={pet.type} _className='rankIcon' data_cy={pet.type} />
                                         </div>
                                     </div>)
                             })}</div>

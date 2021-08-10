@@ -1,6 +1,10 @@
 # UX Development
 Since that the original codes are developed with js, we decided to switch to React framework to help with develop (detailed reasons listed in section below). Therefore, our team decided to build the webpage from beginning. 
-Webpage building is made up of two main parts: 1. Realize new features 2. Style/UI (CSS)
+Webpage building is made up of three main parts: 
+1. Realize new features 
+2. Style/UI (CSS)
+3. Modify according to users' feedback
+
 ## Realize features & functions
 ### 1. Introduce in React to help develop, realize 'Hello World' page：
 * Detail contents:
@@ -135,7 +139,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: 025d5b3d456784cb2883f2db7435df5ec1b80048
 * time: 2021/08/04 2021/08/04 02:10
 
-## 2. "add" webpage's CSS
+### 2. "add" webpage's CSS
 * Detailed contents:
  Since that this page uses antd components, it has its own style. All I need to do is modify their layout, so the whole page looks more balanced.
 
@@ -144,7 +148,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: f977f3f4de95bbc302468675c772f37c34e560b4
 * time: 2021/08/04 02:44
 
-## 3. "show" webpage's CSS
+### 3. "show" webpage's CSS
 * Detailed contents:
   1. Modify the background color of header and footer according to product requirements
   2. The filtered form uses the components of antd, and only needs to adjust the layout
@@ -155,7 +159,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: 423b9e11e028444d7f496cb331f261f361915405
 * time: 2021/08/04 21:55
 
-## 4. "rank" webpage's CSS
+### 4. "rank" webpage's CSS
 * Detailed contents:
   1. Make ranking list
   2. Display the pets of sold and pending
@@ -165,7 +169,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: da6a6a225c8e3e283603141e821d28aef7972915
 * time: 2021/08/05 03:08
 
-## 5. Modify footer's design
+### 5. Modify footer's design
 * Detailed contents:
     1. icon vertical alignment
     2. add copyRight
@@ -176,18 +180,48 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 
 * time: 2021/08/05 03:43
 
+## Modify according to users' feedback
+
+### 1. Use real pet pics to replace icon & make the page more colorful 
+* Detailed contents:
+
+    1. uses hope that the webpage should contain more real pet picture. So we replaced original petCard img to real pictures of pets. 
+    2. We use different icon color and font color according to different icon contents because users want to webpage to look more colorful. 
+* Picture:
+![](../static/reportImg/dev3-1.png)
+
+* commit: ea33a83ea50b94e071635de41ef58197c431384a
+* time: 2021/08/06 19:47
+
+### 2. Modify nav's content & add tips 
+* Detailed contents:
+
+    1. Since that users think the status of pets are not easy to identify we changed the contents in nav and improved readability. After modification, animal status is easier to identify.
+    2. Added tips on "rank" and "show" webpage in order to make features more understandable. 
+
+* Picture:
+
+    1.rank webpage
+
+    ![](../static/reportImg/dev3-2-1.png)
+    2. show webpage
+
+    ![](../static/reportImg/dev3-2-2.png)
+* commit: 26462ae6b9bc26d90ae86ceae4ec6b8560583542
+* time: 2021/08/08 17:07
+
 # Final UX
 ## 1. header
 1. Picture:
 ![](../static/reportImg/ui-2.png)
 2. Layout:
-    For the webpage we use flex layout. Three main elements: logo (including rank & show button's wrapper's element and add icon).
-    The logo on the left is for decoration and main pages are "rank" and "sold". Therefore we put them in the center and put the "add" icon on the right. 
+
+    header一共有四个原素，分别是logo，best-selling的button和available-pets的button和一个add的icon。其中logo是展示作用，其他三个原素是页面跳转作用。由于header是起一个导航的作用，所以我们把原素都按照水平方向展开。从左到右的顺序依次是logo，best-selling，available-pets和add的icon。由于best-selling和available-pets是主要的页面，因此把他们放在较为中间的部分，并且占更大的体积。
 
 3. HCI event:
     
-    * When hovering aboce rank show and add icon, user can see change of icon pattern.
-    * Rank, Show, Add icons would appear differently on different webpages to help people know which webpage they are viewing. 
+    * When hovering aboce best-selling, available-pets and add icon, user can see change of icon pattern.
+    * Aest-selling button, Available-pets button, Add icons would appear differently on different webpages to help people know which webpage they are viewing. 
     * When clicking on these three icons, people can go to corresponding webpages.  
     
 4. Functions:
@@ -215,15 +249,49 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 4. Function：
 Add new pets and modify pet status.
 
-## 4. "show" webpage
+## 5. "available-pets" webpage
 1. Picture:
 ![](../static/reportImg/ui-4.png)
 2. Layout:
-    There are only two big elements in the whole "show" page: the filtered form, which we call fliterForm, and the pet list, which we call petList. These two big parts still adopt the vertical layout, with fliterForm above and petList below
-    The petList is composed of petCard. The petList adopts flex layout, so that the petCard is distributed with 2 elements per line, making the page structure more beautiful.
-    Petcard includes petImg, tags, ID, name and deleticon. Petimg displays different icons according to different pet categories. It is used to distinguish different pets, so we make it large and put it on the left of the card (just like ID card). 
-    Name is placed at the top of the right, and its font and size are modified so that it can be noticed at a glance. Tags are placed under name, and a "tag" icon is placed on the left of the text to indicate that it is a tag. As for the Pet ID, we put it in the upper left corner, and then the "delete" icon in the upper right corner.
 
+    整个abailable-pet页面只有三个元素，分别是tips,筛选的form表单，我们叫它fliterForm,还有宠物列表，我们叫它petList。整个页面采用垂直布局，从上到下依次是tip,fliterForm，petList
+
+    petList里面是由petCard组成的，petList采用flex布局，让petCard呈每行2个原素分布，让页面结构更加优美。
+    petCard包括了petImg，tags，id，name和deletIcon。petImg是根据宠物的category不同，展示不同的icon，它是用于区别不同宠物的，因此我们把它做的很大并且放在card的左边（就像id card一样）。name放在右边的上方，并且修改了它的字体还有大小，使得它能够一眼就被发现。tags放在name下面，并且在文字的左边放上一个tag的icon来表示它是一个标签。至于宠物的id，我们把它放到了左上角，然后删除的icon放到了右上角。
+3. 交互（event）
+
+    fliter-form的作用是可以根据用户的喜好，选择种类和tag，通过点击summit来筛选展示的宠物。
+    pet list是一个展示的作用。petCard右上角的deleteIcon，hover之后透明度会发生改变，而且鼠标的style也会发生改变，提示用户这里可以点击。点击deleteIcon，可以删除那个该petCard。
+
+
+4. 功能
+
+    1. 展示available-pets。
+    2. 通过用户的喜好，筛选宠物列表
+    3. 删除宠物
+
+## 4. "best-selling" webpage
+1. Picture:
+![](../static/reportImg/ui-5.png)
+2. Layout:
+
+    best-showing页面是由三个元素构成的，采用的是垂直的布局，从上到下依次是tip，排行榜还有petList
+
+
+    其中，tip和petList的设计和available-pet页面的设计基本一致，唯一的不同是petcard的右上角从原来的deleteIcon改为表示状态的圆圈icon，红色的icon表示宠物的状态是sold，黄色则标表示状态是pending。
+
+    排行榜的我们设计成一个领奖台的形式，从左到右我们一次设计第二名，第一名和第三名（实际上如果有第四第五名，我们也把他们放到第三名的栏目）。站在领奖台上面的是对应的宠物的种类的icon还有他们已经卖出去的个数（状态为sold和pending的宠物我们视为已经卖出）。领奖台的左右两边分别是两个草的icon，用于装饰。
+
+3. 交互（event）
+
+    通过鼠标hover在领奖台上的宠物icon，icon的透明度还有鼠标的style会发生变化，提示用户这些icon可以点击。通过点击这些icon，可以实现对available-pet页面的跳转，并且跳转的url带上category=${pet}的参数，使得available-pet页面的pet list只展示该category的宠物。
+    pet list也是一个展示的作用，每个petCard的右上角的icon的颜色代表状态
+
+4. 功能
+
+    1. 展示状态为sold和pending的宠物。
+    2. 对已经出售或者正在出售宠物根据他们的category进行排行，并展示在排行榜上。
+    3. 通过点击排行榜上的宠物icon，进行跳转
 # Design Choices
 ## 1. Framework choice 
 ### 1. sample vs framework
@@ -362,4 +430,22 @@ Conclusion：Combine the three layout schemes with each other and each takes its
        __________________
 
 ### HCI Questionnaire feedback evaluation
-
+Q1
+![](../static/reportImg/HCI1.png)
+We reviewed our new features again regarding to whether they are easy to understand. 
+Q2
+![](../static/reportImg/HCI2.png)
+We did not change UI design too much as the feedback was quite positive.
+Q3
+![](../static/reportImg/HCI3.png)
+Q4
+![](../static/reportImg/HCI4.png)
+We are quite happy with Q3&Q4's feedback as that means we are on a right path. However we realized there are still places to improve and we asked that in Q7. 
+Q5
+![](../static/reportImg/HCI5.png)
+Q6
+![](../static/reportImg/HCI6.png)
+For Q5&Q6, we added more tips to the webpage as some feedback said they cannot identify which page is rank which page is available clearly. 
+Q7
+![](../static/reportImg/HCI7.png)
+The feedback on this question is most meaningful to us. After seeing this, we decided to add tips and use actual pet pics. And we also discussed whether we are going to do a welcome page or not. As for buttons, we also agree with the idea that consistency needs to be improved so we modified the buttons as well. All the modification is described in UX development before. 

@@ -5,11 +5,11 @@ try { requireAll(require.context('../constant/icons', true, /\.svg$/)); } catch 
 
 
 const Component = (props) => {
-    const { _className } = props
+    const { _className, data_cy } = props
     return (
-        <svg className={_className ? `${_className}` : 'icon'}>
+        <svg className={_className ? `${_className}` : 'icon'} data-cy={data_cy ? data_cy : ''}>
             {props.name && <use xlinkHref={'#' + props.name} />}
-        </svg>
+        </svg >
     )
 }
 

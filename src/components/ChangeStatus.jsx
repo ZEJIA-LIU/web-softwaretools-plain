@@ -16,15 +16,11 @@ class Component extends React.Component {
     onFinish = (values) => {
         const { petArrayStore } = this.props
         const { id, status } = values
-        console.log(id, status)
         changeStats(id, status).then((res) => {
-            console.log(res)
             petArrayStore.changeStatus(id)
-            console.log(petArrayStore.curArray)
             window.alert('change success')
         }).catch(err => {
             changeStats(id, status).then((res) => {
-                console.log(res)
                 window.alert('change success')
             }).catch(err => { window.alert('change fail, please try again') })
         })

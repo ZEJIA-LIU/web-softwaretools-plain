@@ -22,11 +22,9 @@ class Component extends React.Component {
             category = search.split('=')[1].split('&')[0]
             tag = search.split('=')[2]
         }
-        const { petArrayStore } = props
         this.state = {
             category: category || 'all',
-            tag: tag || 'all',
-            petArray: petArrayStore.curArray
+            tag: tag || 'all'
         }
     }
 
@@ -38,8 +36,9 @@ class Component extends React.Component {
     render() {
         const { Option } = Select
         const { petArrayStore } = this.props
-        const { category, tag, petArray } = this.state
-        const array = petArray.filter(pet => pet.status === "available").filter((item) => rightTag(tag, item) === true).filter(item => rihtCategory(category, item))
+        const { category, tag } = this.state
+
+        const array = petArrayStore.curArray.filter(pet => pet.status === "available").filter((item) => rightTag(tag, item) === true).filter(item => rihtCategory(category, item))
         const imgMap = {
             'dog': dog,
             'cat': cat,
@@ -127,7 +126,7 @@ class Component extends React.Component {
                                             <div className='name'>{item.name}</div>
                                             <div onClick={() => {
                                                 petArrayStore.delete(item.id).then(res => {
-                                                    this.setState({ petArray: petArrayStore.curArray })
+                                                    window.alert('delete Success')
                                                 })
 
                                             }} className='delete'>
