@@ -1,6 +1,6 @@
 # Conclusion
 
-![image](https://github.com/bristolcs/web-softwaretools-plain/blob/release-20210727/workSpace/hengbin-an/conclusion%20pic.jpeg)
+![image](../static/reportImg/conclusion-pic.jpeg)
 
   ## Table of contents
 
@@ -16,19 +16,18 @@
 
   ### Discussion of new features for the project
 
-  In order to improve the convenience and visibility of the website, after a group discussion, we decided to add the following functions. These functions take into account the convenience of the store manager for warehouse management, as well as the needs of customers to filter pets and query pet allowances.
+  In order to improve the convenience and visibility of the website, after a group discussion, we decided to add the following functions. These functions take into account the convenience of the store manager for warehouse management, as well as customers screening pets and checking the needs of remaining pets.
+
 
   To meet these needs, we have made three pages. One is to show which pets are not yet sold. This interface also adds a filter function. From the customer's point of view, it is convenient for customers to complete pet queries based on certain conditions, such as pets. There are five species in our group, including cats, dogs, rabbits, hamsters, and birds. Our group also set up five types of pet personalities, namely, lively, brave, lazy, docile, and cold. This can largely satisfy customers' selection of pets, and at the same time improve retrieval efficiency and transaction rate. Obviously, an operating website that is not user-friendly to customers is difficult to leave customers to continue using and recommend to others.
 
-  ![image](https://github.com/bristolcs/web-softwaretools-plain/blob/release-20210727/workSpace/hengbin-an/WechatIMG652.png)
+  ![image](../static/reportImg/Con-1.1.png)
 
-  The second interface is to display animals that have been sold. This interface is simply a display of animals that have been sold. Our team surveyed that the consumer psychology of customers almost determines their shopping behavior. Consumer psychology is the consumer The sum of consumer psychology and purchase psychology, and the psychological process of consumer purchase behavior is often three processes, including the process of cognition of the product, the emotional and emotional process, and the will process. For a customer who does not have a clear shopping goal, the herd effect will greatly occupy the customer's process of understanding the product and the process of will, which will lead to a perceptual cognition. Pets that are sold more are more suitable for feeding. It is more appropriate to wait for a series of judgments. Obviously, when customers only want to buy pets, but there is no specific pet standard, the benefit of this page is to guide customers to spend, and customers are often willing to pay for pets with high sales, thereby increasing the income of the store manager In addition, the store manager can also check the high-selling pets in a timely manner and supplement the categories in the warehouse. This is a win-win situation.
+  The second interface is to show the animals that have been sold. In this interface, the best-selling pets will be displayed and sorted according to the sales volume. By clicking the pet icon on the sorting chart, the page of this kind of pets can be directly jumped to. Our group design this function because of data collection, through we think that the customer's consumer psychology, almost determines their shopping this behavior, consumer psychology is the sum of consumer's consumer psychology and purchasing psychology, and psychological process of consumer purchase behavior is often 3 process, including the cognitive process of the commodities, mood and emotional process, will process. For a customer without a clear shopping goal, the herd effect will greatly dominate the customer's process of understanding and will, and then lead to a perceptual perception that pets that are sold more are more suitable for feeding, more suitable for personality and a series of judgments. Obviously, when customers want to buy a pet, but without a specific standard of pet, the benefits of this page is to lead customers to consume, and customers are willing to pay for the high sales of pet, so as to increase the income of the manager, in addition, the manager can timely by looking at the high sales of pet, in the warehouse to complement of the species, It's a win-win situation.
+  ![image](../static/reportImg/Con-2.1.png)
 
-  ![image](https://github.com/bristolcs/web-softwaretools-plain/blob/release-20210727/workSpace/hengbin-an/rank_pic.png)
-
-  The design concept of the third interface is to improve the convenience of the store manager’s pet website management. From the store manager’s point of view, to maintain the operation of this pet website, it is necessary to introduce new pets and provide them to customers to choose from, and at the same time customers purchase For pets, the store manager should set the status of the pet as soon as possible to prevent conflicts caused by multiple users buying the same pet. There are three pet states that the store manager can change on this page. They are sold. pending, available, so that customers can make correct choices and purchases, and maintain the normal operation of the pet website.
-
-  ![image](https://github.com/bristolcs/web-softwaretools-plain/blob/release-20210727/workSpace/hengbin-an/third_pict1.png)
+  The design concept of the third interface is to improve the convenience for the store manager to manage pet websites. You can enter the third interface by clicking the plus sign in the upper right corner of the pet website. From the manager perspective, the running of the pet website, you need to introduce a new pet, provide for the customer choice, customers to buy the pet at the same time, the manager should be the first to set the pet's condition, to prevent conflicts caused by the number of users to buy the same pet, the manager on this page you can change the state of pet has three, respectively is sold, Pending, available, so that customers can make a correct choice and purchase, and maintain the normal operation of the pet website.
+  ![image](../static/reportImg/Con-2.png)
 
   ### The final performance of the project
 
@@ -44,7 +43,7 @@
 
   At the meeting on August 4th, our group put forward some achievable functions. We decided to give a brief introduction to these feasible suggestions. Considering time constraints, this part of the function will not be carried out in our project.
 
-  ![image](https://github.com/ZEJIA-LIU/web-softwaretools-plain/blob/main/workSpace/hengbin-an/8.4%20DIscussion%20for%20SEPG.jpeg)
+  ![image](../static/reportImg/8.4_Discussion.jpeg)
 
   - For the pet website, it is more appropriate for the store manager to have a special permission function. Therefore, it is safer to set the administrator to log in to the system. It can prevent others from maliciously modifying the content of the pet website. You can make a permission login system. Make this pet website safer and more in line with the actual performance.
 
