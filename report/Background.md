@@ -142,6 +142,10 @@ name, category, status and character tag for the new coming pet or change a exis
 
 #### New added features
 
+![image](../static/reportImg/feat-1-1.png)
+![image](../static/reportImg/feat-1-2.png)
+![image](../static/reportImg/feat-1-3.png)
+
 1. Adding new available pets with configurable information:
    
    - \***id**
@@ -150,15 +154,23 @@ name, category, status and character tag for the new coming pet or change a exis
    - \***status** (e.g. available/ sold. - Default: *available*)
    - **tag[]** (e.g. Brave/ Elegance/ Lazy/ Active/ Mild)
 
+![image](../static/reportImg/feat-2.png)
+
 2. Deleting available pet.
 
-   - By clicking deleting icon, with popped alert to double check.
+   - By clicking deleting icon, with popped alert to double check. (with popped success alert)
+
+![image](../static/reportImg/feat-3.png)
 
 3. Updating status of pet by entering ***id**.
+
+![image](../static/reportImg/feat-4.png)
 
 4. Sorting pets by **category** and/or **tag** on available page.
   
     - One **category** and one **tag** could be chosen at the same time.
+
+![image](../static/reportImg/feat-5.png)
 
 5. Showing sold pets with a ranking list, jumping to *available* page by clicking icon of **category** on the list.
 
@@ -183,5 +195,5 @@ name, category, status and character tag for the new coming pet or change a exis
    - Booking/Order system. 
 
    - Updating status of pets on *available* page.(Could be implemented after implementing administrator authorization)
-   
+
    - Updating pet detail by **name**.(Not possible due to API)
