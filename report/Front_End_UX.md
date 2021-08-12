@@ -3,24 +3,39 @@
 ## Table of contents
 
 - [Development](#jump1)
+    * [Wireframes showing planned design](#jump1-1)
+    * [Evidence of how my design evolved over time](#jump1-2)
+    * [System flow](#jump1-3)
 - [Documentation of final front end design](#jump2)
+     * [header](#jump2-1)
+     * [footer](#jump2-2)
+     * ["add" webpage](#jump2-3)
+     * ["available-pets" webpage](#jump2-4)
+     * ["best-selling" webpage](#jump2-5)
 - [Reasoned list of design choices](#jump3)
+    * [Framework choice](#jump3-1)
+     * [Catalog design](#jump3-2)
+     * [Data design](#jump3-3)
+     * [Routing tools choice](#jump3-4)
+     * [Component library choice](#jump3-5)
+     * [CSS vs SCSS](#jump3-6)
+     * [CSS layout choice](#jump3-7)
 - [Evidence of HCI evaluation process](#jump4)
 
 ## <span id="jump1">Development</span>
 
+
+
+###  <span id="jump1-1">Wireframes showing planned design</span>
 Since that the original codes are developed with js, we decided to switch to React framework to help with develop (detailed reasons listed in section below). Therefore, our team decided to build the webpage from beginning. 
 Webpage building is made up of three main parts: 
 1. Realize new features 
 2. Style/UI (CSS)
 3. Modify according to users' feedback
 
-### Wireframes showing planned design
-
-### Realize features & functions
-
-![](../static/reportImg/formatting-featurefunction.png)
-
+![](../static/reportImg/wireframces.png)
+### <span id="jump1-2">Evidence of how my design evolved over time</span>
+We have documented each change in the order of the wireframces, with a description, screenshot of the page, commit number and time, as evidence
 #### 1. Introduce in React to help develop, realize 'Hello World' page：
 * Detail contents:
 
@@ -44,9 +59,9 @@ In this part we introduced axios to encapsulate API and then return a Promise in
 
     Among them findByStatus, delete, add exist in original webpage while update is our new API to call. 
 
-    * Picture: No changes to UI
-    * commit: 6d51adb8a6e45afa34f27eb8e1dad0556127db62
-    * time:  2021/07/28 : 10:42
+* Picture: No changes to UI
+* commit: 6d51adb8a6e45afa34f27eb8e1dad0556127db62
+* time:  2021/07/28 : 10:42
 
 #### 3. Settle on webpage structure
 * Detail contents:
@@ -94,7 +109,7 @@ PS: Our group's id starts with prefix 4400 in order to make sure that we would n
 #### 6. "available" webpage's filtering form 
 * Detail contents:
 
-The "available" webpage was designed merely to present pets for purchase. However, we added form according to newly designed feature in order to let consumers to filter pets according their preference. They can choose to filter by choosing pet's category and tag.
+    The "available" webpage was designed merely to present pets for purchase. However, we added form according to newly designed feature in order to let consumers to filter pets according their preference. They can choose to filter by choosing pet's category and tag.
 
 * Pictures:
 ![](../static/reportImg/dev1-6.png)
@@ -124,7 +139,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * Detail contents: 
 
     For the new function, you need to click the pet corresponding to the rank module on the sold page to jump to the filtering results of the pet corresponding to the category in the available page. The specific implementation is realized by taking query when jumping.
-    Jumping uses react-router's ```history.push```function. 
+    Jumping uses react-router's ```history.push()```function. 
 
 * Picture: No changes/updates to UI
 * commit: 5b18ebc1924dd005fb39af6cd0d851e8038fa4d8
@@ -140,14 +155,11 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: 5b18ebc1924dd005fb39af6cd0d851e8038fa4d8
 * time: 2021/08/02 23:40
 
-### Style/UI (CSS)
 
-![](../static/reportImg/formatting-style:ui.png)
-
-#### 1. header & footer's CSS
+#### 11. header & footer's CSS
 * Detailed contents:
 
- The layout of header and footer is flex layout plus ```position```positioning. It is the style of traditional header and footer. I changed the navigation buttons of the original "available" and "solid" to "show" and "rank", which can better highlight their functional characteristics. The add page is placed on the far right, and a plus sign icon is used to replace the text. A picture is placed on the far right of the page as the logo. The footer module has no function, just the display of some information.
+    The layout of header and footer is flex layout plus ```position```positioning. It is the style of traditional header and footer. I changed the navigation buttons of the original "available" and "solid" to "show" and "rank", which can better highlight their functional characteristics. The add page is placed on the far right, and a plus sign icon is used to replace the text. A picture is placed on the far right of the page as the logo. The footer module has no function, just the display of some information.
 
 * Picture:
 ![](../static/reportImg/dev2-1.png)
@@ -155,7 +167,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: 025d5b3d456784cb2883f2db7435df5ec1b80048
 * time: 2021/08/04 2021/08/04 02:10
 
-#### 2. "add" webpage's CSS
+#### 12. "add" webpage's CSS
 * Detailed contents:
  Since that this page uses antd components, it has its own style. All I need to do is modify their layout, so the whole page looks more balanced.
 
@@ -164,7 +176,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: f977f3f4de95bbc302468675c772f37c34e560b4
 * time: 2021/08/04 02:44
 
-#### 3. "show" webpage's CSS
+#### 13. "show" webpage's CSS
 * Detailed contents:
   1. Modify the background color of header and footer according to product requirements
   2. The filtered form uses the components of antd, and only needs to adjust the layout
@@ -175,7 +187,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: 423b9e11e028444d7f496cb331f261f361915405
 * time: 2021/08/04 21:55
 
-#### 4. "rank" webpage's CSS
+#### 14. "rank" webpage's CSS
 * Detailed contents:
   1. Make ranking list
   2. Display the pets of sold and pending
@@ -185,7 +197,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: da6a6a225c8e3e283603141e821d28aef7972915
 * time: 2021/08/05 03:08
 
-#### 5. Modify footer's design
+#### 15. Modify footer's design
 * Detailed contents:
     1. icon vertical alignment
     2. add copyRight
@@ -196,11 +208,9 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 
 * time: 2021/08/05 03:43
 
-### Modify according to users' feedback
 
-![](../static/reportImg/formatting-modify.png)
 
-#### 1. Use real pet pics to replace icon & make the page more colorful 
+#### 16. Use real pet pics to replace icon & make the page more colorful 
 * Detailed contents:
 
     1. uses hope that the webpage should contain more real pet picture. So we replaced original petCard img to real pictures of pets. 
@@ -211,7 +221,7 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: ea33a83ea50b94e071635de41ef58197c431384a
 * time: 2021/08/06 19:47
 
-#### 2. Modify nav's content & add tips 
+#### 17. Modify nav's content & add tips 
 * Detailed contents:
 
     1. Since that users think the status of pets are not easy to identify we changed the contents in nav and improved readability. After modification, animal status is easier to identify.
@@ -228,14 +238,14 @@ The "available" webpage was designed merely to present pets for purchase. Howeve
 * commit: 26462ae6b9bc26d90ae86ceae4ec6b8560583542
 * time: 2021/08/08 17:07
 
-### System flow
+### <span id="jump1-3">System flow</span>
 
 The System flow of this project is shown in the figure below.
 ![](../static/reportImg/system-flow.png)
   
 ## <span id="jump2">Documentation of final front end design</span>
 
-### header
+### <span id="jump2-1">header</span>
 
 1. Picture:
 ![](../static/reportImg/ui-2.png)
@@ -250,7 +260,7 @@ The System flow of this project is shown in the figure below.
     
 4. Functions: Easy to jump between web pages.
 
-### footer
+### <span id="jump2-2">footer</span>
     
 1. Picture:
 ![](../static/reportImg/ui-1.png)
@@ -259,7 +269,7 @@ The System flow of this project is shown in the figure below.
 3. Function:
     Presesnt contact details of the shop owner and clarify copyright of photos used. 
     
-### "add" webpage
+### <span id="jump2-3">"add" webpage</span>
     
 1. Picture:
 ![](../static/reportImg/ui-3.png)
@@ -274,8 +284,7 @@ The System flow of this project is shown in the figure below.
 4. Function：
 Add new pets and modify pet status.
 
-### "available-pets" webpage
-    
+### <span id="jump2-4">"available-pets" webpage</span>
 1. Picture:
 ![](../static/reportImg/ui-4.png)
 2. Layout:
@@ -294,7 +303,7 @@ Add new pets and modify pet status.
     2. Filter pet list according to users' preference.
     3. Delete pets. 
 
-### "best-selling" webpage
+### <span id="jump2-5">"best-selling" webpage</span>
     
 1. Picture:
 ![](../static/reportImg/ui-5.png)
@@ -313,7 +322,7 @@ Pet list is also a display function. The color of the icon in the upper right co
    
 ## <span id="jump3">Reasoned list of design choices</span>
     
-### Framework choice
+### <span id="jump3-1">Framework choice</span>
     
 #### sample vs framework
 1. Do not choose framework
@@ -335,7 +344,7 @@ Pet list is also a display function. The color of the icon in the upper right co
     - Easy to code: ReactJS uses JSX file which makes coding and understanding much easier. 
     - Has a lot of third party components to use. Like antd component warehouse, it has large amounts of React components. 
     
-### Catalog design 
+### <span id="jump3-2">Catalog design</span>
     
 A good catalog would make the logic of the whole project much clearer. From the names in the catalog we can find corresponding codes and carry out a centralized management.  
 In this project all the codes are put under src catalog: 
@@ -358,7 +367,7 @@ We used mobx as status management tool. Newly created files for each store are s
 This project has two stores, one is petArray (array of pets belonging to out team) and another is addPet (properties of newly added pets)
     
 
-### Data design
+### <span id="jump3-3">Data design</span>
     
 Normally speaking this part does not belong to front end. However this project is very special as backend APIs and database are both public for which everyone can modify data. This results in the situation that not all data in the database are needed by us and our newly created data has the possibility to be deleted by other people. Additionally, chances are that we might change other people's data by mistake as well. Therefore we came up with same methods to solve this issue. 
 1. Make clear which pets belong to our group. We find that pet tages are arrays. Therefore we push an object of ```{id:0,name:"team4"}```。
@@ -370,18 +379,16 @@ Normally speaking this part does not belong to front end. However this project i
 
 We set five tages for our pets: 'brave', 'elegance', 'lazy', 'active', 'mild'. We set five categories for our pets：'cat', 'dog', 'bird', 'rabbit', 'hamsters'.
 
-### Routing tools choice
-    
+
+### <span id="jump3-4">Routing tools choice</span>    
 Following our design we have three webpages in total so we need a router to help us handle jump between webpages. Since that we use React framework, we decide to use react-router. React-router has two kinds of router which are BrowserRouter and HashRouter. These two has no difference from function perspective. Theoretically, HashRouter is like an anchor location. No matter how paths after # change, requests all focus on the webpage before #. On the other side, BrowerRouter is like adding a new path. For this project we use HashRouter as this project's front end and backend is dividied up a lot. 
 
-### Component library choice
-    
+### <span id="jump3-5">Component library choice</span>
 Following the development rule that if existing components could be used then we need to use them instead of coding by ourselves again. For this project, not too many components are in need to use and nowadays large component libraries include antd、Bootstrap、Bulma、Chakra UI、Material UI...
 
 Following our analysis of the project, we find that all we need is form.  Therefore after reviewing all these component libraries, we find that antd's form can fulfill this project's requirement and the introduction of this library is also very easy. Therefore we use antd as our component libraries.
 
-### State management tool choice 
-    
+### <span id="jump3-5">State management tool choice </span>
 State management library is used to handle state chaos, lack of effectlve synchronism issues. React framework currently has two main state management library which are redux and mobx:
 
 - Redux
@@ -395,10 +402,11 @@ State management library is used to handle state chaos, lack of effectlve synchr
 
 Since that our project is no doubt a relatively small project and our developer are not too many so we choose to use light tool of Mobx. 
 
-### CSS layout choice
-    
+### <span id="jump3-6">CSS vs SCSS</span>
+
 CSS is the website style language applicable for any browser. SCSS is a special type of file SASS. It's program coded using Ruby. CSS is used to assemble style sheets for browsers. Additionally, in order to provide info, SASS also adds many other functions to CSS variables and nesting etc. These functions could make it easier and quicker to code CSS. The SCSS file is processed by the server running the web application to output a traditional format that the CSS browser can understand. In complex projects, the use of SCSS can undoubtedly make the development more convenient and improve the speed of development. However, in a simple project like this project, CSS can fully meet the requirements. So we finally decided to develop with CSS.
-    
+
+### <span id="jump3-7">CSS layout choice</span>   
 At present, there are three popular CSS layouts: float, flex and grid. 
 - Compatibility: Grid layout has the worst compatibility while flex and float have good compatibility.
 - Use difficulty: The API of grid layout is too long and inconvenient to use. Float is difficult to layout, cannot complete the response, and needs to eliminate float. Flex layout is flexible and convenient.
