@@ -1,4 +1,14 @@
-# Group Working Methods
+# Process
+
+## Table of contents
+
+- [Group working methods](#jump1)
+- [Team roles](#jump2)
+- [Documentation of sprints](#jump3)
+- [Use of git](#jump4)
+
+## <span id="jump1">Group working methods</span>
+
 Agile software development focuses on people and realizes quick delivery of software through iterative modification. It works well in dealing with complex system. There are many different styles of agile, including scrum, crystal, feature driven development, lean software development, XP extreme programming, Kanban and so forth. Our team utilized a combination of scrum development and feature driven development since that our main object is focusing on adding new features.  
 This flexible development method helps us a lot as the demand for features change very quickly. As for our first three meetings, potential features change a lot during each meeting. Therefore, we must transform from waterfall to agile development mode which focuses on “Fix time, Flex Scope”.
 
@@ -19,7 +29,7 @@ Apart from Scrum, we also combined feature driven development into the developme
 Agile development also focuses on people and it is human driven. It requires sufficient team empowerment, motivation, align constraints, develop competence and grow structure. 
 The process should be adaptive and flexible and always have other options ready to be used. When demand changes, the team can then quickly switch to plan B and rebuild certain features. 
 
-# Team Roles
+## <span id="jump2">Team roles</span>
 
 Zejia Liu: coding and implementation of features; report part “Use of git” writing
 
@@ -33,15 +43,17 @@ Tao He: Background & research
 
 All team members participate in the brainstorming and designing of features. 
 
+## <span id="jump3">Documentation of sprints</span>
 
-# Sprints
 Documentation of your sprints, including both high level overview, timeline, and selected highlights that were critical points in the project (remember to show the users stories implemented in each sprint). We expect a summary of meeting logs (including for instance apologies for absence etc)
 High level overview: For quick in time justification of our webpage to cater to quick feature design and demand changes, our sprints are designed to be very short term and we nearly have a new sprint for each meeting every three days. 
+
 ### Timeline: grant chart/sprint backlog
 
 ![timeline](../static/reportImg/timeline.png)
 
 ### Critical points:
+
 1. Early form of webpage basic 
  
  This version came out after our first meeting when we roughly talked about some potential features and developers tried to implement them then, 
@@ -66,7 +78,8 @@ High level overview: For quick in time justification of our webpage to cater to 
 
 ![beautified](../static/reportImg/ui-5.png)
 
-# Continuous Integration
+## <span id="jump4">Use of git</span>
+
 ### branch
 Every time we meet, a new RELEASE branch is created with the current date. For example, if today is 2021/07/27, then we would create a release-20210727 branch. We git push things to this branch first and then one person is in charge of merging useful information to main branch. 
 

@@ -1,7 +1,5 @@
 # Conclusion
 
-![image](../static/reportImg/conclusion-pic.jpeg)
-
   ## Table of contents
 
   - [Summary of project](#jump1)
@@ -24,9 +22,11 @@
   ![image](../static/reportImg/Con-1.1.png)
 
   The second interface is to show the animals that have been sold. In this interface, the best-selling pets will be displayed and sorted according to the sales volume. By clicking the pet icon on the sorting chart, the page of this kind of pets can be directly jumped to. Our group design this function because of data collection, through we think that the customer's consumer psychology, almost determines their shopping this behavior, consumer psychology is the sum of consumer's consumer psychology and purchasing psychology, and psychological process of consumer purchase behavior is often 3 process, including the cognitive process of the commodities, mood and emotional process, will process. For a customer without a clear shopping goal, the herd effect will greatly dominate the customer's process of understanding and will, and then lead to a perceptual perception that pets that are sold more are more suitable for feeding, more suitable for personality and a series of judgments. Obviously, when customers want to buy a pet, but without a specific standard of pet, the benefits of this page is to lead customers to consume, and customers are willing to pay for the high sales of pet, so as to increase the income of the manager, in addition, the manager can timely by looking at the high sales of pet, in the warehouse to complement of the species, It's a win-win situation.
+
   ![image](../static/reportImg/Con-2.1.png)
 
   The design concept of the third interface is to improve the convenience for the store manager to manage pet websites. You can enter the third interface by clicking the plus sign in the upper right corner of the pet website. From the manager perspective, the running of the pet website, you need to introduce a new pet, provide for the customer choice, customers to buy the pet at the same time, the manager should be the first to set the pet's condition, to prevent conflicts caused by the number of users to buy the same pet, the manager on this page you can change the state of pet has three, respectively is sold, Pending, available, so that customers can make a correct choice and purchase, and maintain the normal operation of the pet website.
+
   ![image](../static/reportImg/Con-2.png)
 
   ### The final performance of the project
