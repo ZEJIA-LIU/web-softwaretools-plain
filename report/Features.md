@@ -9,15 +9,18 @@
 
   ## <span id="jump1">Possible new features</span>
   
-  - Adding new available pets with more details / deleting available pet.(Default adding **status**: *available*)
-  - Updating status of pet by **id**.  
-  - Sorting pets by **category** and/or **tag**.
-  - Showing sold pets with a ranking list, jump to *available* page with certain category parameter by clicking **category** icon on the list.
+  1. Adding new available pets with more details / deleting available pet.
+
+  2. Updating status of pet by **id**.  
+
+  3. Sorting pets by **category** and/or **tag**.
+
+  4. Showing sold pets with a ranking list, jump to *available* page with certain category parameter by clicking **category** icon on the list.
 
   ### ->> Features not implemented 
 
   - Copying **id** to clipboard by clicking pet's **id**.  
-  - Adding new *available* pets with default **id**~~/**name**~~(useless, banned), ~~/**status**(*available*)~~(done).
+  - Adding new *available* pets with default **id**, ~~**name**~~(useless, banned), ~~**status**(*available*)~~(done).
   - Sorting pets on *available* page by multiple **tags**.
   - Updating **available categories[]** which is selected while adding pets.
   - Updating **available tags[]** which is selected while adding pets.
@@ -33,41 +36,44 @@
 
   #### Adding new available pets with configurable information:
 
-    - ***id**
-    - ***name**
-    - ***category** (e.g. dog/ cat/ fish)
-    - ***status** (e.g. available/ sold **default: *available***)
-    - **tag[]** (e.g. Brave/ Elegance/ Lazy/ Active/ Mild)
+   - \***id**
+     > is required because it's reserved for querying, while the back-end does not support auto increment of pet's **id**.
 
-  #### Deleting available pet.(With poped alert to double check)
-  
-  - ***id** is required because it's reserved for querying, while the back-end does not support auto increment of pet's **id**.
- 
-  - ***name**, ***category**, ***status**, are required because they are necessary for every pet.
-  
-  - **tag[]** are optional, just for more detailed record.
-  - **tag[]** are only selectable(from **available tags[]**), they do not support customisation insertion due to the API data structure, updating **available  tags[]** could only be done in editing source code.
-  
+   - \***name**
+   - \***category** (e.g. dog/ cat/ fish)
+   - \***status** (e.g. available/ sold. - Default: *available*)
+     > \***name**, \***category**, \***status**, are required because they are necessary for every pet.
+
+   - **tag[]** (e.g. Brave/ Elegance/ Lazy/ Active/ Mild)
+     > **tag[]** are optional for more detailed record and they are only selectable(among the 5 tags shown above), they do not support customisation insertion due to the API data structure, updating **available  tags[]** could only be done in editing source code.
+
+  #### Deleting available pet.
+
+   - By clicking deleting icon, with popped alert to double check.
+
   ### Feature 2
   
   #### Updating status of pet by entering ***id**.
   
   ### Feature 3
   
-  #### Sorting pets by **category** and/or **tag** on available page.(One **category** and one **tag** could be chosen at the same time)
+  #### Sorting pets by **category** and/or **tag** on available page.
+  
+  - One **category** and one **tag** could be chosen at the same time.
   
   ### Feature 4
   
   #### Showing sold pets with a ranking list, jumping to *available* page by clicking icon of **category** on the list.
 
   - The ranking list ranks top 5 best-selling **categories** with their sales.
+
   - When clicking on the icon of a **category**, it will jump to *available* page with request parameter of clicked icon's corresponding **category**, which will be automatically filled into the sorting form.
 
   ## <span id="jump3">Reasons for choosing these features</span>
   
   ### Reasons for choosing feature 1
   
-  - When adding new available pets onto the website, besides pet ***name**, shopkeeper would like to upload more information about them, such as ***category**, ***status** and **tag[]**.
+  - When adding new available pets onto the website, besides pet **name**, shopkeeper would like to upload more information about them, such as **category**, **status** and **tag[]**.
 
   - This feature helps shopkeeper to manage pets in inventory with more details.
 
@@ -91,7 +97,6 @@
 
   ### Reasons for choosing feature 4
   
-
   - Shopkeeper could analyse business and customers' preference by checking *sold* pets.
 
   - knowing best-selling **categories** would help shopkeeper with arranging future management like updating inventory.
@@ -106,7 +111,8 @@
   
   ### Testing for feature 1
 
-  - We test this feature by automated unit testing tool: ***jest***.(Because this feature is mostly implemented by one specific function)
+  - We test this feature by automated unit testing tool: ***jest***.  
+  > Because this feature is mostly implemented by one specific function.
 
   #### Testing Details
 
@@ -116,7 +122,8 @@
 
   #### Testing Process
 
-  1. Install jest(Add package into package.json file)
+  1. Install ***jest***.
+  > Add package into package.json file.
   2. Create testing file: 
   ```
   web-softwaretools-plain/src/test/newPet.test.js
@@ -157,7 +164,8 @@
   
   ### Testing for feature 2
 
-  - We test this feature by automated unit testing tool: ***jest***.(Because this feature is mostly implemented by one specific function)
+  - We test this feature by automated unit testing tool: ***jest***.
+  > Because this feature is mostly implemented by one specific function.
 
   #### Testing Details
 
@@ -167,7 +175,8 @@
   
   #### Testing Process
 
-  1. Install jest(Add package into package.json file)
+  1. Install ***jest***.
+  > Add package into package.json file.
   2. Create testing file: 
   ```
   web-softwaretools-plain/src/test/changeStatus.test.js
@@ -208,7 +217,8 @@
   
   ### Testing for feature 3
 
-  - We test this feature by automated integration testing tool: ***cypress***.(Because this feature deals with different pages so we chose integration testing but not unit testing)
+  - We test this feature by automated integration testing tool: ***cypress***.
+  > Because this feature deals with different pages so we chose integration testing but not unit testing.
 
   #### Testing Details
 
@@ -226,7 +236,8 @@
 
   #### Testing Process: 
 
-  1. Install cypress(Add package into package.json file)
+  1. Install ***cypress***.
+  > Add package into package.json file.
   2. Create testing file: 
   ```
   web-softwaretools-plain/cypress/integration/showFliter.spec.js
@@ -266,11 +277,13 @@
   
   ### Testing for feature 4
 
-  - We test this feature by automated integration testing tool: ***cypress***.(Because this feature deals with different pages so we chose integration testing but not unit testing)
+  - We test this feature by automated integration testing tool: ***cypress***.
+  > Because this feature deals with different pages so we chose integration testing but not unit testing.
 
   #### Testing Details
 
   - Clicking to jump to *available* page with url including right **category**:
+
     1. Visit the *sold* page.
     2. Mock data of a random **category** being clicked.
     3. Mock clicking the icon correspondence to the mocked **categoty**.
@@ -280,7 +293,8 @@
 
   #### Testing Process: 
 
-  1. Install cypress(Add package into package.json file)
+  1. Install ***cypress***.
+  > Add package into package.json file.
   2. Create testing file: 
   ```
   web-softwaretools-plain/cypress/integration/rankJumpShow.spec.js
