@@ -91,6 +91,37 @@ potential customers and their user profile in relation to online pet shopping. B
    d. Others ____
 
 
+##### Questionnaire feedback & analysis
+
+Q1&2: ![image](../static/reportImg/feedback.png)
+
+Q3: 9/20 people have pets and only one pet for each person. 11/20 do not have pets.
+
+Q4: 12/20 people have plan to adopt new pets.
+
+Q5: 16/20 people have not surfed any online pet stores before as they prefer to go to offline stores more. 
+
+Consumers do not quite believe in the credibility of the online platforms and show very limited acceptance on this new type of pet shopping. Therefore our group plan to make the webpage pet info present & search only and leave trade & contact information in the footnote. In this way, customers can contact shop owner directly after they see sth they interested in and make purchase thereafter.
+
+Q6:
+
+   choice                                    percentage chose
+   a. Search bar	                           15/20
+   b. Picture presenting	                  20/20
+   c. Filtering of available items        	12/20
+   d. Bookmark favorite items             	14/20
+
+According to this data, our group plan to add all these features to our webpage.
+
+Q7: Other features: Shopping basket, rank according to price.
+
+   choice                                    percentage chose
+   a. Popularity according to past sales	   8/20
+   b. Pets characteristics	                  12/20
+   c. Photos	                              18/20
+   d. Others                                 Health condition, breeding info, price, age……
+
+
 
 #### Design of the website
 
@@ -127,22 +158,30 @@ name, category, status and character tag for the new coming pet or change a exis
 
 4. Sorting pets by **category** and/or **tag** on available page.
   
-  - One **category** and one **tag** could be chosen at the same time.
+    - One **category** and one **tag** could be chosen at the same time.
 
 5. Showing sold pets with a ranking list, jumping to *available* page by clicking icon of **category** on the list.
 
-  - The ranking list ranks top 5 best-selling **categories** with their sales.
+   - The ranking list ranks top 5 best-selling **categories** with their sales.
 
-  - When clicking on the icon of a **category**, it will jump to *available* page with request parameter of clicked icon's corresponding **category**, which will be automatically filled into the sorting form.
+   - When clicking on the icon of a **category**, it will jump to *available* page with request parameter of clicked icon's corresponding **category**, which will be automatically filled into the sorting form.
 
   #### Features not implemented
 
-  - Copying **id** to clipboard by clicking pet's **id**.  
-  - Adding new *available* pets with default **id**, ~~**name**~~(useless, banned), ~~**status**(*available*)~~(done).
-  - Sorting pets on *available* page by multiple **tags**.
-  - Updating **available categories[]** which is selected while adding pets.
-  - Updating **available tags[]** which is selected while adding pets.
-  - Administrator authorization. 
-  - Booking/Order system. 
-  - Updating status of pets on *available* page.(Could be implemented after implementing administrator authorization)
-  - Updating pet detail by **name**.(Not possible due to API)
+   - Copying **id** to clipboard by clicking pet's **id**.  
+
+   - Adding new *available* pets with default **id**, ~~**name**~~(useless, banned), ~~**status**(*available*)~~(done).
+
+   - Sorting pets on *available* page by multiple **tags**.
+
+   - Updating **available categories[]** which is selected while adding pets.
+
+   - Updating **available tags[]** which is selected while adding pets.
+
+   - Administrator authorization. 
+
+   - Booking/Order system. 
+
+   - Updating status of pets on *available* page.(Could be implemented after implementing administrator authorization)
+   
+   - Updating pet detail by **name**.(Not possible due to API)
