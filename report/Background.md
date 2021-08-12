@@ -8,6 +8,9 @@
 
 - [Architecture and design](#jump3)
 
+- [Full description of all features](#jump4)
+
+
 ### <span id="jump1">Abstract</span>
 
 With the current ongoing covid epidemic, people's lives have been affected to some
@@ -68,23 +71,24 @@ potential customers and their user profile in relation to online pet shopping. B
 6. What features do you want to see on online pet stores?
    
    a. Search bar  
+
    b. Picture presenting
    
    c. Filtering of available items
    
    d. Bookmark favorite items
    
-   8. Others features you want to add? ___
+8. Others features you want to add? ___
    
-   9. Would buy pets based on what?
+9. Would buy pets based on what?
 
-a. Popularity according to past sales
+   a. Popularity according to past sales
 
-b. Pets characteristics
+   b. Pets characteristics
 
-c. Photos
+   c. Photos
 
-d. Others ____
+   d. Others ____
 
 
 
@@ -102,3 +106,7 @@ The second interface "Best-selling!", the pets's sales rank. By clicking on the 
 
 The third interface is for the management of the pet website. Where we can set the id,
 name, category, status and character tag for the new coming pet or change a existing pet's status.
+
+### <span id="jump4"> Full description of all features</span>
+
+
