@@ -109,4 +109,40 @@ name, category, status and character tag for the new coming pet or change a exis
 
 ### <span id="jump4"> Full description of all features</span>
 
+#### New added features
 
+1. Adding new available pets with configurable information:
+   
+   - \***id**
+   - \***name**
+   - \***category** (e.g. dog/ cat/ fish)
+   - \***status** (e.g. available/ sold. - Default: *available*)
+   - **tag[]** (e.g. Brave/ Elegance/ Lazy/ Active/ Mild)
+
+2. Deleting available pet.
+
+   - By clicking deleting icon, with popped alert to double check.
+
+3. Updating status of pet by entering ***id**.
+
+4. Sorting pets by **category** and/or **tag** on available page.
+  
+  - One **category** and one **tag** could be chosen at the same time.
+
+5. Showing sold pets with a ranking list, jumping to *available* page by clicking icon of **category** on the list.
+
+  - The ranking list ranks top 5 best-selling **categories** with their sales.
+
+  - When clicking on the icon of a **category**, it will jump to *available* page with request parameter of clicked icon's corresponding **category**, which will be automatically filled into the sorting form.
+
+  #### Features not implemented
+
+  - Copying **id** to clipboard by clicking pet's **id**.  
+  - Adding new *available* pets with default **id**, ~~**name**~~(useless, banned), ~~**status**(*available*)~~(done).
+  - Sorting pets on *available* page by multiple **tags**.
+  - Updating **available categories[]** which is selected while adding pets.
+  - Updating **available tags[]** which is selected while adding pets.
+  - Administrator authorization. 
+  - Booking/Order system. 
+  - Updating status of pets on *available* page.(Could be implemented after implementing administrator authorization)
+  - Updating pet detail by **name**.(Not possible due to API)
