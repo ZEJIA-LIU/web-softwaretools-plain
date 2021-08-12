@@ -47,8 +47,6 @@ In addition to the above key features, the high level goals of the project are
 - Develop teamwork skills and improve the efficiency of our teamwork
 
 - Develop team members' proficiency with git
-  
-  
 
 ### <span id="jump3"> Architecture and design</span>
 
@@ -87,3 +85,20 @@ b. Pets characteristics
 c. Photos
 
 d. Others ____
+
+
+
+#### Design of the website
+
+![image](../static/reportImg/ui-4.png)
+
+The first interface "Available Pets！" shows the pets that are currently available. We can also make queries using the category and tag filter functions.
+
+![image](../static/reportImg/ui-5.png)
+
+The second interface "Best-selling!", the pets's sales rank. By clicking on the category icon it jumps to available pets in this category.
+
+![image](../static/reportImg/ui-3.png)
+
+The third interface is for the management of the pet website. Where we can set the id,
+name, category, status and character tag for the new coming pet or change a existing pet's status.
