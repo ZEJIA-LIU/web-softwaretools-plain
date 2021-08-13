@@ -33,7 +33,7 @@ website to showcase his pet shop online.
 
 The pet shop website we built is based on the two main objectives of the pet shop owner to manage the pet data in the back office and to showcase the pets. Accordingly, the website will attempt to implement the following requirements.
 
-- Add back office pet data including: name, species, sale status, personality tag
+- Add back-office pet data including name, species, sale status, personality tag
 
 - Modify the current sale status of pets: available, pending, sold
 
@@ -41,20 +41,19 @@ The pet shop website we built is based on the two main objectives of the pet sho
 
 - Rank the most recent popular pets by sales
 
-#### High level goals
+#### High-level goals
 
-In addition to the above key features, the high level goals of the project are
+In addition to the above key objectives, the High-level goals of our project are
 
 - Apply agile development principles to the development of the site
 
 - Develop teamwork skills and improve the efficiency of our teamwork
 
-- Develop team members' proficiency with git
+- Develop team members' proficiency with Git
 
 ### <span id="jump3"> Architecture and design</span>
 
-At the beginning of the project, the team created a user survey to study the habits of
-potential customers and their user profile in relation to online pet shopping. Based on the feedback we received from 20 of our local friends, we identified the most requested features and discussed the initial framework of our website.
+At the beginning of the project, our group created a user survey to study the habits of potential customers and their user profiles concerning online pet shopping. Based on the feedback we received from 20 of our local friends, we identified the most requested features and discussed the initial framework of our website.
 
 #### User research questionnaires
 
@@ -101,26 +100,27 @@ Q4: 12/20 people have plan to adopt new pets.
 
 Q5: 16/20 people have not surfed any online pet stores before as they prefer to go to offline stores more. 
 
-Consumers do not quite believe in the credibility of the online platforms and show very limited acceptance on this new type of pet shopping. Therefore our group plan to make the webpage pet info present & search only and leave trade & contact information in the footnote. In this way, customers can contact shop owner directly after they see sth they interested in and make purchase thereafter.
+ Consumers do not quite believe in the credibility of the online platforms and show very limited acceptance on this new type of pet shopping. Therefore our group plans to make the webpage pet info present & search only and leave trade & contact information in the footnote. In this way, customers can contact the shop owner directly after they see s something they are interested in and make a purchase thereafter.
 
-Q6:
+Q6: 
 
-   choice                                    percentage chose
-   a. Search bar	                           15/20
-   b. Picture presenting	                  20/20
-   c. Filtering of available items        	12/20
-   d. Bookmark favorite items             	14/20
+| choice  | percentage chosed  |
+|  -------- | ----------------------  |
+| a.    Search bar  | 15/20 |
+| b.    Picture presenting | 20/20 |
+| c.    Filtering of available items  | 12/20 |
+| d.    Bookmark favorite items  | 14/20 |
 
 According to this data, our group plan to add all these features to our webpage.
 
-Q7: Other features: Shopping basket, rank according to price.
+Q7: Other features: Shopping basket, rank according to price. 
 
-   choice                                    percentage chose
-   a. Popularity according to past sales	   8/20
-   b. Pets characteristics	                  12/20
-   c. Photos	                              18/20
-   d. Others                                 Health condition, breeding info, price, age……
-
+| choice  | percentage chosed  |
+|  -------- | ----------------------  |
+| a.    Popularity according to past sales  | 8/20 |
+| b.    Pets characteristics  | 12/20 |
+| c.    Photos  | 18/20 |
+| d.    Others  | Health condition, breeding info, price, age…… |
 
 
 #### Design of the website
@@ -131,12 +131,12 @@ The first interface "Available Pets！" shows the pets that are currently availa
 
 ![image](../static/reportImg/ui-5.png)
 
-The second interface "Best-selling!", the pets's sales rank. By clicking on the category icon it jumps to available pets in this category.
+The second interface "Best-selling!", the pets' sales rank. By clicking on the category icon it jumps to available pets in this category.
 
 ![image](../static/reportImg/ui-3.png)
 
 The third interface is for the management of the pet website. Where we can set the id,
-name, category, status and character tag for the new coming pet or change a existing pet's status.
+name, category, status and character tag for the new coming pet or change an existing pet's status.
 
 ### <span id="jump4"> Full description of all features</span>
 
@@ -158,7 +158,7 @@ name, category, status and character tag for the new coming pet or change a exis
 
 2. Deleting available pet.
 
-   - By clicking deleting icon, with popped alert to double check. (with popped success alert)
+   - By clicking deleting icon, with popped success alert.
 
 ![image](../static/reportImg/feat-3.png)
 
