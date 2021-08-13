@@ -33,7 +33,7 @@ website to showcase his pet shop online.
 
 The pet shop website we built is based on the two main objectives of the pet shop owner to manage the pet data in the back office and to showcase the pets. Accordingly, the website will attempt to implement the following requirements.
 
-- Add back office pet data including: name, species, sale status, personality tag
+- Add back-office pet data including name, species, sale status, personality tag
 
 - Modify the current sale status of pets: available, pending, sold
 
@@ -41,20 +41,19 @@ The pet shop website we built is based on the two main objectives of the pet sho
 
 - Rank the most recent popular pets by sales
 
-#### High level goals
+#### High-level goals
 
-In addition to the above key features, the high level goals of the project are
+In addition to the above key objectives, the High-level goals of our project are
 
 - Apply agile development principles to the development of the site
 
 - Develop teamwork skills and improve the efficiency of our teamwork
 
-- Develop team members' proficiency with git
+- Develop team members' proficiency with Git
 
 ### <span id="jump3"> Architecture and design</span>
 
-At the beginning of the project, the team created a user survey to study the habits of
-potential customers and their user profile in relation to online pet shopping. Based on the feedback we received from 20 of our local friends, we identified the most requested features and discussed the initial framework of our website.
+At the beginning of the project, our group created a user survey to study the habits of potential customers and their user profiles concerning online pet shopping. Based on the feedback we received from 20 of our local friends, we identified the most requested features and discussed the initial framework of our website.
 
 #### User research questionnaires
 
@@ -105,22 +104,27 @@ Q5: 16/20 people have not surfed any online pet stores before as they prefer to 
 
 Q6:
 
-   choice                                    percentage chose
-   a. Search bar	                           15/20
-   b. Picture presenting	                  20/20
-   c. Filtering of available items        	12/20
-   d. Bookmark favorite items             	14/20
-
+   a. Search bar(percentage chose: 15/20)
+   
+   b. Picture presenting(percentage chose: 20/20)
+   
+   c. Filtering of available items(percentage chose: 12/20)
+   
+   d. Bookmark favorite items(percentage chose: 14/20)
+   
 According to this data, our group plan to add all these features to our webpage.
 
-Q7: Other features: Shopping basket, rank according to price.
+Q7:
 
-   choice                                    percentage chose
-   a. Popularity according to past sales	   8/20
-   b. Pets characteristics	                  12/20
-   c. Photos	                              18/20
-   d. Others                                 Health condition, breeding info, price, age……
-
+   Other features: Shopping basket, rank according to price.
+   
+   a. Popularity according to past sales(percentage chose: 8/20)
+   
+   b. Pets characteristics(percentage chose: 12/20)
+   
+   c. Photos(percentage chose: 18/20)
+   
+   d. Others(percentage chose: Health condition, breeding info, price, age……)
 
 
 #### Design of the website
