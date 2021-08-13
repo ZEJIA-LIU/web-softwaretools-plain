@@ -102,29 +102,25 @@ Q5: 16/20 people have not surfed any online pet stores before as they prefer to 
 
  Consumers do not quite believe in the credibility of the online platforms and show very limited acceptance on this new type of pet shopping. Therefore our group plans to make the webpage pet info present & search only and leave trade & contact information in the footnote. In this way, customers can contact the shop owner directly after they see s something they are interested in and make a purchase thereafter.
 
-Q6:
+Q6: 
 
-   a. Search bar(percentage chose: 15/20)
-   
-   b. Picture presenting(percentage chose: 20/20)
-   
-   c. Filtering of available items(percentage chose: 12/20)
-   
-   d. Bookmark favorite items(percentage chose: 14/20)
-   
+| choice  | percentage chosed  |
+|  -------- | ----------------------  |
+| a.    Search bar  | 15/20 |
+| b.    Picture presenting | 20/20 |
+| c.    Filtering of available items  | 12/20 |
+| d.    Bookmark favorite items  | 14/20 |
+
 According to this data, our group plan to add all these features to our webpage.
 
-Q7:
+Q7: Other features: Shopping basket, rank according to price. 
 
-   Other features: Shopping basket, rank according to price.
-   
-   a. Popularity according to past sales(percentage chose: 8/20)
-   
-   b. Pets characteristics(percentage chose: 12/20)
-   
-   c. Photos(percentage chose: 18/20)
-   
-   d. Others(percentage chose: Health condition, breeding info, price, age……)
+| choice  | percentage chosed  |
+|  -------- | ----------------------  |
+| a.    Popularity according to past sales  | 8/20 |
+| b.    Pets characteristics  | 12/20 |
+| c.    Photos  | 18/20 |
+| d.    Others  | Health condition, breeding info, price, age…… |
 
 
 #### Design of the website
