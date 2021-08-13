@@ -22,7 +22,7 @@ The owner of one of our local pet shops was looking to set up his own pet websit
 project is the result of our group helping the local pet shop owner to set up a
 website to showcase his pet shop online.
 
-The high-level overview of the capabilities of the site are to make it easier 
+The high-level overview of the capabilities of the site is to make it easier 
 
 - for customers to select and find their favourite pets
 - for pet shop owners to operate and manage their pet shops 
