@@ -101,7 +101,7 @@ Q4: 12/20 people have plan to adopt new pets.
 
 Q5: 16/20 people have not surfed any online pet stores before as they prefer to go to offline stores more. 
 
-Consumers do not quite believe in the credibility of the online platforms and show very limited acceptance on this new type of pet shopping. Therefore our group plan to make the webpage pet info present & search only and leave trade & contact information in the footnote. In this way, customers can contact shop owner directly after they see sth they interested in and make purchase thereafter.
+ Consumers do not quite believe in the credibility of the online platforms and show very limited acceptance on this new type of pet shopping. Therefore our group plans to make the webpage pet info present & search only and leave trade & contact information in the footnote. In this way, customers can contact the shop owner directly after they see s something they are interested in and make a purchase thereafter.
 
 Q6:
 
@@ -131,12 +131,12 @@ The first interface "Available Pets！" shows the pets that are currently availa
 
 ![image](../static/reportImg/ui-5.png)
 
-The second interface "Best-selling!", the pets's sales rank. By clicking on the category icon it jumps to available pets in this category.
+The second interface "Best-selling!", the pets' sales rank. By clicking on the category icon it jumps to available pets in this category.
 
 ![image](../static/reportImg/ui-3.png)
 
 The third interface is for the management of the pet website. Where we can set the id,
-name, category, status and character tag for the new coming pet or change a existing pet's status.
+name, category, status and character tag for the new coming pet or change an existing pet's status.
 
 ### <span id="jump4"> Full description of all features</span>
 
@@ -158,7 +158,7 @@ name, category, status and character tag for the new coming pet or change a exis
 
 2. Deleting available pet.
 
-   - By clicking deleting icon, with popped alert to double check. (with popped success alert)
+   - By clicking deleting icon, with popped success alert.
 
 ![image](../static/reportImg/feat-3.png)
 
