@@ -7,6 +7,7 @@
 - [Documentation of sprints](#jump3)
 - [Use of git](#jump4)
 
+
 ## <span id="jump1">Group working methods</span>
 
 Agile software development focuses on people and realizes quick delivery of software through iterative modification. It works well in dealing with complex system. There are many different styles of agile, including scrum, crystal, feature driven development, lean software development, XP extreme programming, Kanban and so forth. Our team utilized a combination of scrum development and feature driven development since that our main object is focusing on adding new features.  
@@ -101,3 +102,8 @@ We should have used eslint as the specification for the submission, but for conv
    //for summit new contents:
    feat: {content}
 ```
+
+## **References**
+
+1.  scrum.org (2021) WHAT IS SCRUM? [Online] Available from: <https://www.scrum.org/resources/what-is-scrum>.
+2.  Sylvanns, D. (2021) 7 Different Types Of Agile Methodologies. [Online] Available from: <https://www.itbriefcase.net/7-different-types-of-agile-methodologies>.
