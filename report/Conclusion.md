@@ -61,12 +61,8 @@
 
   ## <span id="jump3">Reflect on group practice and teamwork</span>
 
-  ### Reflection on group practice
-
   We will discuss the feasibility of the new ideas mentioned in the group meeting of the team. As long as it is feasible, we will try our best to achieve it. However, the process of this practice does encounter some obstacles. For example, there is a function that is very good, but because we multiple types of pet types are set, and there are many copies of imported pet data. 
   
   This leads to the fact that if you want to implement this function, then these data must be set with corresponding codes. One is more cumbersome, and second, bear in mind it's also a live API provided, anyone can post, so it's very twitchy. This may cause the data to disappear.
-
-  ### Reflection on teamwork
 
   In addition, our team is very active to communicate about this project, and the number of group meetings is more frequent, so that everyone can clearly know the part of the task that they are responsible for, and have a function of the code part of the new project. A clear understanding will help us write and unify the report.
