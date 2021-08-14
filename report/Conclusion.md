@@ -41,9 +41,9 @@
 
   ### Further optimize the direction analysis of the project
 
-  At the meeting on August 4th, our group put forward some achievable functions. We decided to give a brief introduction to these feasible suggestions. Considering time constraints, this part of the function will not be carried out in our project.
+  At the meeting on August 4th, our group put forward some achievable functions. We decided to give a brief introduction to these feasible suggestions. Considering time constraints, this part of the function will not be implemented in our project.
 
-  ![image](../static/reportImg/8.4_Discussion.jpeg)
+  ![image](../static/reportImg/features-dis.png)
 
   - For the pet website, it is more appropriate for the store manager to have a special permission function. Therefore, it is safer to set the administrator to log in to the system. It can prevent others from maliciously modifying the content of the pet website. You can make a permission login system. Make this pet website safer and more in line with the actual performance.
 
@@ -61,8 +61,8 @@
 
   ## <span id="jump3">Reflect on group practice and teamwork</span>
 
-  We will discuss the feasibility of the new ideas mentioned in the group meeting of the team. As long as it is feasible, we will try our best to achieve it. However, the process of this practice does encounter some obstacles. For example, there is a function that is very good, but because we multiple types of pet types are set, and there are many copies of imported pet data. 
-  
-  This leads to the fact that if you want to implement this function, then these data must be set with corresponding codes. One is more cumbersome, and second, bear in mind it's also a live API provided, anyone can post, so it's very twitchy. This may cause the data to disappear.
+  In general, our team has completed the basic requirements of this project well. From the very beginning of the meeting, we have explained the basic use of Git, so as to prevent any member from not being familiar with git operation, so that everyone can more easily push the content they are responsible for. For this project, we carried out a total of 6 times meeting, every meeting we have three steps, first, everyone report processing work, after the last meeting, second, the distribution of the specific everyone the next task, third, brainstorming, everyone for pet website design, put forward their own point of view, and talk to the coders to see if they can implement it. Therefore, each team meeting is a sprint, which makes our progress always very stable, there is no urgent situation.
 
-  In addition, our team is very active to communicate about this project, and the number of group meetings is more frequent, so that everyone can clearly know the part of the task that they are responsible for, and have a function of the code part of the new project. A clear understanding will help us write and unify the report.
+  New ideas for team meeting mentioned, we will discuss the feasibility, as long as possible, we will try to realize it, but the practice of the process has encountered some obstacles, such as a function is very good, but because we set up many kinds of pet type, and the coder imported pet data also has a lot of, as a result, if we want to realize this function, Bear in mind it's also a live API provided, anyone can post, so it's very twitchy. This will likely cause the data to disappear.
+  
+  In addition, our team actively communicated with each other about this project. Although the five of us had six sprint meetings in total, in fact, we also had separate meetings. For example, the members in charge of features often had separate discussion meetings with coder. The members in charge of the conclusion will communicate with others in order to make the conclusion report more consistent. Some members have frequent meetings with each other, which is also one of the ways to improve efficiency. In some parts, it is not necessary for all members to participate in additional discussions. They just need to save more time to better complete their own part and improve the readability and professionalism of the report.
