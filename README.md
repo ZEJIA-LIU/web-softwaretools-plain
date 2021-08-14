@@ -5,7 +5,7 @@ Plain HTML, CSS and Javascript  website created for the software tools module at
 
 ## Local development
 
-```shell
+```
 //Create a directory for the project in the ~ directory
 cd ~ && mkdir team-4-project && cd team-4-project
 
