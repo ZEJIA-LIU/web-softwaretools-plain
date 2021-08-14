@@ -28,5 +28,15 @@ export const petName = [
     'Jack',
     'Teddy',
     'Callie',
-    'Nala'
+    'Nala',
+    "Bruno",
+    " Penny",
+    "Honey",
+    "Milly",
+    "Murphy",
+    "Simba",
+    "Holly",
+    "Benji",
+    "Henry",
+    "Lilly"
 ]

@@ -334,5 +334,115 @@ export const petArray = [
             { name: tagArray[4], id: tagsMap[tagArray[4]] }
         ]
     },
+    {
+        name: petName[30],
+        id: 440031,
+        category: { name: categoryArray[0], id: categoryMap[categoryArray[0]] },
+        status: statusArray[2],
+        tags: [
+            { name: tagArray[0], id: tagsMap[tagArray[0]] },
+            { name: tagArray[3], id: tagsMap[tagArray[3]] },
+            { name: tagArray[2], id: tagsMap[tagArray[2]] }
+        ]
+    },
+    {
+        name: petName[31],
+        id: 440032,
+        category: { name: categoryArray[0], id: categoryMap[categoryArray[0]] },
+        status: statusArray[2],
+        tags: [
+            { name: tagArray[0], id: tagsMap[tagArray[0]] },
+            { name: tagArray[4], id: tagsMap[tagArray[4]] },
+            { name: tagArray[5], id: tagsMap[tagArray[5]] }
+        ]
+    },
+    {
+        name: petName[32],
+        id: 440033,
+        category: { name: categoryArray[1], id: categoryMap[categoryArray[1]] },
+        status: statusArray[2],
+        tags: [
+            { name: tagArray[0], id: tagsMap[tagArray[0]] },
+            { name: tagArray[3], id: tagsMap[tagArray[3]] },
+            { name: tagArray[1], id: tagsMap[tagArray[1]] }
+        ]
+    },
+    {
+        name: petName[33],
+        id: 440034,
+        category: { name: categoryArray[1], id: categoryMap[categoryArray[1]] },
+        status: statusArray[2],
+        tags: [
+            { name: tagArray[0], id: tagsMap[tagArray[0]] },
+            { name: tagArray[2], id: tagsMap[tagArray[2]] },
+            { name: tagArray[4], id: tagsMap[tagArray[4]] }
+        ]
+    },
+    {
+        name: petName[34],
+        id: 440035,
+        category: { name: categoryArray[2], id: categoryMap[categoryArray[2]] },
+        status: statusArray[2],
+        tags: [
+            { name: tagArray[0], id: tagsMap[tagArray[0]] },
+            { name: tagArray[2], id: tagsMap[tagArray[2]] },
+            { name: tagArray[4], id: tagsMap[tagArray[4]] }
+        ]
+    },
+    {
+        name: petName[35],
+        id: 440036,
+        category: { name: categoryArray[2], id: categoryMap[categoryArray[2]] },
+        status: statusArray[2],
+        tags: [
+            { name: tagArray[0], id: tagsMap[tagArray[0]] },
+            { name: tagArray[2], id: tagsMap[tagArray[2]] },
+            { name: tagArray[1], id: tagsMap[tagArray[1]] }
+        ]
+    },
+    {
+        name: petName[36],
+        id: 440037,
+        category: { name: categoryArray[3], id: categoryMap[categoryArray[3]] },
+        status: statusArray[2],
+        tags: [
+            { name: tagArray[0], id: tagsMap[tagArray[0]] },
+            { name: tagArray[2], id: tagsMap[tagArray[2]] },
+            { name: tagArray[5], id: tagsMap[tagArray[5]] }
+        ]
+    },
+    {
+        name: petName[37],
+        id: 440038,
+        category: { name: categoryArray[3], id: categoryMap[categoryArray[3]] },
+        status: statusArray[2],
+        tags: [
+            { name: tagArray[0], id: tagsMap[tagArray[0]] },
+            { name: tagArray[1], id: tagsMap[tagArray[1]] },
+            { name: tagArray[4], id: tagsMap[tagArray[4]] }
+        ]
+    },
+    {
+        name: petName[38],
+        id: 440039,
+        category: { name: categoryArray[4], id: categoryMap[categoryArray[4]] },
+        status: statusArray[2],
+        tags: [
+            { name: tagArray[0], id: tagsMap[tagArray[0]] },
+            { name: tagArray[1], id: tagsMap[tagArray[1]] },
+            { name: tagArray[4], id: tagsMap[tagArray[4]] }
+        ]
+    },
+    {
+        name: petName[39],
+        id: 440040,
+        category: { name: categoryArray[4], id: categoryMap[categoryArray[4]] },
+        status: statusArray[2],
+        tags: [
+            { name: tagArray[0], id: tagsMap[tagArray[0]] },
+            { name: tagArray[5], id: tagsMap[tagArray[5]] },
+            { name: tagArray[4], id: tagsMap[tagArray[4]] }
+        ]
+    },
 
 ]

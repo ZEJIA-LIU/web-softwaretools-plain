@@ -29,7 +29,7 @@ class App extends React.Component {
     componentDidMount() {
         const { add } = stores.petArrayStore
         findAll().then(res => {
-            if (res.length < 15) {
+            if (res.length < 20) {
                 this.upLoadData()
                 findAll().then(res => {
                     for (let i = 0; i < res.length; i++) {
