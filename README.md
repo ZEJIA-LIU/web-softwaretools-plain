@@ -3,6 +3,24 @@
 Plain HTML, CSS and Javascript  website created for the software tools module at University of Bristol.
 ## PetStore Display Link: https://zejia-liu.github.io/web-softwaretools-plain/
 
+## Local development
+
+```shell
+//Create a directory for the project in the ~ directory
+cd ~ && mkdir team-4-project && cd team-4-project
+
+//Clone the project to your local
+git clone https://github.com/ZEJIA-LIU/web-softwaretools-plain.git
+
+//Go to the project catalogue
+cd web-softwaretools-plain
+
+//Installing dependencies using npm( node version > 12)
+npm install
+
+//Start your project locally
+npm run start
+```
 ## **Report**
 
 ### [1. Background](report/Background.md)
