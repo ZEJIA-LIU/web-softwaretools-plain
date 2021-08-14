@@ -10,6 +10,7 @@ import PetArrayStore from './store/petArray'
 import PageStore from './store/page'
 import { petArray } from './constant/petData'
 import { findAll, addPet } from './module/index'
+import Loading from './components/Loading'
 const stores = {
     newPetStore: new NewPetStore(),
     petArrayStore: new PetArrayStore(),
@@ -62,13 +63,14 @@ class App extends React.Component {
         const { loading } = this.state
         return (
             <Router>
-                {loading ? <Provider {...stores} >
+                {/* {loading ? <Provider {...stores} >
 
                     <Header />
                     <Main />
                     <Footer />
 
-                </Provider > : <div>loading</div>}
+                </Provider > : <Loading />} */}
+                <Loading />
 
             </Router>
         )
