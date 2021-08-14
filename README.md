@@ -2,6 +2,7 @@
   
 Plain HTML, CSS and Javascript  website created for the software tools module at University of Bristol.
 ## PetStore Display Link: https://zejia-liu.github.io/web-softwaretools-plain/
+Sometimes the pet lis on the Available Pets and Best-selling pages are null due to unstable back-end data, please refresh the page to solve this problem.
 
 ## Local development
 
