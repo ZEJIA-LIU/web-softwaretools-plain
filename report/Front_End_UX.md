@@ -4,8 +4,8 @@
 
 - [Development](#jump1)
     * [Wireframes showing planned design](#jump1-1)
-    * [Evidence of how my design evolved over time](#jump1-2)
-    * [System flow](#jump1-3)
+    * [System flow](#jump1-2)
+    * [Evidence of how my design evolved over time](#jump1-3)
 - [Documentation of final front end design](#jump2)
      * [header](#jump2-1)
      * [footer](#jump2-2)
@@ -34,9 +34,15 @@ Webpage building is made up of three main parts:
 3. Modify according to users' feedback
 
 ![](../static/reportImg/wireframces.png)
-### <span id="jump1-2">Evidence of how my design evolved over time</span>
-We have documented each change in the order of the wireframces, with a description, screenshot of the page, commit number and time, as evidence
-#### 1. Introduce in React to help develop, realize 'Hello World' page：
+
+### <span id="jump1-2">System flow</span>
+
+The System flow of this project is shown in the figure below.
+![](../static/reportImg/system-flow.png)
+  
+### <span id="jump1-3">Evidence of how my design evolved over time</span>
+We have documented each change in the order of the wireframces(according to the numbering of each step), with a description, screenshot of the page, commit number and time, as evidence.
+#### 1. Introduce in React to help develop, realize 'Hello World' page
 * Detail contents:
 
     Use command 'create-react-app' to initialize React. Then delete unnecessary files and retain simplist file structure. 
@@ -238,11 +244,7 @@ PS: Our group's id starts with prefix 4400 in order to make sure that we would n
 * commit: 26462ae6b9bc26d90ae86ceae4ec6b8560583542
 * time: 2021/08/08 17:07
 
-### <span id="jump1-3">System flow</span>
 
-The System flow of this project is shown in the figure below.
-![](../static/reportImg/system-flow.png)
-  
 ## <span id="jump2">Documentation of final front end design</span>
 
 ### <span id="jump2-1">header</span>
