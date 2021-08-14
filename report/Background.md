@@ -157,9 +157,8 @@ name, category, status and characteristic tag for the new coming pet or change a
 
 10. Updating status of pets by entering id.
   
-
+  
 ## **References**
 
 1.  GOV.UK (2021) Coronavirus (COVID‑19) - <https://www.gov.uk/coronavirus>
-
 2.  Mayor of Bristol, Marvin Rees (2021)  #COVID-19 update - <https://twitter.com/BristolCouncil/status/1426188097218306050>
