@@ -63,14 +63,13 @@ class App extends React.Component {
         const { loading } = this.state
         return (
             <Router>
-                {/* {loading ? <Provider {...stores} >
+                {loading ? <Provider {...stores} >
 
                     <Header />
                     <Main />
                     <Footer />
 
-                </Provider > : <Loading />} */}
-                <Loading />
+                </Provider > : <Loading />}
 
             </Router>
         )
